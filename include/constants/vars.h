@@ -133,21 +133,21 @@
 #define VAR_ROUTE119_STATE                               0x4072
 #define VAR_ROUTE120_STATE                               0x4073 // Unused Var
 #define VAR_ROUTE121_STATE                               0x4074
-#define VAR_ROUTE122_STATE                               0x4075 // Unused Var
-#define VAR_ROUTE123_STATE                               0x4076 // Unused Var
-#define VAR_ROUTE124_STATE                               0x4077 // Unused Var
-#define VAR_ROUTE125_STATE                               0x4078 // Unused Var
-#define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
+#define VAR_GYM_1_TRAINER                                0x4075 // Gym 1 Type and set number
+#define VAR_GYM_2_TRAINER                                0x4077 // Gym 2 Type and set number
+#define VAR_GYM_3_TRAINER                                0x4076 // Gym 3 Type and set number
+#define VAR_GYM_4_TRAINER                                0x4078 // Gym 4 Type and set number
+#define VAR_GYM_5_TRAINER                                0x4079 // Gym 5 Type and set number
+#define VAR_GYM_6_TRAINER                                0x407A // Gym 6 Type and set number
 #define VAR_ROUTE128_STATE                               0x407B
-#define VAR_ROUTE129_STATE                               0x407C // Unused Var
-#define VAR_ROUTE130_STATE                               0x407D // Unused Var
-#define VAR_ROUTE131_STATE                               0x407E // Unused Var
-#define VAR_ROUTE132_STATE                               0x407F // Unused Var
-#define VAR_ROUTE133_STATE                               0x4080 // Unused Var
-#define VAR_ROUTE134_STATE                               0x4081 // Unused Var
+#define VAR_GYM_7_TRAINER                                0x407C // Gym 7 Type and set number
+#define VAR_GYM_8_TRAINER                                0x407D // Gym 8 Type and set number
+#define VAR_ELITE_FOUR_1_TRAINER                         0x407E // Elite 4 n.1 Type and set number
+#define VAR_ELITE_FOUR_2_TRAINER                         0x407F // Elite 4 n.2 Type and set number
+#define VAR_ELITE_FOUR_3_TRAINER                         0x4080 // Elite 4 n.3 Type and set number
+#define VAR_ELITE_FOUR_4_TRAINER                         0x4081 // Elite 4 n.4 Type and set number
 #define VAR_LITTLEROOT_HOUSES_STATE_MAY                  0x4082
-#define VAR_UNUSED_0x4083                                0x4083 // Unused Var
+#define VAR_CHAMPION_TRAINER                             0x4083 // Champion set
 #define VAR_BIRCH_LAB_STATE                              0x4084
 #define VAR_PETALBURG_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
 #define VAR_CONTEST_HALL_STATE                           0x4086
