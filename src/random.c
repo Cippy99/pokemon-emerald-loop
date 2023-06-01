@@ -41,7 +41,8 @@ u16 Random2(void)
 
 u16 RandomCustom(void)
 {
-    gRngCustomValue = ISO_RANDOMIZE1(gRngCustomValue);
+    gRngCustomValue = 1103515245 * gRngCustomValue + 24691;
+    // DebugPrintf("Random: %d", gRngCustomValue >> 16);
     return gRngCustomValue >> 16;
 }
 
@@ -56,7 +57,7 @@ void ShuffleList(u16 *list, u16 count)
 
     for (i = (count - 1); i > 0; i--)
     {
-        u16 j = Random() % (i + 1);
+        u16 j = RandomCustom() % (i + 1);
         u16 arr = list[j];
         list[j] = list[i];
         list[i] = arr;
