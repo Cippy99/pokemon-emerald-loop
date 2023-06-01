@@ -23,4 +23,6 @@ void SeedRng(u16 seed);
 void SeedRng2(u16 seed);
 void SeedRngCustom(u16 seed);
 
+void ShuffleList(u16 *list, u16 count);
+
 #endif // GUARD_RANDOM_H
