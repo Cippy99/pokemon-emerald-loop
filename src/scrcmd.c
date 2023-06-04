@@ -2324,3 +2324,27 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
     ResetInitialPlayerAvatarState();
     return TRUE;
 }
+
+bool8 ScrCmd_getImportantFightType(struct ScriptContext *ctx){
+    DebugPrintf("Calling ScrCmd_getImportantFightType");
+    u16 id = VarGet(ScriptReadHalfword(ctx));
+    DebugPrintf("Context value: %d", id);
+    DebugPrintf("Var GYM_1: %d", VarGet(VAR_GYM_1_LEADER));
+    DebugPrintf("Var GYM_2: %d", VarGet(VAR_GYM_2_LEADER));
+    DebugPrintf("Var GYM_3: %d", VarGet(VAR_GYM_3_LEADER));
+    DebugPrintf("Var GYM_4: %d", VarGet(VAR_GYM_4_LEADER));
+    DebugPrintf("Var GYM_5: %d", VarGet(VAR_GYM_5_LEADER));
+    DebugPrintf("Var 0x8003: %d", VarGet(VAR_0x8003));
+    gSpecialVar_Result = id >> 2;
+    //gSpecialVar_Result = 12;
+    return TRUE;
+
+}
+
+bool8 ScrCmd_getImportantFightSet(struct ScriptContext *ctx){
+
+    u16 id = ScriptReadHalfword(ctx);
+    gSpecialVar_Result = id & 0b11; 
+    return TRUE;
+
+}

@@ -1,7 +1,13 @@
 RustboroCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_Gym_OnTransition
 	.byte 0
 
-RustboroCity_Gym_EventScript_Roxanne::
+RustboroCity_Gym_OnTransition:
+	copyvar VAR_0x8003 VAR_GYM_1_LEADER
+	call Common_EventScript_SetupImportantFightGfxId
+	end
+
+RustboroCity_Gym_EventScript_Leader::
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch

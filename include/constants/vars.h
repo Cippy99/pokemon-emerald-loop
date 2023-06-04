@@ -133,19 +133,19 @@
 #define VAR_ROUTE119_STATE                               0x4072
 #define VAR_ROUTE120_STATE                               0x4073 // Unused Var
 #define VAR_ROUTE121_STATE                               0x4074
-#define VAR_GYM_1_TRAINER                                0x4075 // Gym 1 Type and set number
-#define VAR_GYM_2_TRAINER                                0x4077 // Gym 2 Type and set number
-#define VAR_GYM_3_TRAINER                                0x4076 // Gym 3 Type and set number
-#define VAR_GYM_4_TRAINER                                0x4078 // Gym 4 Type and set number
-#define VAR_GYM_5_TRAINER                                0x4079 // Gym 5 Type and set number
-#define VAR_GYM_6_TRAINER                                0x407A // Gym 6 Type and set number
+#define VAR_GYM_1_LEADER                                 0x4075 // Gym 1 Type and set number
+#define VAR_GYM_2_LEADER                                 0x4077 // Gym 2 Type and set number
+#define VAR_GYM_3_LEADER                                 0x4076 // Gym 3 Type and set number
+#define VAR_GYM_4_LEADER                                 0x4078 // Gym 4 Type and set number
+#define VAR_GYM_5_LEADER                                 0x4079 // Gym 5 Type and set number
+#define VAR_GYM_6_LEADER                                 0x407A // Gym 6 Type and set number
 #define VAR_ROUTE128_STATE                               0x407B
-#define VAR_GYM_7_TRAINER                                0x407C // Gym 7 Type and set number
-#define VAR_GYM_8_TRAINER                                0x407D // Gym 8 Type and set number
-#define VAR_ELITE_FOUR_1_TRAINER                         0x407E // Elite 4 n.1 Type and set number
-#define VAR_ELITE_FOUR_2_TRAINER                         0x407F // Elite 4 n.2 Type and set number
-#define VAR_ELITE_FOUR_3_TRAINER                         0x4080 // Elite 4 n.3 Type and set number
-#define VAR_ELITE_FOUR_4_TRAINER                         0x4081 // Elite 4 n.4 Type and set number
+#define VAR_GYM_7_LEADER                                 0x407C // Gym 7 Type and set number
+#define VAR_GYM_8_LEADER                                 0x407D // Gym 8 Type and set number
+#define VAR_ELITE_FOUR_1_MEMBER                          0x407E // Elite 4 n.1 Type and set number
+#define VAR_ELITE_FOUR_2_MEMBER                          0x407F // Elite 4 n.2 Type and set number
+#define VAR_ELITE_FOUR_3_MEMBER                          0x4080 // Elite 4 n.3 Type and set number
+#define VAR_ELITE_FOUR_4_MEMBER                          0x4081 // Elite 4 n.4 Type and set number
 #define VAR_LITTLEROOT_HOUSES_STATE_MAY                  0x4082
 #define VAR_CHAMPION_TRAINER                             0x4083 // Champion set
 #define VAR_BIRCH_LAB_STATE                              0x4084

@@ -45,6 +45,9 @@
 #include "mystery_gift.h"
 #include "union_room_chat.h"
 #include "constants/items.h"
+#include "constants/vars.h"
+#include "constants/pokemon.h"
+#include "fights_randomizer.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -204,6 +207,8 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    RandomizeImportantFights();
+    DebugPrintImportantFightsVarsValue();
 }
 
 static void ResetMiniGamesRecords(void)

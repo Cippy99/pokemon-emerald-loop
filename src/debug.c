@@ -57,6 +57,7 @@
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/weather.h"
+#include "fights_randomizer.h"
 
 #if DEBUG_OVERWORLD_MENU == TRUE
 // *******************************
@@ -678,6 +679,8 @@ void Debug_ShowMainMenu(void)
 }
 static void Debug_ShowMenu(void (*HandleInput)(u8), struct ListMenuTemplate LMtemplate)
 {
+    // To remove, here just for debug purposes
+    DebugPrintImportantFightsVarsValue();
     struct ListMenuTemplate menuTemplate;
     u8 windowId;
     u8 menuTaskId;
