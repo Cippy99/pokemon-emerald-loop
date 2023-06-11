@@ -1,0 +1,200 @@
+script(global) Common_EventScript_StartGym1Fight{
+    // VAR_0x8003 contains Gym Leader Variable
+    getImportantFightType(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case TYPE_NORMAL: call(normalFight)
+        case TYPE_FIRE: call(fireFight)
+        case TYPE_WATER: call(waterFight)
+        case TYPE_GHOST: call(ghostFight)    
+        case TYPE_DARK: call(darkFight)
+        case TYPE_ICE: call(iceFight)
+        case TYPE_DRAGON: call(dragonFight)
+        case TYPE_ELECTRIC: call(electricFight) 
+        case TYPE_ROCK: call(rockFight)
+        case TYPE_FLYING: call(flyingFight)
+        case TYPE_PSYCHIC: call(psychicFight)
+        case TYPE_FIGHTING: call(fightingFight)
+        default: call(normalFight)
+
+    }
+}
+
+script(local) normalFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) rockFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) electricFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_WATTSON_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WATTSON_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fightingFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) psychicFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_TATE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_TATE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fireFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) flyingFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_WINONA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WINONA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) waterFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_JUAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_JUAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) darkFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) ghostFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) iceFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_GLACIA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GLACIA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) dragonFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_DRAKE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_DRAKE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) poisonFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) groundFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) grassFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fairyFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) steelFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) bugFight {
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}

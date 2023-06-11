@@ -857,11 +857,133 @@
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
 
+// ------- Gym Leaders -------------------------- 
+
+#define TRAINER_ROXANNE_GYM_1               855
+#define TRAINER_ROXANNE_GYM_2               856
+#define TRAINER_ROXANNE_GYM_3               857
+#define TRAINER_ROXANNE_GYM_4               858
+#define TRAINER_ROXANNE_GYM_5               859
+#define TRAINER_ROXANNE_GYM_6               860
+#define TRAINER_ROXANNE_GYM_7               861
+#define TRAINER_ROXANNE_GYM_8               862
+#define TRAINER_ROXANNE_ELITE_4             863
+
+#define TRAINER_BRAWLY_GYM_1                864
+#define TRAINER_BRAWLY_GYM_2                865
+#define TRAINER_BRAWLY_GYM_3                866
+#define TRAINER_BRAWLY_GYM_4                867
+#define TRAINER_BRAWLY_GYM_5                868
+#define TRAINER_BRAWLY_GYM_6                869
+#define TRAINER_BRAWLY_GYM_7                870
+#define TRAINER_BRAWLY_GYM_8                871
+#define TRAINER_BRAWLY_ELITE_4              872
+
+#define TRAINER_WATTSON_GYM_1               873
+#define TRAINER_WATTSON_GYM_2               874
+#define TRAINER_WATTSON_GYM_3               875
+#define TRAINER_WATTSON_GYM_4               876
+#define TRAINER_WATTSON_GYM_5               877
+#define TRAINER_WATTSON_GYM_6               878
+#define TRAINER_WATTSON_GYM_7               879
+#define TRAINER_WATTSON_GYM_8               880
+#define TRAINER_WATTSON_ELITE_4             881
+
+#define TRAINER_FLANNERY_GYM_1              882
+#define TRAINER_FLANNERY_GYM_2              883
+#define TRAINER_FLANNERY_GYM_3              884
+#define TRAINER_FLANNERY_GYM_4              885
+#define TRAINER_FLANNERY_GYM_5              886
+#define TRAINER_FLANNERY_GYM_6              887
+#define TRAINER_FLANNERY_GYM_7              888
+#define TRAINER_FLANNERY_GYM_8              889
+#define TRAINER_FLANNERY_ELITE_4            890
+
+#define TRAINER_NORMAN_GYM_1                891
+#define TRAINER_NORMAN_GYM_2                892
+#define TRAINER_NORMAN_GYM_3                893
+#define TRAINER_NORMAN_GYM_4                894
+#define TRAINER_NORMAN_GYM_5                895
+#define TRAINER_NORMAN_GYM_6                896
+#define TRAINER_NORMAN_GYM_7                897
+#define TRAINER_NORMAN_GYM_8                898
+#define TRAINER_NORMAN_ELITE_4              899
+
+#define TRAINER_WINONA_GYM_1                890
+#define TRAINER_WINONA_GYM_2                891
+#define TRAINER_WINONA_GYM_3                892
+#define TRAINER_WINONA_GYM_4                893
+#define TRAINER_WINONA_GYM_5                894
+#define TRAINER_WINONA_GYM_6                895
+#define TRAINER_WINONA_GYM_7                896
+#define TRAINER_WINONA_GYM_8                897
+#define TRAINER_WINONA_ELITE_4              898
+
+#define TRAINER_TATE_GYM_1                  899
+#define TRAINER_TATE_GYM_2                  900
+#define TRAINER_TATE_GYM_3                  901
+#define TRAINER_TATE_GYM_4                  902
+#define TRAINER_TATE_GYM_5                  903
+#define TRAINER_TATE_GYM_6                  904
+#define TRAINER_TATE_GYM_7                  905
+#define TRAINER_TATE_GYM_8                  906
+#define TRAINER_TATE_ELITE_4                907
+
+#define TRAINER_JUAN_GYM_1                  908
+#define TRAINER_JUAN_GYM_2                  909
+#define TRAINER_JUAN_GYM_3                  910
+#define TRAINER_JUAN_GYM_4                  911
+#define TRAINER_JUAN_GYM_5                  912
+#define TRAINER_JUAN_GYM_6                  913
+#define TRAINER_JUAN_GYM_7                  914
+#define TRAINER_JUAN_GYM_8                  915
+#define TRAINER_JUAN_ELITE_4                916
+
+#define TRAINER_SIDNEY_GYM_1                917
+#define TRAINER_SIDNEY_GYM_2                918
+#define TRAINER_SIDNEY_GYM_3                919
+#define TRAINER_SIDNEY_GYM_4                920
+#define TRAINER_SIDNEY_GYM_5                921
+#define TRAINER_SIDNEY_GYM_6                922
+#define TRAINER_SIDNEY_GYM_7                923
+#define TRAINER_SIDNEY_GYM_8                924
+#define TRAINER_SIDNEY_ELITE_4              925
+
+#define TRAINER_PHOEBE_GYM_1                926
+#define TRAINER_PHOEBE_GYM_2                927
+#define TRAINER_PHOEBE_GYM_3                928
+#define TRAINER_PHOEBE_GYM_4                929
+#define TRAINER_PHOEBE_GYM_5                930
+#define TRAINER_PHOEBE_GYM_6                931
+#define TRAINER_PHOEBE_GYM_7                932
+#define TRAINER_PHOEBE_GYM_8                933
+#define TRAINER_PHOEBE_ELITE_4              934
+
+#define TRAINER_GLACIA_GYM_1                935
+#define TRAINER_GLACIA_GYM_2                936
+#define TRAINER_GLACIA_GYM_3                937
+#define TRAINER_GLACIA_GYM_4                938
+#define TRAINER_GLACIA_GYM_5                939
+#define TRAINER_GLACIA_GYM_6                940
+#define TRAINER_GLACIA_GYM_7                941
+#define TRAINER_GLACIA_GYM_8                942
+#define TRAINER_GLACIA_ELITE_4              943
+
+#define TRAINER_DRAKE_GYM_1                 944
+#define TRAINER_DRAKE_GYM_2                 945
+#define TRAINER_DRAKE_GYM_3                 946
+#define TRAINER_DRAKE_GYM_4                 947
+#define TRAINER_DRAKE_GYM_5                 948
+#define TRAINER_DRAKE_GYM_6                 949
+#define TRAINER_DRAKE_GYM_7                 950
+#define TRAINER_DRAKE_GYM_8                 951
+#define TRAINER_DRAKE_ELITE_4               952
+
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      855
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      953
+#define MAX_TRAINERS_COUNT                  1600
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

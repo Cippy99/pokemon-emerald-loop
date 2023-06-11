@@ -691,6 +691,7 @@ EventScript_BackupMrBrineyLocation::
 	.include "data/scripts/rival_graphics.inc"
 	.include "data/scripts/important_fight_graphics.inc"
 	.include "data/scripts/set_gym_trainers.inc"
+	.include "data/scripts/important_fights/gym1.inc"
 
 Common_EventScript_ShowBagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT

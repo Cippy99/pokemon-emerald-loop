@@ -8,7 +8,8 @@ RustboroCity_Gym_OnTransition:
 	end
 
 RustboroCity_Gym_EventScript_Leader::
-	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	copyvar VAR_0x8003 VAR_GYM_1_LEADER
+	call Common_EventScript_StartGym1Fight
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM39, RustboroCity_Gym_EventScript_GiveRockTomb
@@ -16,7 +17,7 @@ RustboroCity_Gym_EventScript_Leader::
 	release
 	end
 
-RustboroCity_Gym_EventScript_RoxanneDefeated::
+RustboroCity_Gym_EventScript_LeaderDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
