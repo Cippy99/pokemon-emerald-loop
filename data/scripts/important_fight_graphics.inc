@@ -89,5 +89,5 @@ EventScript_SetupImportantFightGfxId_Steel::
     return
 
 EventScript_SetupImportantFightGfxId_Fairy::
-    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_MOM
+    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_VALERIE
     return
