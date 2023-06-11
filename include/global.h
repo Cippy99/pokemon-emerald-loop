@@ -16,6 +16,9 @@
 #include "constants/easy_chat.h"
 #include "constants/trainer_hill.h"
 
+// Free saveblock 1 defines
+#define FREE_UNION_ROOM_CHAT
+
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
 
@@ -1068,7 +1071,9 @@ struct SaveBlock1
     /*0x3???*/ struct RecordMixingGift recordMixingGift;
     /*0x3???*/ LilycoveLady lilycoveLady;
     /*0x3???*/ struct TrainerNameRecord trainerNameRecords[20];
+    #ifndef FREE_UNION_ROOM_CHAT
     /*0x3???*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
+    #endif
     /*0x3???*/ struct TrainerHillSave trainerHill;
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
