@@ -14,6 +14,12 @@ script(global) Common_EventScript_StartGym1Fight{
         case TYPE_FLYING: call(flyingFight)
         case TYPE_PSYCHIC: call(psychicFight)
         case TYPE_FIGHTING: call(fightingFight)
+        case TYPE_GROUND: call(groundFight)
+        case TYPE_GRASS: call(grassFight)
+        case TYPE_STEEL: call(steelFight)
+        case TYPE_BUG: call(bugFight)
+        case TYPE_POISON: call(poisonFight)
+        case TYPE_FAIRY: call(fairyFight)
         default: call(normalFight)
 
     }
@@ -173,9 +179,9 @@ script(local) fairyFight {
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_VALERIE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_VALERIE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }
 

@@ -979,11 +979,21 @@
 #define TRAINER_DRAKE_GYM_8                 951
 #define TRAINER_DRAKE_ELITE_4               952
 
+#define TRAINER_VALERIE_GYM_1               953
+#define TRAINER_VALERIE_GYM_2               954
+#define TRAINER_VALERIE_GYM_3               955
+#define TRAINER_VALERIE_GYM_4               956
+#define TRAINER_VALERIE_GYM_5               957
+#define TRAINER_VALERIE_GYM_6               958
+#define TRAINER_VALERIE_GYM_7               959
+#define TRAINER_VALERIE_GYM_8               960
+#define TRAINER_VALERIE_ELITE_4             961
+
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      953
+#define TRAINERS_COUNT                      962
 #define MAX_TRAINERS_COUNT                  1600
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

@@ -13,6 +13,12 @@ Common_EventScript_StartGym1Fight::
 	case TYPE_FLYING, Common_EventScript_StartGym1Fight_11
 	case TYPE_PSYCHIC, Common_EventScript_StartGym1Fight_12
 	case TYPE_FIGHTING, Common_EventScript_StartGym1Fight_13
+	case TYPE_GROUND, Common_EventScript_StartGym1Fight_14
+	case TYPE_GRASS, Common_EventScript_StartGym1Fight_15
+	case TYPE_STEEL, Common_EventScript_StartGym1Fight_16
+	case TYPE_BUG, Common_EventScript_StartGym1Fight_17
+	case TYPE_POISON, Common_EventScript_StartGym1Fight_18
+	case TYPE_FAIRY, Common_EventScript_StartGym1Fight_19
 	call normalFight
 	return
 
@@ -62,6 +68,30 @@ Common_EventScript_StartGym1Fight_12:
 
 Common_EventScript_StartGym1Fight_13:
 	call fightingFight
+	return
+
+Common_EventScript_StartGym1Fight_14:
+	call groundFight
+	return
+
+Common_EventScript_StartGym1Fight_15:
+	call grassFight
+	return
+
+Common_EventScript_StartGym1Fight_16:
+	call steelFight
+	return
+
+Common_EventScript_StartGym1Fight_17:
+	call bugFight
+	return
+
+Common_EventScript_StartGym1Fight_18:
+	call poisonFight
+	return
+
+Common_EventScript_StartGym1Fight_19:
+	call fairyFight
 	return
 
 
@@ -249,11 +279,11 @@ fairyFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, fairyFight_2
-	trainerbattle_single TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_VALERIE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 fairyFight_2:
-	trainerbattle_single TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_VALERIE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 

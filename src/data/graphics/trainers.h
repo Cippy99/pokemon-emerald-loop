@@ -290,3 +290,6 @@ const u32 gTrainerBackPicPalette_Red[] = INCBIN_U32("graphics/trainers/back_pics
 const u32 gTrainerBackPicPalette_Leaf[] = INCBIN_U32("graphics/trainers/back_pics/leaf.gbapal.lz");
 
 // Gym Leaders custom
+
+const u32 gTrainerFrontPic_LeaderValerie[] = INCBIN_U32("graphics/trainers/front_pics/leader_valerie.4bpp.lz");
+const u32 gTrainerPalette_LeaderValerie[] = INCBIN_U32("graphics/trainers/palettes/valerie.gbapal.lz");
