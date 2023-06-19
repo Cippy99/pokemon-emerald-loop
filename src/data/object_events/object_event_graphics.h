@@ -380,3 +380,15 @@ const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/h
 
 const u32 gObjectEventPic_Valerie[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/valerie.4bpp");
 const u16 gObjectEventPal_Valerie[] = INCBIN_U16("graphics/object_events/palettes/gym_leaders/valerie.gbapal");
+
+const u32 gObjectEventPic_Erika[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/erika.4bpp");
+const u16 gObjectEventPal_Erika[] = INCBIN_U16("graphics/object_events/palettes/gym_leaders/erika.gbapal");
+
+const u32 gObjectEventPic_Giovanni[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/giovanni.4bpp");
+const u16 gObjectEventPal_Giovanni[] = INCBIN_U16("graphics/object_events/palettes/gym_leaders/giovanni.gbapal");
+
+const u32 gObjectEventPic_Koga[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/koga.4bpp");
+const u16 gObjectEventPal_Koga[] = INCBIN_U16("graphics/object_events/palettes/gym_leaders/koga.gbapal");
+
+const u32 gObjectEventPic_Bugsy[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/bugsy.4bpp");
+const u16 gObjectEventPal_Bugsy[] = INCBIN_U16("graphics/object_events/palettes/gym_leaders/bugsy.gbapal");

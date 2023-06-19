@@ -455,6 +455,10 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 
 // Gym Leaders Custom
 #define OBJ_EVENT_PAL_VALERIE                     0X1124
+#define OBJ_EVENT_PAL_GIOVANNI                    0X1125
+#define OBJ_EVENT_PAL_ERIKA                       0X1126
+#define OBJ_EVENT_PAL_KOGA                        0X1127
+#define OBJ_EVENT_PAL_BUGSY                       0X1128
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -502,6 +506,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
     // Gym Leaders Custom
     {gObjectEventPal_Valerie,               OBJ_EVENT_PAL_VALERIE},
+    {gObjectEventPal_Giovanni,              OBJ_EVENT_PAL_GIOVANNI},
+    {gObjectEventPal_Erika,                 OBJ_EVENT_PAL_ERIKA},
+    {gObjectEventPal_Koga,                  OBJ_EVENT_PAL_KOGA},
+    {gObjectEventPal_Bugsy,                 OBJ_EVENT_PAL_BUGSY},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

@@ -7185,6 +7185,10 @@ extern const u32 gTrainerFrontPic_RubySapphireMay[];
 
 // Gym Leaders Custom
 extern const u32 gTrainerFrontPic_LeaderValerie[];
+extern const u32 gTrainerFrontPic_LeaderErika[];
+extern const u32 gTrainerFrontPic_LeaderGiovanni[];
+extern const u32 gTrainerFrontPic_LeaderKoga[];
+extern const u32 gTrainerFrontPic_LeaderBugsy[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -7282,6 +7286,10 @@ extern const u32 gTrainerPalette_RubySapphireMay[];
 
 // Gym Leaders Custom
 extern const u32 gTrainerPalette_LeaderValerie[];
+extern const u32 gTrainerPalette_LeaderErika[];
+extern const u32 gTrainerPalette_LeaderGiovanni[];
+extern const u32 gTrainerPalette_LeaderKoga[];
+extern const u32 gTrainerPalette_LeaderBugsy[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];

@@ -37,7 +37,7 @@ EventScript_SetupImportantFightGfxId_Water::
     return
 
 EventScript_SetupImportantFightGfxId_Grass::
-    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_BEAUTY
+    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_ERIKA
     return
 
 EventScript_SetupImportantFightGfxId_Electric::
@@ -73,15 +73,15 @@ EventScript_SetupImportantFightGfxId_Dragon::
     return
 
 EventScript_SetupImportantFightGfxId_Poison::
-    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_AQUA_MEMBER_M
+    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_KOGA
     return
 
 EventScript_SetupImportantFightGfxId_Ground::
-    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_MAGMA_MEMBER_M
+    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_GIOVANNI
     return
 
 EventScript_SetupImportantFightGfxId_Bug::
-    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_BUG_CATCHER
+    setvar VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_BUGSY
     return
 
 EventScript_SetupImportantFightGfxId_Steel::

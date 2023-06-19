@@ -96,6 +96,10 @@ const struct MonCoords gTrainerFrontPicCoords[] =
 
     // Gym Leaders Custom
     [TRAINER_PIC_LEADER_VALERIE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_ERIKA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_GIOVANNI] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_KOGA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_BUGSY] = {.size = 8, .y_offset = 1},
 
 };
 
@@ -199,6 +203,10 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
 
     // Gym Leaders Custom
     TRAINER_SPRITE(LEADER_VALERIE, gTrainerFrontPic_LeaderValerie, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(LEADER_GIOVANNI, gTrainerFrontPic_LeaderGiovanni, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(LEADER_ERIKA, gTrainerFrontPic_LeaderErika, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(LEADER_KOGA, gTrainerFrontPic_LeaderKoga, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(LEADER_BUGSY, gTrainerFrontPic_LeaderBugsy, TRAINER_PIC_SIZE),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -301,4 +309,8 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
 
     // Gym Leaders Custom
     TRAINER_PAL(LEADER_VALERIE, gTrainerPalette_LeaderValerie),
+    TRAINER_PAL(LEADER_GIOVANNI, gTrainerPalette_LeaderGiovanni),
+    TRAINER_PAL(LEADER_ERIKA, gTrainerPalette_LeaderErika),
+    TRAINER_PAL(LEADER_KOGA, gTrainerPalette_LeaderKoga),
+    TRAINER_PAL(LEADER_BUGSY, gTrainerPalette_LeaderBugsy),
 };

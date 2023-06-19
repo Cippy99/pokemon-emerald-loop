@@ -375,6 +375,22 @@ static const union AnimCmd *const sAnims_LeaderValerie[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_LeaderKoga[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderGiovanni[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderErika[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderBugsy[] ={
+    sAnim_GeneralFrame0,
+};
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -472,5 +488,9 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
 
     // Gym Leaders Custom
+    [TRAINER_PIC_LEADER_BUGSY] = sAnims_LeaderBugsy,
+    [TRAINER_PIC_LEADER_GIOVANNI] = sAnims_LeaderGiovanni,
+    [TRAINER_PIC_LEADER_ERIKA] = sAnims_LeaderErika,
+    [TRAINER_PIC_LEADER_KOGA] = sAnims_LeaderKoga,
     [TRAINER_PIC_LEADER_VALERIE] = sAnims_LeaderValerie,
 };

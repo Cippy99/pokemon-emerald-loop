@@ -149,9 +149,9 @@ script(local) poisonFight {
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_KOGA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_KOGA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }
 
@@ -159,9 +159,9 @@ script(local) groundFight {
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }
 
@@ -169,9 +169,9 @@ script(local) grassFight {
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_ERIKA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_ERIKA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }
 
@@ -189,9 +189,9 @@ script(local) steelFight {
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_STEVEN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_STEVEN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }
 
@@ -199,8 +199,8 @@ script(local) bugFight {
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_BUGSY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_BUGSY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }

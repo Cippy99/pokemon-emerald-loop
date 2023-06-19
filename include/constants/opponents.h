@@ -989,11 +989,61 @@
 #define TRAINER_VALERIE_GYM_8               960
 #define TRAINER_VALERIE_ELITE_4             961
 
+#define TRAINER_ERIKA_GYM_1                 962
+#define TRAINER_ERIKA_GYM_2                 963
+#define TRAINER_ERIKA_GYM_3                 964
+#define TRAINER_ERIKA_GYM_4                 965
+#define TRAINER_ERIKA_GYM_5                 966
+#define TRAINER_ERIKA_GYM_6                 967
+#define TRAINER_ERIKA_GYM_7                 968
+#define TRAINER_ERIKA_GYM_8                 969
+#define TRAINER_ERIKA_ELITE_4               970
+
+#define TRAINER_GIOVANNI_GYM_1              971
+#define TRAINER_GIOVANNI_GYM_2              972
+#define TRAINER_GIOVANNI_GYM_3              973
+#define TRAINER_GIOVANNI_GYM_4              974
+#define TRAINER_GIOVANNI_GYM_5              975
+#define TRAINER_GIOVANNI_GYM_6              976
+#define TRAINER_GIOVANNI_GYM_7              977
+#define TRAINER_GIOVANNI_GYM_8              978
+#define TRAINER_GIOVANNI_ELITE_4            979
+
+#define TRAINER_KOGA_GYM_1                  980
+#define TRAINER_KOGA_GYM_2                  981
+#define TRAINER_KOGA_GYM_3                  982
+#define TRAINER_KOGA_GYM_4                  983
+#define TRAINER_KOGA_GYM_5                  984
+#define TRAINER_KOGA_GYM_6                  985
+#define TRAINER_KOGA_GYM_7                  986
+#define TRAINER_KOGA_GYM_8                  987
+#define TRAINER_KOGA_ELITE_4                988
+
+#define TRAINER_BUGSY_GYM_1                 989
+#define TRAINER_BUGSY_GYM_2                 990
+#define TRAINER_BUGSY_GYM_3                 991
+#define TRAINER_BUGSY_GYM_4                 992
+#define TRAINER_BUGSY_GYM_5                 993
+#define TRAINER_BUGSY_GYM_6                 994
+#define TRAINER_BUGSY_GYM_7                 995
+#define TRAINER_BUGSY_GYM_8                 996
+#define TRAINER_BUGSY_ELITE_4               997
+
+#define TRAINER_STEVEN_GYM_1                998
+#define TRAINER_STEVEN_GYM_2                999
+#define TRAINER_STEVEN_GYM_3               1000
+#define TRAINER_STEVEN_GYM_4               1001
+#define TRAINER_STEVEN_GYM_5               1002
+#define TRAINER_STEVEN_GYM_6               1003
+#define TRAINER_STEVEN_GYM_7               1004
+#define TRAINER_STEVEN_GYM_8               1005
+#define TRAINER_STEVEN_ELITE_4             1006
+
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      962
+#define TRAINERS_COUNT                      1007 //Last +1
 #define MAX_TRAINERS_COUNT                  1600
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
