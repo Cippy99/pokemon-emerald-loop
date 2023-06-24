@@ -1,0 +1,393 @@
+// Gym Intro Texts
+text RoxanneIntroGym{
+    "Hello, I am ROXANNE, the leader\n"
+	"of this gym.\p"
+	"I became a GYM LEADER so that I might\n"
+	"apply what I learned at the POKéMON\l"
+	"TRAINER'S SCHOOL in battle.\p"
+	"Would you kindly demonstrate how you\n"
+	"battle, and with which POKéMON?"
+}
+
+text BrawlyIntroGym{
+	"I'm BRAWLY!\n"
+	"I am a GYM LEADER!\p"
+	"I've been churned in the rough waves\n"
+	"of these parts, and I've grown tough\l"
+	"in the pitch-black cave!\p"
+	"So you wanted to challenge me?\n"
+	"Let me see what you're made of!"
+}
+
+text WattsonIntroGym{
+	"I've given up on my plans to convert\n"
+	"the city, I have.\p"
+	"And so, I put my time into making\n"
+	"a puzzle for my GYM.\p"
+	"Oh? Now, what are you doing here?\p"
+	"What's that? You say you've gotten\n"
+	"past all my tricks?\p"
+	"Wahahahah!\n"
+	"Now, that is amusing!\p"
+	"Then, I, WATTSON shall electrify\n"
+	"you!"
+}
+
+text FlanneryIntroGym{
+    "Welcome… No, wait.\p"
+	"Puny TRAINER, how good to see you've\n"
+	"made it here!\p"
+	"I have been entrusted with the…\n"
+	"No, wait.\p"
+	"I am FLANNERY, and I'm the GYM\n"
+	"LEADER here!\p"
+	"Uh…\n"
+	"Dare not underestimate me, though\l"
+	"I have been LEADER only a short time!\p"
+	"With skills inherited from my grand-\n"
+	"father, I shall, uh…demonstrate the\l"
+	"hot moves we have honed on this land!"
+}
+
+text NormanIntroGym{
+    "DAD: Hm…\n"
+	"So, it seems you've made progress.\p"
+	"Fine, as I promised, we will have\n"
+	"a POKéMON battle.\p"
+	"{PLAYER}…\p"
+	"I'm so happy that I can have\n"
+	"a real battle with my own child.\p"
+	"But, a battle is a battle!\p"
+	"I will do everything in my power as\n"
+	"a GYM LEADER to win.\p"
+	"{PLAYER}, you'd better give it your\n"
+	"best shot, too!"
+}
+
+text WinonaIntroGym{
+    "I am WINONA. I am the LEADER of\n"
+	"this POKéMON GYM.\p"
+	"I have become one with BIRD POKéMON\n"
+	"and have soared the skies…\p"
+	"However grueling the battle, we have\n"
+	"triumphed with grace…\p"
+	"Witness the elegant choreography\n"
+	"of FLYING POKéMON and I!"
+}
+
+text TateIntroGym{
+    "Heh heh heh... I'm Tate. I'm the\n"
+    "GYM LEADER here.\p"
+    "Although my twin sister Liza is away\n"
+    "don't underestimate me.\p"
+    "Thanks to my strict training, I can\n"
+    "make myself one with POKéMON!\p"
+    "Can you beat this combination?"
+}
+
+text JuanIntroGym{
+	"Let me ask you.\n"
+	"Did you know?\l"
+	"Ah, I should not be so coy.\p"
+	"It was I who taught WALLACE everything\n"
+	"there is to know about POKéMON.\p"
+	"Once, I had given up my position as\n"
+	"the GYM LEADER.\p"
+	"In my place, I had entrusted WALLACE\n"
+	"with the GYM.\p"
+	"However, a compelling reason arose for\n"
+	"me to make a comeback.\p"
+	"Ah, but enough chatter.\n"
+	"Let us begin our match, shall we?\p"
+	"Please, you shall bear witness to\n"
+	"our artistry.\p"
+	"A grand illusion of water sculpted\n"
+	"by POKéMON and myself!"
+}
+
+text SidneyIntroGym{
+	"Welcome, challenger!\n"
+	"I'm SIDNEY\p"
+	"I like that look you're giving me.\n"
+	"I guess you'll give me a good match.\l"
+	"That's good! Looking real good!\p"
+	"All right! You and me, let's enjoy\n"
+	"a battle that will be remembered!"
+}
+
+text GlaciaIntroGym{
+	"Welcome, my name is GLACIA\n"
+	"I'm the GYM LEADER here.\p"
+	"I've traveled from afar to HOENN\n"
+	"so that I may hone my ice skills.\p"
+	"But all I have seen are challenges by\n"
+	"weak TRAINERS and their POKéMON.\p"
+	"What about you?\p"
+	"It would please me to no end if I could\n"
+	"go all out against you!$"
+}
+
+text PhoebeIntroGym{
+	"Ahahaha!\p"
+	"I'm PHOEBE the GYM LEADER.\n"
+	"I did my training on MT. PYRE.\p"
+	"While I trained, I gained the ability\n"
+	"to commune with GHOST-type POKéMON.\p"
+	"Yes, the bond I developed with POKéMON\n"
+	"is extremely tight.\p"
+	"So, come on, just try and see if you can\n"
+	"even inflict damage on my POKéMON!$"
+}
+
+text DrakeIntroGym{
+	"I am DRAKE the DRAGON master!\n"
+	"In their natural state, POKéMON are\n"
+	"wild living things. They are free.\p"
+	"At times, they hinder us.\n"
+	"At times, they help us.\p"
+	"For us to battle with POKéMON as\n"
+	"partners, do you know what it takes?\p"
+	"Do you know what is needed?\p"
+	"If you don't, then you will never\n"
+	"prevail over me!$"
+}
+
+text ErikaIntroGym{
+	"Hello…\n"
+    "Lovely weather, isn't it?\l"
+    "It's so pleasant…\p"
+    "…Oh, dear…\n"
+    "I must have dozed off. Welcome.\p"
+    "My name is ERIKA.\n"
+    "I am the LEADER of this Gym.\p"
+    "I am a student of the art of\n"
+    "flower arranging.\p"
+    "My POKéMON are solely of the\n"
+    "GRASS type.\p"
+    "…Oh, I'm sorry, I had no idea that\n"
+    "you wished to challenge me.\p"
+    "Very well, but I shall not lose.$"
+}
+
+text GiovanniIntroGym{
+	"Fwahahaha!\n"
+    "Welcome to my hideout!\p"
+    "It shall be so until I can restore\n"
+    "TEAM ROCKET to its former glory.\p"
+    "But, you have found me again.\n"
+    "So be it.\l"
+    "This time, I'm not holding back!\p"
+    "You shall face GIOVANNI\n"
+    "the greatest TRAINER!$"
+}
+
+text KogaIntroGym{
+	"Fwahahaha!\p"
+    "A mere child like you dares to\n"
+    "challenge me?\p"
+    "The very idea makes me shiver\n"
+    "with mirth!\p"
+    "Very well, I shall show you true\n"
+    "terror as a ninja master.\p"
+    "Poison brings steady doom.\n"
+    "Sleep renders foes helpless.\p"
+    "Despair to the creeping horror of\n"
+    "POISON-type POKéMON!$"
+}
+
+text StevenIntroGym{
+	"Welcome, {PLAYER}. I was looking\n"
+	"forward to seeing you here one day.\p"
+	"You… What did you see on your journey\n"
+	"with POKèMON? What did you feel\l"
+	"meeting so many other Trainers like you?\p"
+	"What has awoken in you? I want you to\n"
+	"hit me with it all!\p"
+	"Now, bring it!"
+}
+
+text BugsyIntroGym{
+	"I'm Bugsy! I never lose when it comes to\n"
+	"bug POKèMON.\p"
+	"My research is going to make me the\n"
+	"authority on bug Pokémon!\p"
+	"Let me demonstrate what I've learned\n"
+	"from my studies."
+}
+
+text ValerieIntroGym{
+	"Oh, if it isn't a young Trainer...\n"
+	"So you've flown all the way through my Gym\l"
+	"fluttering down to me on a fortunate wind.\p"
+	"Then I suppose you have earned yourself the right\n"
+	"to a battle, as a reward for your efforts.\p"
+	"I am Valerie, who leads this Fairy-type Gym.\n"
+	"I hope your visit will prove entertaining to you.\p" 
+	"The elusive Fairy types may appear frail\n"
+	"as a breeze and delicate as a bloom\l"
+	"but they are strong."
+}
+
+// Gym Leader Defeated
+
+text RoxanneGymDefeat{
+	"So…\n"
+	"I lost…\p"
+	"It seems that I still have much more\n"
+	"to learn…\p"
+	"I understand.\p"
+	"The POKéMON LEAGUE's rules state\n"
+	"that TRAINERS are to be given this\l"
+	"if they defeat a GYM LEADER.\p"
+	"Please accept this official POKéMON\n"
+	"LEAGUE GYM BADGE.$"
+}
+
+text BrawlyGymDefeat{
+	"Whoah, wow! You made a much bigger\n"
+	"splash than I expected!\p"
+	"You swamped me!\p"
+	"Okay, you've got me.\n"
+	"Take this GYM BADGE!$"
+}
+
+text WattsonGymDefeat{
+	"Wahahahah!\n"
+	"Fine, I lost!\p"
+	"You ended up giving me a thrill!\n"
+	"Take this BADGE!$"
+}
+
+text FlanneryGymDefeat{
+	"Oh…\n"
+	"I guess I was trying too hard…\p"
+	"I… I've only recently become\n"
+	"a GYM LEADER.\p"
+	"I tried too hard to be someone\n"
+	"I'm not.\p"
+	"I have to do things my natural way. If\n"
+	"I don't, my POKéMON will be confused.\p"
+	"Thanks for teaching me that.\n"
+	"For that, you deserve this.$"
+}
+
+text NormanGymDefeat{
+	"…\p"
+	"I… I can't…\p"
+	"I can't believe it. {PLAYER}…\p"
+	"I lost to {PLAYER}?\p"
+	"But, rules are rules!\n"
+	"Here, take this.$"
+}
+
+text WinonaGymDefeat{
+	"Never before have I seen a TRAINER\n"
+	"command POKéMON with more grace\l"
+	"than I…\p"
+	"In recognition of your prowess,\n"
+	"I present to you this GYM BADGE.$"
+}
+
+text TateGymDefeat{
+	"The... The combination of me and my\n"
+	"POKèMON!\p"
+	"It can't be helped. You've won…\n"
+	"So, in recognition, take this.$"
+}
+
+text JuanGymDefeat{
+	"Ahahaha, excellent!\n"
+	"Very well, you are the winner.\p"
+	"From you, I sense the brilliant shine\n"
+	"of skill that will overcome all.\p"
+	"However, compared with me or even\n"
+	"WALLACE, you are lacking in elegance.\p"
+	"Perhaps I should make you a loan\n"
+	"of my outfit?\p"
+	"… … … … … …\n"
+	"… … … … … …\p"
+	"Hahaha, I merely jest!\p"
+	"Rather than my clothes, I shall reward\n"
+	"you with this BADGE!$"
+}
+
+text SidneyGymDefeat{
+	"Well, how do you like that? I lost!\n"
+	"Eh, it was fun, so it doesn't matter.\p"
+	"Take this GYM BADGE!"
+}
+
+text GlaciaGymDefeat{
+	"You and your POKéMON…\n"
+	"How hot your spirits burn!\p"
+	"The all-consuming heat overwhelms.\p"
+	"It's no surprise that my icy skills\n"
+	"failed to harm you.$"
+}
+
+text PhoebeGymDefeat{
+	"Oh, darn.\n"
+	"I've gone and lost.\p"
+	"Take this GYM BADGE!"
+}
+
+text DrakeGymDefeat{
+	"You deserve every credit for coming\n"
+	"this far as a TRAINER of POKéMON.\p"
+	"You do seem to know what is needed.\p"
+	"Yes, what a TRAINER needs is a\n"
+	"virtuous heart.\p"
+	"POKéMON touch the good hearts of\n"
+	"TRAINERS and learn good from wrong.\p"
+	"They touch the good hearts of\n"
+	"TRAINERS and grow strong.\p"
+	"Go! Go onwards!\n"
+	"And take this BADGE!$"
+}
+
+text ErikaGymDefeat{
+	"Oh!\n"
+    "I concede defeat.\l"
+    "You are remarkably strong.\p"
+    "I must confer on you this BADGE"
+}
+
+text GiovanniGymDefeat{
+	"Ha!\n"
+    "That was a truly intense fight.\l"
+    "You have won!\p"
+    "As proof, here is the GYM BADGE!\n"
+}
+
+text KogaGymDefeat{
+	"Humph!\n"
+    "You have proven your worth!\p"
+    "Here!\n"
+    "Take this BADGE!$"
+}
+
+text StevenGymDefeat{
+	"Congratulations! The feelings you have\n"
+	"for your POKèMON…\p"
+	"And the POKèMON that responded to those\n"
+	"feelings with all their might...\p"
+	"They came together as one and created\n"
+	"an even greater power. And thus, you\l"
+	"were able to grasp victory!"
+}
+
+text ValerieGymDefeat{
+	"Yes... That was a fine battle.\n"
+	"I shall reward you for this great victory.\p"
+	"This is a GYM BADGE. It is yours now.\n"
+	"Its beauty is captivating, is it not?\p"
+	"... ... ... ... ... ...\n"
+	"Ah... Do forgive me. I was so captivated\l"
+	"I forgot for a moment that it is yours."
+}
+
+text BugsyGymDefeat{
+	"Whoa, amazing! You're an expert on POKèMON!\n"
+	 "My research isn't complete yet.\p"
+	 "OK, you win. Take this BADGE."
+}
