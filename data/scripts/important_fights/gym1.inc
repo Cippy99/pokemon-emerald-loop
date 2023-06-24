@@ -99,11 +99,11 @@ normalFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, normalFight_2
-	trainerbattle_single TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_NORMAN_GYM_1, NormanIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 normalFight_2:
-	trainerbattle_single TRAINER_NORMAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_NORMAN_GYM_1, NormanIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -111,11 +111,11 @@ rockFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, rockFight_2
-	trainerbattle_single TRAINER_ROXANNE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_ROXANNE_GYM_1, RoxanneIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 rockFight_2:
-	trainerbattle_single TRAINER_ROXANNE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_ROXANNE_GYM_1, RoxanneIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -123,11 +123,11 @@ electricFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, electricFight_2
-	trainerbattle_single TRAINER_WATTSON_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WATTSON_GYM_1, WattsonIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 electricFight_2:
-	trainerbattle_single TRAINER_WATTSON_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WATTSON_GYM_1, WattsonIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -135,11 +135,11 @@ fightingFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, fightingFight_2
-	trainerbattle_single TRAINER_BRAWLY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_BRAWLY_GYM_1, BrawlyIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 fightingFight_2:
-	trainerbattle_single TRAINER_BRAWLY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_BRAWLY_GYM_1, BrawlyIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -147,11 +147,11 @@ psychicFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, psychicFight_2
-	trainerbattle_single TRAINER_TATE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_TATE_GYM_1, TateIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 psychicFight_2:
-	trainerbattle_single TRAINER_TATE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_TATE_GYM_1, TateIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -159,11 +159,11 @@ fireFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, fireFight_2
-	trainerbattle_single TRAINER_FLANNERY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_FLANNERY_GYM_1, FlanneryIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 fireFight_2:
-	trainerbattle_single TRAINER_FLANNERY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_FLANNERY_GYM_1, FlanneryIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -171,11 +171,11 @@ flyingFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, flyingFight_2
-	trainerbattle_single TRAINER_WINONA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WINONA_GYM_1, WinonaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 flyingFight_2:
-	trainerbattle_single TRAINER_WINONA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_WINONA_GYM_1, WinonaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -183,11 +183,11 @@ waterFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, waterFight_2
-	trainerbattle_single TRAINER_JUAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_JUAN_GYM_1, JuanIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 waterFight_2:
-	trainerbattle_single TRAINER_JUAN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_JUAN_GYM_1, JuanIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -195,11 +195,11 @@ darkFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, darkFight_2
-	trainerbattle_single TRAINER_SIDNEY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_SIDNEY_GYM_1, SidneyIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 darkFight_2:
-	trainerbattle_single TRAINER_SIDNEY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_SIDNEY_GYM_1, SidneyIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -207,11 +207,11 @@ ghostFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, ghostFight_2
-	trainerbattle_single TRAINER_PHOEBE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_PHOEBE_GYM_1, PhoebeIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 ghostFight_2:
-	trainerbattle_single TRAINER_PHOEBE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_PHOEBE_GYM_1, PhoebeIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -219,11 +219,11 @@ iceFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, iceFight_2
-	trainerbattle_single TRAINER_GLACIA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_GLACIA_GYM_1, GlaciaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 iceFight_2:
-	trainerbattle_single TRAINER_GLACIA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_GLACIA_GYM_1, GlaciaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -231,11 +231,11 @@ dragonFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, dragonFight_2
-	trainerbattle_single TRAINER_DRAKE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_DRAKE_GYM_1, DrakeIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 dragonFight_2:
-	trainerbattle_single TRAINER_DRAKE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_DRAKE_GYM_1, DrakeIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -243,11 +243,11 @@ poisonFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, poisonFight_2
-	trainerbattle_single TRAINER_KOGA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_KOGA_GYM_1, KogaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 poisonFight_2:
-	trainerbattle_single TRAINER_KOGA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_KOGA_GYM_1, KogaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -255,11 +255,11 @@ groundFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, groundFight_2
-	trainerbattle_single TRAINER_GIOVANNI_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_GIOVANNI_GYM_1, GiovanniIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 groundFight_2:
-	trainerbattle_single TRAINER_GIOVANNI_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_GIOVANNI_GYM_1, GiovanniIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -267,11 +267,11 @@ grassFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, grassFight_2
-	trainerbattle_single TRAINER_ERIKA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_ERIKA_GYM_1, ErikaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 grassFight_2:
-	trainerbattle_single TRAINER_ERIKA_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_ERIKA_GYM_1, ErikaIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -279,11 +279,11 @@ fairyFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, fairyFight_2
-	trainerbattle_single TRAINER_VALERIE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_VALERIE_GYM_1, ValerieIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 fairyFight_2:
-	trainerbattle_single TRAINER_VALERIE_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_VALERIE_GYM_1, ValerieIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -291,11 +291,11 @@ steelFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, steelFight_2
-	trainerbattle_single TRAINER_STEVEN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_STEVEN_GYM_1, StevenIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 steelFight_2:
-	trainerbattle_single TRAINER_STEVEN_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_STEVEN_GYM_1, StevenIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 
@@ -303,10 +303,10 @@ bugFight:
 	getImportantFightSet VAR_0x8003
 	switch VAR_RESULT
 	case 0, bugFight_2
-	trainerbattle_single TRAINER_BUGSY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_BUGSY_GYM_1, BugsyIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
 bugFight_2:
-	trainerbattle_single TRAINER_BUGSY_GYM_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_BUGSY_GYM_1, BugsyIntroGym, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC
 	return
 
