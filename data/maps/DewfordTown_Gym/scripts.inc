@@ -4,6 +4,8 @@ DewfordTown_Gym_MapScripts::
 
 DewfordTown_Gym_OnTransition:
 	call DewfordTown_Gym_EventScript_SetFlashLevel
+	copyvar VAR_0x8003 VAR_GYM_1_LEADER
+	call Common_EventScript_SetupImportantFightGfxId
 	end
 
 DewfordTown_Gym_EventScript_SetFlashLevel::
@@ -132,8 +134,9 @@ DewfordTown_Gym_EventScript_CheckLilith::
 DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
-DewfordTown_Gym_EventScript_Brawly::
-	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+DewfordTown_Gym_EventScript_Leader::
+	copyvar VAR_0x8003 VAR_GYM_1_LEADER
+	call Common_EventScript_StartGym2Fight
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM08, DewfordTown_Gym_EventScript_GiveBulkUp2
@@ -141,7 +144,7 @@ DewfordTown_Gym_EventScript_Brawly::
 	release
 	end
 
-DewfordTown_Gym_EventScript_BrawlyDefeated::
+DewfordTown_Gym_EventScript_LeaderDefeated::
 	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
@@ -378,22 +381,6 @@ DewfordTown_Gym_Text_CristianDefeat:
 DewfordTown_Gym_Text_CristianPostBattle:
 	.string "You win!\n"
 	.string "Go after that BADGE!$"
-
-DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
-	.string "I've been churned in the rough waves\n"
-	.string "of these parts, and I've grown tough\l"
-	.string "in the pitch-black cave!\p"
-	.string "So you wanted to challenge me?\n"
-	.string "Let me see what you're made of!$"
-
-DewfordTown_Gym_Text_BrawlyDefeat:
-	.string "Whoah, wow! You made a much bigger\n"
-	.string "splash than I expected!\p"
-	.string "You swamped me!\p"
-	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
 	.string "{PLAYER} received the KNUCKLE BADGE\n"
