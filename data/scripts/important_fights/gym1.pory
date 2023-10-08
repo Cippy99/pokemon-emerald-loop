@@ -2,30 +2,30 @@ script(global) Common_EventScript_StartGym1Fight{
     // VAR_0x8003 contains Gym Leader Variable
     getImportantFightType(VAR_0x8003)
     switch(var(VAR_RESULT)){
-        case TYPE_NORMAL: call(normalFight)
-        case TYPE_FIRE: call(fireFight)
-        case TYPE_WATER: call(waterFight)
-        case TYPE_GHOST: call(ghostFight)    
-        case TYPE_DARK: call(darkFight)
-        case TYPE_ICE: call(iceFight)
-        case TYPE_DRAGON: call(dragonFight)
-        case TYPE_ELECTRIC: call(electricFight) 
-        case TYPE_ROCK: call(rockFight)
-        case TYPE_FLYING: call(flyingFight)
-        case TYPE_PSYCHIC: call(psychicFight)
-        case TYPE_FIGHTING: call(fightingFight)
-        case TYPE_GROUND: call(groundFight)
-        case TYPE_GRASS: call(grassFight)
-        case TYPE_STEEL: call(steelFight)
-        case TYPE_BUG: call(bugFight)
-        case TYPE_POISON: call(poisonFight)
-        case TYPE_FAIRY: call(fairyFight)
-        default: call(normalFight)
+        case TYPE_NORMAL: call(normalFightGym1)
+        case TYPE_FIRE: call(fireFightGym1)
+        case TYPE_WATER: call(waterFightGym1)
+        case TYPE_GHOST: call(ghostFightGym1)    
+        case TYPE_DARK: call(darkFightGym1)
+        case TYPE_ICE: call(iceFightGym1)
+        case TYPE_DRAGON: call(dragonFightGym1)
+        case TYPE_ELECTRIC: call(electricFightGym1) 
+        case TYPE_ROCK: call(rockFightGym1)
+        case TYPE_FLYING: call(flyingFightGym1)
+        case TYPE_PSYCHIC: call(psychicFightGym1)
+        case TYPE_FIGHTING: call(fightingFightGym1)
+        case TYPE_GROUND: call(groundFightGym1)
+        case TYPE_GRASS: call(grassFightGym1)
+        case TYPE_STEEL: call(steelFightGym1)
+        case TYPE_BUG: call(bugFightGym1)
+        case TYPE_POISON: call(poisonFightGym1)
+        case TYPE_FAIRY: call(fairyFightGym1)
+        default: call(normalFightGym1)
 
     }
 }
 
-script(local) normalFight {
+script(local) normalFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -35,7 +35,7 @@ script(local) normalFight {
     }
 }
 
-script(local) rockFight {
+script(local) rockFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -45,7 +45,7 @@ script(local) rockFight {
     }
 }
 
-script(local) electricFight {
+script(local) electricFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -55,7 +55,7 @@ script(local) electricFight {
     }
 }
 
-script(local) fightingFight {
+script(local) fightingFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -65,7 +65,7 @@ script(local) fightingFight {
     }
 }
 
-script(local) psychicFight {
+script(local) psychicFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -75,7 +75,7 @@ script(local) psychicFight {
     }
 }
 
-script(local) fireFight {
+script(local) fireFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -85,17 +85,17 @@ script(local) fireFight {
     }
 }
 
-script(local) flyingFight {
+script(local) flyingFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
-            trainerbattle_single(TRAINER_WINONA_GYM_1, WinonaIntroGym, FlyingGymDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_WINONA_GYM_1, WinonaIntroGym, WinonaGymDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
-            trainerbattle_single(TRAINER_WINONA_GYM_1, WinonaIntroGym, FlyingGymDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+            trainerbattle_single(TRAINER_WINONA_GYM_1, WinonaIntroGym, WinonaGymDefeat, RustboroCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
     }
 }
 
-script(local) waterFight {
+script(local) waterFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -105,7 +105,7 @@ script(local) waterFight {
     }
 }
 
-script(local) darkFight {
+script(local) darkFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -115,7 +115,7 @@ script(local) darkFight {
     }
 }
 
-script(local) ghostFight {
+script(local) ghostFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -125,7 +125,7 @@ script(local) ghostFight {
     }
 }
 
-script(local) iceFight {
+script(local) iceFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -135,7 +135,7 @@ script(local) iceFight {
     }
 }
 
-script(local) dragonFight {
+script(local) dragonFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -145,7 +145,7 @@ script(local) dragonFight {
     }
 }
 
-script(local) poisonFight {
+script(local) poisonFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -155,7 +155,7 @@ script(local) poisonFight {
     }
 }
 
-script(local) groundFight {
+script(local) groundFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -165,7 +165,7 @@ script(local) groundFight {
     }
 }
 
-script(local) grassFight {
+script(local) grassFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -175,7 +175,7 @@ script(local) grassFight {
     }
 }
 
-script(local) fairyFight {
+script(local) fairyFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -185,7 +185,7 @@ script(local) fairyFight {
     }
 }
 
-script(local) steelFight {
+script(local) steelFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:
@@ -195,7 +195,7 @@ script(local) steelFight {
     }
 }
 
-script(local) bugFight {
+script(local) bugFightGym1{
     getImportantFightSet(VAR_0x8003)
     switch(var(VAR_RESULT)){
         case 0:

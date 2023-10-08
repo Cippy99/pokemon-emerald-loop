@@ -11809,7 +11809,7 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
 // ---------- Gym Leaders -------------------------
 
 // Gym 1
-static const struct TrainerMonCustomized sParty_RoxanneGym1[] = {
+static const struct TrainerMon sParty_RoxanneGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -11848,7 +11848,7 @@ static const struct TrainerMonCustomized sParty_RoxanneGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_BrawlyGym1[] = {
+static const struct TrainerMon sParty_BrawlyGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -11888,7 +11888,7 @@ static const struct TrainerMonCustomized sParty_BrawlyGym1[] = {
 
 };
 
-static const struct TrainerMonCustomized sParty_WattsonGym1[] = {
+static const struct TrainerMon sParty_WattsonGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -11927,7 +11927,7 @@ static const struct TrainerMonCustomized sParty_WattsonGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_FlanneryGym1[] = {
+static const struct TrainerMon sParty_FlanneryGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -11967,7 +11967,7 @@ static const struct TrainerMonCustomized sParty_FlanneryGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_NormanGym1[] = {
+static const struct TrainerMon sParty_NormanGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12006,7 +12006,7 @@ static const struct TrainerMonCustomized sParty_NormanGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_WinonaGym1[] = {
+static const struct TrainerMon sParty_WinonaGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12045,7 +12045,7 @@ static const struct TrainerMonCustomized sParty_WinonaGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_TateGym1[] = {
+static const struct TrainerMon sParty_TateGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12084,7 +12084,7 @@ static const struct TrainerMonCustomized sParty_TateGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_JuanGym1[] = {
+static const struct TrainerMon sParty_JuanGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12123,7 +12123,7 @@ static const struct TrainerMonCustomized sParty_JuanGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_SidneyGym1[] = {
+static const struct TrainerMon sParty_SidneyGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12162,7 +12162,7 @@ static const struct TrainerMonCustomized sParty_SidneyGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_PhoebeGym1[] = {
+static const struct TrainerMon sParty_PhoebeGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12201,7 +12201,7 @@ static const struct TrainerMonCustomized sParty_PhoebeGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_GlaciaGym1[] = {
+static const struct TrainerMon sParty_GlaciaGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12240,7 +12240,7 @@ static const struct TrainerMonCustomized sParty_GlaciaGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_DrakeGym1[] = {
+static const struct TrainerMon sParty_DrakeGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12279,7 +12279,7 @@ static const struct TrainerMonCustomized sParty_DrakeGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_ValerieGym1[] = {
+static const struct TrainerMon sParty_ValerieGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12318,7 +12318,7 @@ static const struct TrainerMonCustomized sParty_ValerieGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_ErikaGym1[] = {
+static const struct TrainerMon sParty_ErikaGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12357,7 +12357,7 @@ static const struct TrainerMonCustomized sParty_ErikaGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_GiovanniGym1[] = {
+static const struct TrainerMon sParty_GiovanniGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12396,7 +12396,7 @@ static const struct TrainerMonCustomized sParty_GiovanniGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_KogaGym1[] = {
+static const struct TrainerMon sParty_KogaGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12435,7 +12435,7 @@ static const struct TrainerMonCustomized sParty_KogaGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_BugsyGym1[] = {
+static const struct TrainerMon sParty_BugsyGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12474,7 +12474,7 @@ static const struct TrainerMonCustomized sParty_BugsyGym1[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_StevenGym1[] = {
+static const struct TrainerMon sParty_StevenGym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12514,7 +12514,7 @@ static const struct TrainerMonCustomized sParty_StevenGym1[] = {
 };
 
 /*
-static const struct TrainerMonCustomized sParty_Gym1[] = {
+static const struct TrainerMon sParty_Gym1[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12556,7 +12556,7 @@ static const struct TrainerMonCustomized sParty_Gym1[] = {
 
 // Gym 2
 
-static const struct TrainerMonCustomized sParty_RoxanneGym2[] = {
+static const struct TrainerMon sParty_RoxanneGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12595,7 +12595,7 @@ static const struct TrainerMonCustomized sParty_RoxanneGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_BrawlyGym2[] = {
+static const struct TrainerMon sParty_BrawlyGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12635,7 +12635,7 @@ static const struct TrainerMonCustomized sParty_BrawlyGym2[] = {
 
 };
 
-static const struct TrainerMonCustomized sParty_WattsonGym2[] = {
+static const struct TrainerMon sParty_WattsonGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12674,7 +12674,7 @@ static const struct TrainerMonCustomized sParty_WattsonGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_FlanneryGym2[] = {
+static const struct TrainerMon sParty_FlanneryGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12714,7 +12714,7 @@ static const struct TrainerMonCustomized sParty_FlanneryGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_NormanGym2[] = {
+static const struct TrainerMon sParty_NormanGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12753,7 +12753,7 @@ static const struct TrainerMonCustomized sParty_NormanGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_WinonaGym2[] = {
+static const struct TrainerMon sParty_WinonaGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12792,7 +12792,7 @@ static const struct TrainerMonCustomized sParty_WinonaGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_TateGym2[] = {
+static const struct TrainerMon sParty_TateGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12815,7 +12815,7 @@ static const struct TrainerMonCustomized sParty_TateGym2[] = {
     .lvl = 18,
     .species = SPECIES_INKAY,
     .ability = ABILITY_CONTRARY,
-    .moves = MOVE_PSYBEAM, MOVE_PLUCK, MOVE_PAYBACK, MOVE_SWAGGER}
+    .moves = {MOVE_PSYBEAM, MOVE_PLUCK, MOVE_PAYBACK, MOVE_SWAGGER}
     },
     {
     .ball = ITEM_POKE_BALL,
@@ -12831,7 +12831,7 @@ static const struct TrainerMonCustomized sParty_TateGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_JuanGym2[] = {
+static const struct TrainerMon sParty_JuanGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12870,7 +12870,7 @@ static const struct TrainerMonCustomized sParty_JuanGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_SidneyGym2[] = {
+static const struct TrainerMon sParty_SidneyGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12909,7 +12909,7 @@ static const struct TrainerMonCustomized sParty_SidneyGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_PhoebeGym2[] = {
+static const struct TrainerMon sParty_PhoebeGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12948,7 +12948,7 @@ static const struct TrainerMonCustomized sParty_PhoebeGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_GlaciaGym2[] = {
+static const struct TrainerMon sParty_GlaciaGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -12987,7 +12987,7 @@ static const struct TrainerMonCustomized sParty_GlaciaGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_DrakeGym2[] = {
+static const struct TrainerMon sParty_DrakeGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -13026,7 +13026,7 @@ static const struct TrainerMonCustomized sParty_DrakeGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_ValerieGym2[] = {
+static const struct TrainerMon sParty_ValerieGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -13065,7 +13065,7 @@ static const struct TrainerMonCustomized sParty_ValerieGym2[] = {
     }    
 };
 
-static const struct TrainerMonCustomized sParty_ErikaGym2[] = {
+static const struct TrainerMon sParty_ErikaGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -13104,7 +13104,7 @@ static const struct TrainerMonCustomized sParty_ErikaGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_GiovanniGym2[] = {
+static const struct TrainerMon sParty_GiovanniGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -13143,7 +13143,7 @@ static const struct TrainerMonCustomized sParty_GiovanniGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_KogaGym2[] = {
+static const struct TrainerMon sParty_KogaGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -13182,7 +13182,7 @@ static const struct TrainerMonCustomized sParty_KogaGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_BugsyGym2[] = {
+static const struct TrainerMon sParty_BugsyGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
@@ -13221,7 +13221,7 @@ static const struct TrainerMonCustomized sParty_BugsyGym2[] = {
     }
 };
 
-static const struct TrainerMonCustomized sParty_StevenGym2[] = {
+static const struct TrainerMon sParty_StevenGym2[] = {
     {
     .ball = ITEM_POKE_BALL,
     .friendship = 255,
