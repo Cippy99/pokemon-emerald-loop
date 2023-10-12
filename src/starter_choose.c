@@ -23,6 +23,7 @@
 #include "window.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
+#include "random.h"
 
 #define STARTER_MON_COUNT   3
 
@@ -59,6 +60,8 @@ const u32 gBirchGrassTilemap[] = INCBIN_U32("graphics/starter_choose/birch_grass
 const u32 gBirchBagGrass_Gfx[] = INCBIN_U32("graphics/starter_choose/tiles.4bpp.lz");
 const u32 gPokeballSelection_Gfx[] = INCBIN_U32("graphics/starter_choose/pokeball_selection.4bpp.lz");
 static const u32 sStarterCircle_Gfx[] = INCBIN_U32("graphics/starter_choose/starter_circle.4bpp.lz");
+
+EWRAM_DATA static u16 sStarterList[STARTER_MON_COUNT] = {0};
 
 static const struct WindowTemplate sWindowTemplates[] =
 {
@@ -110,11 +113,40 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
     {8, 4},
 };
 
-static const u16 sStarterMon[STARTER_MON_COUNT] =
+static const u16 sStarterMonGrass[8] =
 {
+    SPECIES_BULBASAUR,
+    SPECIES_CHIKORITA,
     SPECIES_TREECKO,
+    SPECIES_TURTWIG,
+    SPECIES_SNIVY,
+    SPECIES_CHESPIN,
+    SPECIES_ROWLET,
+    SPECIES_GROOKEY,
+};
+
+static const u16 sStarterMonFire[8] =
+{
+    SPECIES_CHARMANDER,
+    SPECIES_CYNDAQUIL,
     SPECIES_TORCHIC,
+    SPECIES_CHIMCHAR,
+    SPECIES_TEPIG,
+    SPECIES_FENNEKIN,
+    SPECIES_LITTEN,
+    SPECIES_SCORBUNNY,
+};
+
+static const u16 sStarterMonWater[8] =
+{
+    SPECIES_SQUIRTLE,
+    SPECIES_TOTODILE,
     SPECIES_MUDKIP,
+    SPECIES_PIPLUP,
+    SPECIES_OSHAWOTT,
+    SPECIES_FROAKIE,
+    SPECIES_POPPLIO,
+    SPECIES_SOBBLE,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
@@ -352,7 +384,28 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+
+    if (sStarterList[chosenStarterId] == 0){
+        switch (chosenStarterId)
+        {
+        case 0:
+            sStarterList[chosenStarterId] = sStarterMonGrass[Random() % 8];
+            break;
+
+        case 1:
+            sStarterList[chosenStarterId] = sStarterMonFire[Random() % 8];
+            break;
+
+        case 2:
+            sStarterList[chosenStarterId] = sStarterMonWater[Random() % 8];
+            break;
+        
+        default:
+            break;
+        }
+    }
+
+    return sStarterList[chosenStarterId];
 }
 
 static void VblankCB_StarterChoose(void)
