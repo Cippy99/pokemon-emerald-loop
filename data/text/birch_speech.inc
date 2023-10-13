@@ -59,3 +59,25 @@ gText_Birch_AreYouReady::
 	.string "Well, I'll be expecting you later.\n"
 	.string "Come see me in my POKéMON LAB.\p"
 	.string "$"
+
+gText_Birch_Difficulty::
+	.string "Now please select the\n"
+	.string "difficulty of the game.$"
+
+
+gText_Birch_DifficultyExplain::
+	.string "On EASY mode no restriction will be\n"
+	.string "applied. This is recommended for a\l"
+	.string "casual playthrough.\p"
+	.string "On NORMAL mode battle stye will always\n"
+	.string "be SET and exp gaining is boosted but\l"
+	.string "level cap is in play. This mean your\l"
+	.string "pokemon will not grow past the level of\l"
+	.string "the next boss' ace pokèmon. Choose\l"
+	.string "this difficulty if you want more of a\l"
+	.string "challenge.\p"
+	.string "On HARD mode, besides all previous\n"
+	.string "restrictions, you will not be able to\l"
+	.string "use healing item during battle.\l"
+	.string "Only for experts.$"
+	

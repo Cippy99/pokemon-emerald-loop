@@ -165,6 +165,7 @@
 
 #define OPTION_MENU_FLAG (1 << 15)
 
+#define DIFFICULTY_WINDOW_ID 3
 // Static type declarations
 
 // Static RAM declarations
@@ -244,6 +245,17 @@ static void MainMenu_FormatSavegamePokedex(void);
 static void MainMenu_FormatSavegameTime(void);
 static void MainMenu_FormatSavegameBadges(void);
 static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8, u8, u8, u8, u8, u8);
+
+//Difficulty Settings
+static void Task_NewGameBirchSpeech_Difficulty(u8);
+static void Task_NewGameBirchSpeech_WaitToShowDifficultyMenu(u8);
+static void Task_NewGameBirchSpeech_ChooseDifficulty(u8);
+static void NewGameBirchSpeech_ShowDifficultyMenu(void);
+static s8 NewGameBirchSpeech_ProcessDifficultyMenuInput(void);
+static void NewGameBirchSpeech_ClearDifficultyWindow(u8, u8);
+static void Task_NewGameBirchSpeech_ExplainDifficulty(u8);
+static void Task_NewGameBirchSpeech_WaitForExplainDifficultyToPrint(u8);
+static void Task_NewGameBirchSpeech_WaitPressBeforeDifficulty(u8);
 
 // .rodata
 
@@ -401,6 +413,15 @@ static const struct WindowTemplate sNewGameBirchSpeechTextWindows[] =
         .paletteNum = 15,
         .baseBlock = 0x85
     },
+    {
+        .bg = 0,
+        .tilemapLeft = 3,
+        .tilemapTop = 2,
+        .width = 7,
+        .height = 8,
+        .paletteNum = 15,
+        .baseBlock = 0x85
+    },
     DUMMY_WIN_TEMPLATE
 };
 
@@ -456,6 +477,13 @@ static const union AffineAnimCmd *const sSpriteAffineAnimTable_PlayerShrink[] =
 static const struct MenuAction sMenuActions_Gender[] = {
     {gText_BirchBoy, NULL},
     {gText_BirchGirl, NULL}
+};
+
+static const struct MenuAction sMenuActions_Difficulty[] = {
+    {gText_EasyDiff, NULL},
+    {gText_NormalDiff, NULL},
+    {gText_HardDiff, NULL},
+    {gText_Info, NULL}
 };
 
 static const u8 *const sMalePresetNames[] = {
@@ -1509,13 +1537,13 @@ static void Task_NewGameBirchSpeech_ChooseGender(u8 taskId)
             PlaySE(SE_SELECT);
             gSaveBlock2Ptr->playerGender = gender;
             NewGameBirchSpeech_ClearGenderWindow(1, 1);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_WhatsYourName;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_Difficulty;
             break;
         case FEMALE:
             PlaySE(SE_SELECT);
             gSaveBlock2Ptr->playerGender = gender;
             NewGameBirchSpeech_ClearGenderWindow(1, 1);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_WhatsYourName;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_Difficulty;
             break;
     }
     gender2 = Menu_GetCursorPos();
@@ -1783,6 +1811,114 @@ static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
         SetMainCallback2(CB2_NewGame);
         DestroyTask(taskId);
     }
+}
+
+static void Task_NewGameBirchSpeech_Difficulty(u8 taskId)
+{
+    NewGameBirchSpeech_ClearWindow(0);
+    StringExpandPlaceholders(gStringVar4, gText_Birch_Difficulty);
+    AddTextPrinterForMessage(TRUE);
+    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowDifficultyMenu;
+
+}
+
+static void Task_NewGameBirchSpeech_WaitToShowDifficultyMenu(u8 taskId)
+{
+    if (!RunTextPrintersAndIsPrinter0Active())
+    {
+        NewGameBirchSpeech_ShowDifficultyMenu();
+        gTasks[taskId].func = Task_NewGameBirchSpeech_ChooseDifficulty;
+    }
+}
+
+
+static void Task_NewGameBirchSpeech_ChooseDifficulty(u8 TaskId)
+{
+    int difficulty = NewGameBirchSpeech_ProcessDifficultyMenuInput();
+
+    // MgbaPrintf(MGBA_LOG_INFO, "Difficulty: %d", difficulty);
+    switch (difficulty){
+        case 0:
+            PlaySE(SE_SELECT);
+            VarSet(VAR_DIFFICULTY, DIFFICULTY_EASY);
+            NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
+            gTasks[TaskId].func = Task_NewGameBirchSpeech_WhatsYourName;
+            break;
+
+        case 1:
+            PlaySE(SE_SELECT);
+            VarSet(VAR_DIFFICULTY, DIFFICULTY_EASY);
+            NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
+            gTasks[TaskId].func = Task_NewGameBirchSpeech_WhatsYourName;
+            break;
+
+        case 2:
+            PlaySE(SE_SELECT);
+            VarSet(VAR_DIFFICULTY, DIFFICULTY_EASY);
+            NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
+            gTasks[TaskId].func = Task_NewGameBirchSpeech_WhatsYourName;
+            break;
+        
+        case 3:
+            PlaySE(SE_SELECT);
+            NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
+            gTasks[TaskId].func = Task_NewGameBirchSpeech_ExplainDifficulty;
+            break;
+    }
+
+    // NewGameBirchSpeech_ClearDifficultyWindow(1, 1);
+    
+}
+
+static void Task_NewGameBirchSpeech_ExplainDifficulty(u8 taskId)
+{
+    NewGameBirchSpeech_ClearWindow(0);
+    StringExpandPlaceholders(gStringVar4, gText_Birch_DifficultyExplain);
+    AddTextPrinterForMessage(TRUE);
+    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForExplainDifficultyToPrint;
+}
+
+static void Task_NewGameBirchSpeech_WaitForExplainDifficultyToPrint(u8 taskId)
+{
+    if (!RunTextPrintersAndIsPrinter0Active())
+        gTasks[taskId].func = Task_NewGameBirchSpeech_WaitPressBeforeDifficulty;
+}
+
+static void Task_NewGameBirchSpeech_WaitPressBeforeDifficulty(u8 taskId)
+{
+    if ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON)))
+    {
+        gTasks[taskId].func = Task_NewGameBirchSpeech_Difficulty;
+    }
+}
+
+static void NewGameBirchSpeech_ShowDifficultyMenu(void)
+{
+    DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[3], 0xF3);
+    FillWindowPixelBuffer(DIFFICULTY_WINDOW_ID, PIXEL_FILL(1));
+    PrintMenuTable(DIFFICULTY_WINDOW_ID, ARRAY_COUNT(sMenuActions_Difficulty), sMenuActions_Difficulty);
+    InitMenuInUpperLeftCornerNormal(DIFFICULTY_WINDOW_ID, ARRAY_COUNT(sMenuActions_Difficulty), 1);
+    PutWindowTilemap(DIFFICULTY_WINDOW_ID);
+    CopyWindowToVram(DIFFICULTY_WINDOW_ID, COPYWIN_FULL);
+}
+
+static s8 NewGameBirchSpeech_ProcessDifficultyMenuInput(void)
+{
+    return Menu_ProcessInputNoWrap();
+}
+
+static void NewGameBirchSpeech_ClearDifficultyWindowTilemap(u8 bg, u8 x, u8 y, u8 width, u8 height, u8 unused)
+{
+    FillBgTilemapBufferRect(bg, 0, x + 255, y + 255, width + 2, height + 2, 2);
+}
+
+static void NewGameBirchSpeech_ClearDifficultyWindow(u8 windowId, bool8 copyToVram)
+{
+    CallWindowFunction(windowId, NewGameBirchSpeech_ClearDifficultyWindowTilemap);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    ClearWindowTilemap(windowId);
+    if (copyToVram == TRUE)
+        CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
 static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
