@@ -1836,25 +1836,25 @@ static void Task_NewGameBirchSpeech_ChooseDifficulty(u8 TaskId)
 {
     int difficulty = NewGameBirchSpeech_ProcessDifficultyMenuInput();
 
-    // MgbaPrintf(MGBA_LOG_INFO, "Difficulty: %d", difficulty);
+    MgbaPrintf(MGBA_LOG_INFO, "Difficulty: %d", difficulty);
     switch (difficulty){
         case 0:
             PlaySE(SE_SELECT);
-            VarSet(VAR_DIFFICULTY, DIFFICULTY_EASY);
+            gSaveBlock2Ptr->difficulty = DIFFICULTY_EASY;
             NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
             gTasks[TaskId].func = Task_NewGameBirchSpeech_WhatsYourName;
             break;
 
         case 1:
             PlaySE(SE_SELECT);
-            VarSet(VAR_DIFFICULTY, DIFFICULTY_EASY);
+            gSaveBlock2Ptr->difficulty = DIFFICULTY_NORMAL;
             NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
             gTasks[TaskId].func = Task_NewGameBirchSpeech_WhatsYourName;
             break;
 
         case 2:
             PlaySE(SE_SELECT);
-            VarSet(VAR_DIFFICULTY, DIFFICULTY_EASY);
+            gSaveBlock2Ptr->difficulty = DIFFICULTY_HARD;
             NewGameBirchSpeech_ClearDifficultyWindow(DIFFICULTY_WINDOW_ID, 1);
             gTasks[TaskId].func = Task_NewGameBirchSpeech_WhatsYourName;
             break;
@@ -1865,8 +1865,6 @@ static void Task_NewGameBirchSpeech_ChooseDifficulty(u8 TaskId)
             gTasks[TaskId].func = Task_NewGameBirchSpeech_ExplainDifficulty;
             break;
     }
-
-    // NewGameBirchSpeech_ClearDifficultyWindow(1, 1);
     
 }
 

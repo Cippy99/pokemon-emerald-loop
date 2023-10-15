@@ -516,6 +516,10 @@ static void DoBattlePikeWildBattle(void)
 
 static void DoTrainerBattle(void)
 {
+    // Disable items in battle
+    if(gSaveBlock2Ptr->difficulty >= DIFFICULTY_HARD)
+        FlagSet(B_FLAG_NO_BAG_USE);
+
     CreateBattleStartTask(GetTrainerBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
@@ -1379,6 +1383,8 @@ void BattleSetup_StartTrainerBattle_Debug(void)
 
 static void CB2_EndTrainerBattle(void)
 {
+    FlagClear(B_FLAG_NO_BAG_USE);
+    
     if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
     {
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
