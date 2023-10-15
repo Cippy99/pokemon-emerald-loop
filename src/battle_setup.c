@@ -342,6 +342,19 @@ static const u16 sBadgeFlags[NUM_BADGES] =
     FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
 };
 
+const struct LevelCap sLevelCaps[NUM_LEVEL_CAPS] =
+ {
+    {FLAG_BADGE01_GET, 15},
+    {FLAG_BADGE02_GET, 20},
+    {FLAG_BADGE03_GET, 25},
+    {FLAG_BADGE04_GET, 30},
+    {FLAG_BADGE05_GET, 35},
+    {FLAG_BADGE06_GET, 40},
+    {FLAG_BADGE07_GET, 45},
+    {FLAG_BADGE08_GET, 50},
+    {FLAG_DEFEATED_ELITE_4_DRAKE, 60}
+ };
+
 #define tState data[0]
 #define tTransition data[1]
 
@@ -1946,3 +1959,23 @@ u16 CountBattledRematchTeams(u16 trainerId)
 
     return i;
 }
+
+static u8 getLevelcap(void){
+    u8 i;
+    for (i = 0; i < NUM_LEVEL_CAPS; i++){
+        if(!FlagGet(sLevelCaps[i].flag)){
+            return sLevelCaps[i].level;
+        }
+    }
+
+    return MAX_LEVEL;
+}
+
+bool8 isUnderLevelCap(u8 level){
+    if (gSaveBlock2Ptr->difficulty >= DIFFICULTY_NORMAL && level >= getLevelcap()){
+        return FALSE;
+    }
+
+    return TRUE;
+}
+

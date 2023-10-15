@@ -4,12 +4,19 @@
 #include "gym_leader_rematch.h"
 
 #define REMATCHES_COUNT 5
+#define NUM_LEVEL_CAPS NUM_BADGES + 1
 
 struct RematchTrainer
 {
     u16 trainerIds[REMATCHES_COUNT];
     u16 mapGroup;
     u16 mapNum;
+};
+
+struct LevelCap
+{
+    bool8 flag;
+    u8 level;
 };
 
 extern const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES];
@@ -70,5 +77,6 @@ u16 CountBattledRematchTeams(u16 trainerId);
 
 void DoStandardWildBattle_Debug(void);
 void BattleSetup_StartTrainerBattle_Debug(void);
+bool8 isUnderLevelCap(u8);
 
 #endif // GUARD_BATTLE_SETUP_H
