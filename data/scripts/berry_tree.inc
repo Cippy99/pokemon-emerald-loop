@@ -21,6 +21,8 @@ BerryTree_EventScript_Sparkling::
 BerryTree_EventScript_CheckSoil::
 	lock
 	faceplayer
+	checkitem ITEM_WAILMER_PAIL
+	goto_if_eq VAR_RESULT, FALSE, BerryTree_EventScript_NeedWater
 	specialvar VAR_RESULT, PlayerHasBerries
 	goto_if_eq VAR_RESULT, TRUE, BerryTree_EventScript_WantToPlant
 	message BerryTree_Text_ItsSoftLoamySoil
@@ -45,6 +47,13 @@ BerryTree_EventScript_ChooseBerryToPlant::
 	call BerryTree_EventScript_PlantBerry
 
 BerryTree_EventScript_CancelPlanting::
+	release
+	end
+
+BerryTree_EventScript_NeedWater::
+	message BerryTree_Text_NeedWater
+	waitmessage
+	waitbuttonpress
 	release
 	end
 
@@ -184,6 +193,10 @@ BerryTree_EventScript_PlantBerry::
 
 BerryTree_Text_ItsSoftLoamySoil:
 	.string "It's soft, loamy soil.$"
+
+BerryTree_Text_NeedWater:
+	.string "It's soft, loamy soil.\n"
+	.string "You need water to plant berries.$"
 
 BerryTree_Text_WantToPlant:
 	.string "It's soft, loamy soil.\n"
