@@ -2,18 +2,18 @@
 #define GUARD_CONSTANTS_TMS_HMS_H
 
 #define FOREACH_TM(F) \
-    F(FOCUS_PUNCH) \
+    F(PSYSHOCK) \
     F(DRAGON_CLAW) \
     F(WATER_PULSE) \
     F(CALM_MIND) \
-    F(ROAR) \
+    F(VENOSHOCK) \
     F(TOXIC) \
     F(HAIL) \
     F(BULK_UP) \
     F(BULLET_SEED) \
     F(HIDDEN_POWER) \
     F(SUNNY_DAY) \
-    F(TAUNT) \
+    F(LEECH_LIFE) \
     F(ICE_BEAM) \
     F(BLIZZARD) \
     F(HYPER_BEAM) \
@@ -21,7 +21,7 @@
     F(PROTECT) \
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
-    F(SAFEGUARD) \
+    F(FLAME_CHARGE) \
     F(FRUSTRATION) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
@@ -33,7 +33,7 @@
     F(PSYCHIC) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \
-    F(DOUBLE_TEAM) \
+    F(LOW_SWEEP) \
     F(REFLECT) \
     F(SHOCK_WAVE) \
     F(FLAMETHROWER) \
@@ -42,16 +42,66 @@
     F(FIRE_BLAST) \
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \
-    F(TORMENT) \
+    F(ECHOED_VOICE) \
     F(FACADE) \
     F(SECRET_POWER) \
     F(REST) \
     F(ATTRACT) \
     F(THIEF) \
     F(STEEL_WING) \
-    F(SKILL_SWAP) \
-    F(SNATCH) \
-    F(OVERHEAT)
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(OVERHEAT) \
+    F(FALSE_SWIPE) \
+    F(SCALD) \
+    F(CHARGE_BEAM) \
+    F(INCINERATE) \
+    F(BRUTAL_SWING) \
+    F(WILL_O_WISP) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(SMART_STRIKE) \
+    F(GIGA_IMPACT) \
+    F(STONE_EDGE) \
+    F(VOLT_SWITCH) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(STRUGGLE_BUG) \
+    F(BULLDOZE) \
+    F(DARK_PULSE) \
+    F(FROST_BREATH) \
+    F(ACROBATICS) \
+    F(ROCK_SLIDE) \
+    F(X_SCISSOR) \
+    F(DRAGON_TAIL) \
+    F(INFESTATION) \
+    F(POISON_JAB) \
+    F(GRASS_KNOT) \
+    F(PLUCK) \
+    F(U_TURN) \
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(WILD_CHARGE) \
+    F(SNARL) \
+    F(NATURE_POWER) \
+    F(POWER_UP_PUNCH) \
+    F(DAZZLING_GLEAM) \
+    F(ROOST) \
+    F(AVALANCHE) \
+    F(SMACK_DOWN) \
+    F(PLAY_ROUGH) \
+    F(MUD_SHOT) \
+    F(DRAGON_PULSE) \
+    F(DRAINING_KISS) \
+    F(HEX) \
+    F(HURRICANE) \
+    F(CHARM) \
+    F(HONE_CLAWS) \
+    F(RETALIATE) \
+    F(ROCK_POLISH) \
+    F(ZEN_HEADBUTT) \
+    F(CONFIDE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
