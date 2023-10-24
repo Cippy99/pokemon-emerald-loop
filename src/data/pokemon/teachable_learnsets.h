@@ -23363,6 +23363,7 @@ static const u16 sBasculinTeachableLearnset[] = {
     MOVE_TAUNT,
     MOVE_TOXIC,
     MOVE_WATERFALL,
+    MOVE_WATER_PULSE,
     MOVE_DOUBLE_EDGE,
     MOVE_ICY_WIND,
     MOVE_SLEEP_TALK,
