@@ -444,7 +444,26 @@ static void DrawMultichoiceMenuInternal(u8 left, u8 top, u8 multichoiceId, bool8
 
 static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos)
 {
-    DrawMultichoiceMenuInternal(left, top, multichoiceId, ignoreBPress, cursorPos, sMultichoiceLists[multichoiceId].list, sMultichoiceLists[multichoiceId].count);
+    int i;
+    u8 windowId;
+    u8 count = sMultichoiceLists[multichoiceId].count;
+    const struct MenuAction *actions = sMultichoiceLists[multichoiceId].list;
+    int width = 0;
+    u8 newWidth;
+
+    for (i = 0; i < count; i++)
+    {
+        width = DisplayTextAndGetWidth(actions[i].text, width);
+    }
+
+    newWidth = ConvertPixelWidthToTileWidth(width);
+    left = ScriptMenu_AdjustLeftCoordFromWidth(left, newWidth);
+    windowId = CreateWindowFromRect(left, top, newWidth, count * 2);
+    SetStandardWindowBorderStyle(windowId, FALSE);
+    PrintMenuTable(windowId, count, actions);
+    InitMenuInUpperLeftCornerNormal(windowId, count, cursorPos);
+    ScheduleBgCopyTilemapToVram(0);
+    InitMultichoiceCheckWrap(ignoreBPress, count, windowId, multichoiceId);
 }
 
 #if I_REPEL_LURE_MENU == TRUE
