@@ -55,6 +55,10 @@ VerdanturfTown_EventScript_WandasHouseSign::
 	msgbox VerdanturfTown_Text_WandasHouse, MSGBOX_SIGN
 	end
 
+VerdanturfTown_EventScript_MoveTutorSign::
+	msgbox VerdanturfTown_Text_MoveTutor, MSGBOX_SIGN
+	end
+
 VerdanturfTown_EventScript_BattleTentSign::
 	msgbox VerdanturfTown_Text_BattleTentSign, MSGBOX_SIGN
 	end
@@ -114,6 +118,10 @@ VerdanturfTown_Text_TownSign:
 
 VerdanturfTown_Text_WandasHouse:
 	.string "WANDA'S HOUSE$"
+
+VerdanturfTown_Text_MoveTutor:
+	.string "MOVE TUTOR'S\n"
+	.string "HOUSE$"
 
 VerdanturfTown_Text_BattleTentSign:
 	.string "BATTLE TENT VERDANTURF SITE\n"

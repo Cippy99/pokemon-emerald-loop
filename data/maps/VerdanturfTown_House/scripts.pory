@@ -1,0 +1,154 @@
+raw `
+VerdanturfTown_House_MapScripts::
+	.byte 0
+`
+
+
+script VerdanturfTown_House_EventScript_TutorPresentation{
+    lock
+    faceplayer
+    msgbox(format("I'm the move tutor. I can teach your Pokèmon powerful moves if you bring me a shard."))
+
+    call(VerdanturfTown_House_EventScript_CheckPlayerHasShards)
+
+    if(var(VAR_TEMP_1) == 0){
+        call(VerdanturfTown_House_EventScript_TutorNoShard)
+    }
+    else{
+        call(VerdanturfTown_House_EventScript_TutorChooseShard)
+    }
+    end
+}
+
+script VerdanturfTown_House_EventScript_CheckPlayerHasShards{
+    setvar(VAR_TEMP_1, 0)
+    checkitem(ITEM_RED_SHARD)
+    if(var(VAR_RESULT) == TRUE){
+        addvar(VAR_TEMP_1, 1)
+    }
+    checkitem(ITEM_YELLOW_SHARD)
+    if(var(VAR_RESULT) == TRUE){
+        addvar(VAR_TEMP_1, 2)
+    }
+    checkitem(ITEM_BLUE_SHARD)
+    if(var(VAR_RESULT) == TRUE){
+        addvar(VAR_TEMP_1, 4)
+    }
+    checkitem(ITEM_GREEN_SHARD)
+    if(var(VAR_RESULT) == TRUE){
+        addvar(VAR_TEMP_1, 8)
+    }
+
+    return
+}
+
+script VerdanturfTown_House_EventScript_TutorNoShard{
+    msgbox(format("I'm sorry, but it seems you don't have any shard with you. Come back when you'll find some."))
+    release
+    end
+}
+
+script VerdanturfTown_House_EventScript_TutorNoShardOfColor{
+    msgbox(format("You don't seem to have any shard of that color. Come back when yo'll finde some."))
+    release
+    end
+}
+
+script VerdanturfTown_House_EventScript_TutorChooseShard{
+    msgbox("Which shard do you want to give me?")
+
+    dynmultichoice(0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "RED", "YELLOW", "BLUE", "GREEN")
+
+    switch(var(VAR_RESULT)){
+
+        case 1: call(VerdanturfTown_House_EventScript_TutorRedShard)
+        case 2: call(VerdanturfTown_House_EventScript_TutorRedShard)
+        case 3: call(VerdanturfTown_House_EventScript_TutorRedShard)
+        case 4: call(VerdanturfTown_House_EventScript_TutorRedShard)
+        default: call(VerdanturfTown_House_EventScript_TutorEnd)
+
+    }
+}
+
+script VerdanturfTown_House_EventScript_TutorRedShard{
+    checkitem(ITEM_RED_SHARD)
+    if(var(VAR_RESULT) == FALSE){
+        call(VerdanturfTown_House_EventScript_TutorNoShardOfColor)
+        end
+    }
+
+    dynmultichoice(0,0,FALSE, 8, 0, DYN_MULTICHOICE_CB_NONE, "Agility", "Bug Bite", "Covet", "Fire Fang", 
+    "Gastro Acid", "Ice Fang", "Magical Leaf", "Metal Claw", "Ominous Wind", "Poison Fang", "Silver Wind"
+    "Super Fang", "Swift", "Taunt", "Thunder Fang", "Work Up")
+
+    switch(var(VAR_RESULT)){
+        case 1: setvar(VAR_0x8005, MOVE_AGILITY)
+        case 2: setvar(VAR_0x8005, MOVE_BUG_BITE)
+        case 3: setvar(VAR_0x8005, MOVE_COVET)
+        case 4: setvar(VAR_0x8005, MOVE_FIRE_FANG)
+        case 5: setvar(VAR_0x8005, MOVE_GASTRO_ACID)
+        case 6: setvar(VAR_0x8005, MOVE_ICE_FANG)
+        case 7: setvar(VAR_0x8005, MOVE_MAGICAL_LEAF)
+        case 8: setvar(VAR_0x8005, MOVE_METAL_CLAW)
+        case 9: setvar(VAR_0x8005, MOVE_OMINOUS_WIND)
+        case 10: setvar(VAR_0x8005, MOVE_POISON_FANG)
+        case 11: setvar(VAR_0x8005, MOVE_SILVER_WIND)
+        case 12: setvar(VAR_0x8005, MOVE_SUPER_FANG)
+        case 13: setvar(VAR_0x8005, MOVE_SWIFT)
+        case 14: setvar(VAR_0x8005, MOVE_TAUNT)
+        case 15: setvar(VAR_0x8005, MOVE_THUNDER_FANG)
+        case 16: setvar(VAR_0x8005, MOVE_WORK_UP)
+    }
+
+    call(MoveTutor_EventScript_OpenPartyMenu)
+
+    if(var(VAR_RESULT) == 0){
+        call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+    else{
+        call(VerdanturfTown_House_EventScript_TutorTaugthMove)
+    }
+}
+
+script VerdanturfTown_House_EventScript_TutorEnd{
+    release
+    end
+}
+
+script VerdanturfTown_House_EventScript_TutorTaugthMove{
+    msgbox("All done! Your Pokèmon learned a new move.\nCome back soon.")
+    call(VerdanturfTown_House_EventScript_TutorEnd)
+}
+
+script EventScript_MultichoiceTests {
+    lock 
+    faceplayer
+    msgbox (LittlerootTown_Text_CanUsePCToStoreItems, MSGBOX_DEFAULT)
+
+    // random items with visualization example
+
+    random(ITEMS_COUNT)
+    bufferitemname(STR_VAR_1, VAR_RESULT)
+    dynmultipush("{STR_VAR_1}", VAR_RESULT)
+    random(ITEMS_COUNT)
+    bufferitemname(STR_VAR_2, VAR_RESULT)
+    dynmultipush("{STR_VAR_2}", VAR_RESULT)
+    random(ITEMS_COUNT)
+    bufferitemname(STR_VAR_3, VAR_RESULT)
+    dynmultipush("{STR_VAR_3}", VAR_RESULT)
+    dynmultistack(0, 0, TRUE, 6, FALSE, VAR_0x800A, DYN_MULTICHOICE_CB_SHOW_ITEM)
+
+    // inline example without scrolling
+
+    dynmultichoice(0,0, TRUE, 6, 0, DYN_MULTICHOICE_CB_NONE, "Option 1", "Option 2", "Option 3")
+
+    // inline example with scrolling
+
+    dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Option 1", "Option 2", "Option 3", "Option 4")
+
+    buffernumberstring(STR_VAR_1, VAR_RESULT)
+    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
+    closemessage
+    release
+    end
+}
