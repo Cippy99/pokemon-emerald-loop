@@ -19,8 +19,9 @@ EventScript_AccessPC::
 	switch VAR_RESULT
 	case 0, EventScript_AccessPokemonStorage
 	case 1, EventScript_AccessPlayersPC
-	case 2, EventScript_AccessHallOfFame
-	case 3, EventScript_TurnOffPC
+	case 2, EventScript_HealPartyAtPC
+	case 3, EventScript_AccessHallOfFame
+	case 4, EventScript_TurnOffPC
 	case MULTI_B_PRESSED, EventScript_TurnOffPC
 	end
 
@@ -63,4 +64,12 @@ EventScript_AccessHallOfFame::
 	special AccessHallOfFamePC
 	waitstate
 	goto EventScript_AccessPC
+	end
+
+EventScript_HealPartyAtPC::
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	msgbox TextPartyHealedAtPC, MSGBOX_DEFAULT
+	goto EventScript_TurnOffPC
 	end

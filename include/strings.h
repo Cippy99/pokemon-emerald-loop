@@ -248,6 +248,7 @@ extern const u8 gText_SaveFailed[];
 // menu texts
 extern const u8 gText_MenuPokedex[];
 extern const u8 gText_MenuPokemon[];
+extern const u8 gText_MenuPC[];
 extern const u8 gText_MenuBag[];
 extern const u8 gText_MenuPokenav[];
 extern const u8 gText_MenuPlayer[];
@@ -1042,6 +1043,7 @@ extern const u8 gText_LogOff[];
 extern const u8 gText_LanettesPC[];
 extern const u8 gText_SomeonesPC[];
 extern const u8 gText_PlayersPC[];
+extern const u8 gText_HealParty[];
 extern const u8 gText_WhichPCShouldBeAccessed[];
 
 extern const u8 gText_PokenavMatchCall_Strategy[];

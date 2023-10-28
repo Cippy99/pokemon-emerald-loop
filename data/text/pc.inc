@@ -15,3 +15,6 @@ gText_AccessedPlayersPC::
 
 gText_AccessedLanettesPC::
 	.string "Accessed LANETTE's PC.$"
+
+TextPartyHealedAtPC:
+	.string "Your party has been healed.$"
