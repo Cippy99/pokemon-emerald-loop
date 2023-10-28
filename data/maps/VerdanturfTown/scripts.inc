@@ -120,8 +120,7 @@ VerdanturfTown_Text_WandasHouse:
 	.string "WANDA'S HOUSE$"
 
 VerdanturfTown_Text_MoveTutor:
-	.string "MOVE TUTOR'S\n"
-	.string "HOUSE$"
+	.string "MOVE TUTOR'S HOUSE$"
 
 VerdanturfTown_Text_BattleTentSign:
 	.string "BATTLE TENT VERDANTURF SITE\n"

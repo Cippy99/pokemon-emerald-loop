@@ -49,22 +49,22 @@ script VerdanturfTown_House_EventScript_TutorNoShard{
 }
 
 script VerdanturfTown_House_EventScript_TutorNoShardOfColor{
-    msgbox(format("You don't seem to have any shard of that color. Come back when yo'll finde some."))
+    msgbox(format("You don't seem to have any shard of that color. Come back when you'll find some."))
     release
     end
 }
 
 script VerdanturfTown_House_EventScript_TutorChooseShard{
-    msgbox("Which shard do you want to give me?")
+    msgbox(format("Which shard do you want to give me?"))
 
     dynmultichoice(0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "RED", "YELLOW", "BLUE", "GREEN")
 
     switch(var(VAR_RESULT)){
 
-        case 1: call(VerdanturfTown_House_EventScript_TutorRedShard)
-        case 2: call(VerdanturfTown_House_EventScript_TutorRedShard)
-        case 3: call(VerdanturfTown_House_EventScript_TutorRedShard)
-        case 4: call(VerdanturfTown_House_EventScript_TutorRedShard)
+        case 0: call(VerdanturfTown_House_EventScript_TutorRedShard)
+        case 1: call(VerdanturfTown_House_EventScript_TutorYellowShard)
+        case 2: call(VerdanturfTown_House_EventScript_TutorBlueShard)
+        case 3: call(VerdanturfTown_House_EventScript_TutorGreenShard)
         default: call(VerdanturfTown_House_EventScript_TutorEnd)
 
     }
@@ -77,27 +77,30 @@ script VerdanturfTown_House_EventScript_TutorRedShard{
         end
     }
 
-    dynmultichoice(0,0,FALSE, 8, 0, DYN_MULTICHOICE_CB_NONE, "Agility", "Bug Bite", "Covet", "Fire Fang", 
-    "Gastro Acid", "Ice Fang", "Magical Leaf", "Metal Claw", "Ominous Wind", "Poison Fang", "Silver Wind"
+    call(VerdanturfTown_House_EventScript_PleaseSelectMove)
+
+    dynmultichoice(0,0,FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, "Agility", "Bug Bite", "Covet", "Fire Fang", 
+    "Gastro Acid", "Ice Fang", "Magical Leaf", "Metal Claw", "Ominous Wind", "Poison Fang", "Silver Wind",
     "Super Fang", "Swift", "Taunt", "Thunder Fang", "Work Up")
 
     switch(var(VAR_RESULT)){
-        case 1: setvar(VAR_0x8005, MOVE_AGILITY)
-        case 2: setvar(VAR_0x8005, MOVE_BUG_BITE)
-        case 3: setvar(VAR_0x8005, MOVE_COVET)
-        case 4: setvar(VAR_0x8005, MOVE_FIRE_FANG)
-        case 5: setvar(VAR_0x8005, MOVE_GASTRO_ACID)
-        case 6: setvar(VAR_0x8005, MOVE_ICE_FANG)
-        case 7: setvar(VAR_0x8005, MOVE_MAGICAL_LEAF)
-        case 8: setvar(VAR_0x8005, MOVE_METAL_CLAW)
-        case 9: setvar(VAR_0x8005, MOVE_OMINOUS_WIND)
-        case 10: setvar(VAR_0x8005, MOVE_POISON_FANG)
-        case 11: setvar(VAR_0x8005, MOVE_SILVER_WIND)
-        case 12: setvar(VAR_0x8005, MOVE_SUPER_FANG)
-        case 13: setvar(VAR_0x8005, MOVE_SWIFT)
-        case 14: setvar(VAR_0x8005, MOVE_TAUNT)
-        case 15: setvar(VAR_0x8005, MOVE_THUNDER_FANG)
-        case 16: setvar(VAR_0x8005, MOVE_WORK_UP)
+        case 0: setvar(VAR_0x8005, MOVE_AGILITY)
+        case 1: setvar(VAR_0x8005, MOVE_BUG_BITE)
+        case 2: setvar(VAR_0x8005, MOVE_COVET)
+        case 3: setvar(VAR_0x8005, MOVE_FIRE_FANG)
+        case 4: setvar(VAR_0x8005, MOVE_GASTRO_ACID)
+        case 5: setvar(VAR_0x8005, MOVE_ICE_FANG)
+        case 6: setvar(VAR_0x8005, MOVE_MAGICAL_LEAF)
+        case 7: setvar(VAR_0x8005, MOVE_METAL_CLAW)
+        case 8: setvar(VAR_0x8005, MOVE_OMINOUS_WIND)
+        case 9: setvar(VAR_0x8005, MOVE_POISON_FANG)
+        case 10: setvar(VAR_0x8005, MOVE_SILVER_WIND)
+        case 11: setvar(VAR_0x8005, MOVE_SUPER_FANG)
+        case 12: setvar(VAR_0x8005, MOVE_SWIFT)
+        case 13: setvar(VAR_0x8005, MOVE_TAUNT)
+        case 14: setvar(VAR_0x8005, MOVE_THUNDER_FANG)
+        case 15: setvar(VAR_0x8005, MOVE_WORK_UP)
+        default: call(VerdanturfTown_House_EventScript_TutorEnd)
     }
 
     call(MoveTutor_EventScript_OpenPartyMenu)
@@ -106,49 +109,155 @@ script VerdanturfTown_House_EventScript_TutorRedShard{
         call(VerdanturfTown_House_EventScript_TutorEnd)
     }
     else{
+        removeitem(ITEM_RED_SHARD)
         call(VerdanturfTown_House_EventScript_TutorTaugthMove)
     }
 }
+
+script VerdanturfTown_House_EventScript_TutorYellowShard{
+    checkitem(ITEM_YELLOW_SHARD)
+    if(var(VAR_RESULT) == FALSE){
+        call(VerdanturfTown_House_EventScript_TutorNoShardOfColor)
+        end
+    }
+
+    call(VerdanturfTown_House_EventScript_PleaseSelectMove)
+
+    dynmultichoice(0,0,FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, "Breaking Swipe", "Cross Poison", "Electroweb", "Fire Punch",
+    "Ice Punch", "Icy Wind", "Iron Head", "Pounce", "Power Gem", "Psychic Fangs", "Razor Shell", "Scorching Sands", 
+    "Seed Bomb", "Signal Beam", "Throat Chop", "Thunder Punch")
+
+    switch(var(VAR_RESULT)){
+        case 0: setvar(VAR_0x8005, MOVE_BREAKING_SWIPE)
+        case 1: setvar(VAR_0x8005, MOVE_CROSS_POISON)
+        case 2: setvar(VAR_0x8005, MOVE_ELECTROWEB)
+        case 3: setvar(VAR_0x8005, MOVE_FIRE_PUNCH)
+        case 4: setvar(VAR_0x8005, MOVE_ICE_PUNCH)
+        case 5: setvar(VAR_0x8005, MOVE_ICY_WIND)
+        case 6: setvar(VAR_0x8005, MOVE_IRON_HEAD)
+        case 7: setvar(VAR_0x8005, MOVE_POUNCE)
+        case 8: setvar(VAR_0x8005, MOVE_POWER_GEM)
+        case 9: setvar(VAR_0x8005, MOVE_PSYCHIC_FANGS)
+        case 10: setvar(VAR_0x8005, MOVE_RAZOR_SHELL)
+        case 11: setvar(VAR_0x8005, MOVE_SCORCHING_SANDS)
+        case 12: setvar(VAR_0x8005, MOVE_SEED_BOMB)
+        case 13: setvar(VAR_0x8005, MOVE_SIGNAL_BEAM)
+        case 14: setvar(VAR_0x8005, MOVE_THROAT_CHOP)
+        case 15: setvar(VAR_0x8005, MOVE_THUNDER_PUNCH)
+        default: call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+
+    call(MoveTutor_EventScript_OpenPartyMenu)
+
+    if(var(VAR_RESULT) == 0){
+        call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+    else{
+        removeitem(ITEM_YELLOW_SHARD)
+        call(VerdanturfTown_House_EventScript_TutorTaugthMove)
+    }
+}
+
+script VerdanturfTown_House_EventScript_TutorBlueShard{
+    checkitem(ITEM_BLUE_SHARD)
+    if(var(VAR_RESULT) == FALSE){
+        call(VerdanturfTown_House_EventScript_TutorNoShardOfColor)
+        end
+    }
+
+    call(VerdanturfTown_House_EventScript_PleaseSelectMove)
+
+    dynmultichoice(0,0,FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, "Aqua Tail", "Blaze Kick", "Bounce", "Chilling Water",
+    "Drill Run", "Earth Power", "Hyper Voice", "Ice Spinner", "Icicle Spear", "Iron Tail",
+    "Knock Off", "Mystical Fire", "Revenge", "Rock Blast", "Skitter Smack", "Trailblaze")
+
+    switch(var(VAR_RESULT)){
+        case 0: setvar(VAR_0x8005, MOVE_AQUA_TAIL)
+        case 1: setvar(VAR_0x8005, MOVE_BLAZE_KICK)
+        case 2: setvar(VAR_0x8005, MOVE_BOUNCE)
+        case 3: setvar(VAR_0x8005, MOVE_CHILLING_WATER)
+        case 4: setvar(VAR_0x8005, MOVE_DRILL_RUN)
+        case 5: setvar(VAR_0x8005, MOVE_EARTH_POWER)
+        case 6: setvar(VAR_0x8005, MOVE_HYPER_VOICE)
+        case 7: setvar(VAR_0x8005, MOVE_ICE_SPINNER)
+        case 8: setvar(VAR_0x8005, MOVE_ICICLE_SPEAR)
+        case 9: setvar(VAR_0x8005, MOVE_IRON_TAIL)
+        case 10: setvar(VAR_0x8005, MOVE_KNOCK_OFF)
+        case 11: setvar(VAR_0x8005, MOVE_MYSTICAL_FIRE)
+        case 12: setvar(VAR_0x8005, MOVE_REVENGE)
+        case 13: setvar(VAR_0x8005, MOVE_ROCK_BLAST)
+        case 14: setvar(VAR_0x8005, MOVE_SKITTER_SMACK)
+        case 15: setvar(VAR_0x8005, MOVE_TRAILBLAZE)
+        default: call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+
+    call(MoveTutor_EventScript_OpenPartyMenu)
+
+    if(var(VAR_RESULT) == 0){
+        call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+    else{
+        removeitem(ITEM_BLUE_SHARD)
+        call(VerdanturfTown_House_EventScript_TutorTaugthMove)
+    }
+}
+
+script VerdanturfTown_House_EventScript_TutorGreenShard{
+    checkitem(ITEM_GREEN_SHARD)
+    if(var(VAR_RESULT) == FALSE){
+        call(VerdanturfTown_House_EventScript_TutorNoShardOfColor)
+        end
+    }
+
+    call(VerdanturfTown_House_EventScript_PleaseSelectMove)
+
+    dynmultichoice(0,0,FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, "Body Press", "Drain Punch", "Dual Wingbeat",
+    "Expanding Force", "Flip Turn", "Foul Play", "Gunk Shot", "Heat Wave", "Liquidation", "Outrage",
+    "Phantom Force", "Pollen Puff", "Rising Voltage", "Stomping Tantrum", "Superpower", "Triple Axel")
+
+    switch(var(VAR_RESULT)){
+        case 0: setvar(VAR_0x8005, MOVE_BODY_PRESS)
+        case 1: setvar(VAR_0x8005, MOVE_DRAIN_PUNCH)
+        case 2: setvar(VAR_0x8005, MOVE_DUAL_WINGBEAT)
+        case 3: setvar(VAR_0x8005, MOVE_EXPANDING_FORCE)
+        case 4: setvar(VAR_0x8005, MOVE_FLIP_TURN)
+        case 5: setvar(VAR_0x8005, MOVE_FOUL_PLAY)
+        case 6: setvar(VAR_0x8005, MOVE_GUNK_SHOT)
+        case 7: setvar(VAR_0x8005, MOVE_HEAT_WAVE)
+        case 8: setvar(VAR_0x8005, MOVE_LIQUIDATION)
+        case 9: setvar(VAR_0x8005, MOVE_OUTRAGE)
+        case 10: setvar(VAR_0x8005, MOVE_PHANTOM_FORCE)
+        case 11: setvar(VAR_0x8005, MOVE_POLLEN_PUFF)
+        case 12: setvar(VAR_0x8005, MOVE_RISING_VOLTAGE)
+        case 13: setvar(VAR_0x8005, MOVE_STOMPING_TANTRUM)
+        case 14: setvar(VAR_0x8005, MOVE_SUPERPOWER)
+        case 15: setvar(VAR_0x8005, MOVE_TRIPLE_AXEL)
+        default: call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+
+    call(MoveTutor_EventScript_OpenPartyMenu)
+
+    if(var(VAR_RESULT) == 0){
+        call(VerdanturfTown_House_EventScript_TutorEnd)
+    }
+    else{
+        removeitem(ITEM_GREEN_SHARD)
+        call(VerdanturfTown_House_EventScript_TutorTaugthMove)
+    }
+}
+
 
 script VerdanturfTown_House_EventScript_TutorEnd{
     release
     end
 }
-
-script VerdanturfTown_House_EventScript_TutorTaugthMove{
-    msgbox("All done! Your Pokèmon learned a new move.\nCome back soon.")
-    call(VerdanturfTown_House_EventScript_TutorEnd)
+script VerdanturfTown_House_EventScript_PleaseSelectMove{
+    msgbox(format("Please select a move from the list."))
+    return
 }
 
-script EventScript_MultichoiceTests {
-    lock 
-    faceplayer
-    msgbox (LittlerootTown_Text_CanUsePCToStoreItems, MSGBOX_DEFAULT)
 
-    // random items with visualization example
-
-    random(ITEMS_COUNT)
-    bufferitemname(STR_VAR_1, VAR_RESULT)
-    dynmultipush("{STR_VAR_1}", VAR_RESULT)
-    random(ITEMS_COUNT)
-    bufferitemname(STR_VAR_2, VAR_RESULT)
-    dynmultipush("{STR_VAR_2}", VAR_RESULT)
-    random(ITEMS_COUNT)
-    bufferitemname(STR_VAR_3, VAR_RESULT)
-    dynmultipush("{STR_VAR_3}", VAR_RESULT)
-    dynmultistack(0, 0, TRUE, 6, FALSE, VAR_0x800A, DYN_MULTICHOICE_CB_SHOW_ITEM)
-
-    // inline example without scrolling
-
-    dynmultichoice(0,0, TRUE, 6, 0, DYN_MULTICHOICE_CB_NONE, "Option 1", "Option 2", "Option 3")
-
-    // inline example with scrolling
-
-    dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Option 1", "Option 2", "Option 3", "Option 4")
-
-    buffernumberstring(STR_VAR_1, VAR_RESULT)
-    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
-    closemessage
-    release
-    end
+script VerdanturfTown_House_EventScript_TutorTaugthMove{
+    msgbox(format("All done! Your Pokèmon learned a new move. Come back soon."))
+    call(VerdanturfTown_House_EventScript_TutorEnd)
 }

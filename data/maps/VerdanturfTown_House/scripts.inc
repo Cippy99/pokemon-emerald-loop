@@ -70,10 +70,10 @@ VerdanturfTown_House_EventScript_TutorChooseShard::
 	msgbox VerdanturfTown_House_EventScript_TutorChooseShard_Text_0
 	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, VerdanturfTown_House_EventScript_TutorChooseShard_Text_1, VerdanturfTown_House_EventScript_TutorChooseShard_Text_2, VerdanturfTown_House_EventScript_TutorChooseShard_Text_3, VerdanturfTown_House_EventScript_TutorChooseShard_Text_4
 	switch VAR_RESULT
-	case 1, VerdanturfTown_House_EventScript_TutorChooseShard_2
-	case 2, VerdanturfTown_House_EventScript_TutorChooseShard_3
-	case 3, VerdanturfTown_House_EventScript_TutorChooseShard_4
-	case 4, VerdanturfTown_House_EventScript_TutorChooseShard_5
+	case 0, VerdanturfTown_House_EventScript_TutorChooseShard_2
+	case 1, VerdanturfTown_House_EventScript_TutorChooseShard_3
+	case 2, VerdanturfTown_House_EventScript_TutorChooseShard_4
+	case 3, VerdanturfTown_House_EventScript_TutorChooseShard_5
 	call VerdanturfTown_House_EventScript_TutorEnd
 	return
 
@@ -82,15 +82,15 @@ VerdanturfTown_House_EventScript_TutorChooseShard_2:
 	return
 
 VerdanturfTown_House_EventScript_TutorChooseShard_3:
-	call VerdanturfTown_House_EventScript_TutorRedShard
+	call VerdanturfTown_House_EventScript_TutorYellowShard
 	return
 
 VerdanturfTown_House_EventScript_TutorChooseShard_4:
-	call VerdanturfTown_House_EventScript_TutorRedShard
+	call VerdanturfTown_House_EventScript_TutorBlueShard
 	return
 
 VerdanturfTown_House_EventScript_TutorChooseShard_5:
-	call VerdanturfTown_House_EventScript_TutorRedShard
+	call VerdanturfTown_House_EventScript_TutorGreenShard
 	return
 
 
@@ -98,28 +98,31 @@ VerdanturfTown_House_EventScript_TutorRedShard::
 	checkitem ITEM_RED_SHARD
 	compare VAR_RESULT, FALSE
 	goto_if_eq VerdanturfTown_House_EventScript_TutorRedShard_2
-	dynmultichoice 0, 0, FALSE, 8, 0, DYN_MULTICHOICE_CB_NONE, VerdanturfTown_House_EventScript_TutorRedShard_Text_0, VerdanturfTown_House_EventScript_TutorRedShard_Text_1, VerdanturfTown_House_EventScript_TutorRedShard_Text_2, VerdanturfTown_House_EventScript_TutorRedShard_Text_3, VerdanturfTown_House_EventScript_TutorRedShard_Text_4, VerdanturfTown_House_EventScript_TutorRedShard_Text_5, VerdanturfTown_House_EventScript_TutorRedShard_Text_6, VerdanturfTown_House_EventScript_TutorRedShard_Text_7, VerdanturfTown_House_EventScript_TutorRedShard_Text_8, VerdanturfTown_House_EventScript_TutorRedShard_Text_9, VerdanturfTown_House_EventScript_TutorRedShard_Text_10, VerdanturfTown_House_EventScript_TutorRedShard_Text_11, VerdanturfTown_House_EventScript_TutorRedShard_Text_12, VerdanturfTown_House_EventScript_TutorRedShard_Text_13, VerdanturfTown_House_EventScript_TutorRedShard_Text_14
+	call VerdanturfTown_House_EventScript_PleaseSelectMove
+	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, VerdanturfTown_House_EventScript_TutorRedShard_Text_0, VerdanturfTown_House_EventScript_TutorRedShard_Text_1, VerdanturfTown_House_EventScript_TutorRedShard_Text_2, VerdanturfTown_House_EventScript_TutorRedShard_Text_3, VerdanturfTown_House_EventScript_TutorRedShard_Text_4, VerdanturfTown_House_EventScript_TutorRedShard_Text_5, VerdanturfTown_House_EventScript_TutorRedShard_Text_6, VerdanturfTown_House_EventScript_TutorRedShard_Text_7, VerdanturfTown_House_EventScript_TutorRedShard_Text_8, VerdanturfTown_House_EventScript_TutorRedShard_Text_9, VerdanturfTown_House_EventScript_TutorRedShard_Text_10, VerdanturfTown_House_EventScript_TutorRedShard_Text_11, VerdanturfTown_House_EventScript_TutorRedShard_Text_12, VerdanturfTown_House_EventScript_TutorRedShard_Text_13, VerdanturfTown_House_EventScript_TutorRedShard_Text_14, VerdanturfTown_House_EventScript_TutorRedShard_Text_15
 	switch VAR_RESULT
-	case 1, VerdanturfTown_House_EventScript_TutorRedShard_6
-	case 2, VerdanturfTown_House_EventScript_TutorRedShard_7
-	case 3, VerdanturfTown_House_EventScript_TutorRedShard_8
-	case 4, VerdanturfTown_House_EventScript_TutorRedShard_9
-	case 5, VerdanturfTown_House_EventScript_TutorRedShard_10
-	case 6, VerdanturfTown_House_EventScript_TutorRedShard_11
-	case 7, VerdanturfTown_House_EventScript_TutorRedShard_12
-	case 8, VerdanturfTown_House_EventScript_TutorRedShard_13
-	case 9, VerdanturfTown_House_EventScript_TutorRedShard_14
-	case 10, VerdanturfTown_House_EventScript_TutorRedShard_15
-	case 11, VerdanturfTown_House_EventScript_TutorRedShard_16
-	case 12, VerdanturfTown_House_EventScript_TutorRedShard_17
-	case 13, VerdanturfTown_House_EventScript_TutorRedShard_18
-	case 14, VerdanturfTown_House_EventScript_TutorRedShard_19
-	case 15, VerdanturfTown_House_EventScript_TutorRedShard_20
-	case 16, VerdanturfTown_House_EventScript_TutorRedShard_21
+	case 0, VerdanturfTown_House_EventScript_TutorRedShard_6
+	case 1, VerdanturfTown_House_EventScript_TutorRedShard_7
+	case 2, VerdanturfTown_House_EventScript_TutorRedShard_8
+	case 3, VerdanturfTown_House_EventScript_TutorRedShard_9
+	case 4, VerdanturfTown_House_EventScript_TutorRedShard_10
+	case 5, VerdanturfTown_House_EventScript_TutorRedShard_11
+	case 6, VerdanturfTown_House_EventScript_TutorRedShard_12
+	case 7, VerdanturfTown_House_EventScript_TutorRedShard_13
+	case 8, VerdanturfTown_House_EventScript_TutorRedShard_14
+	case 9, VerdanturfTown_House_EventScript_TutorRedShard_15
+	case 10, VerdanturfTown_House_EventScript_TutorRedShard_16
+	case 11, VerdanturfTown_House_EventScript_TutorRedShard_17
+	case 12, VerdanturfTown_House_EventScript_TutorRedShard_18
+	case 13, VerdanturfTown_House_EventScript_TutorRedShard_19
+	case 14, VerdanturfTown_House_EventScript_TutorRedShard_20
+	case 15, VerdanturfTown_House_EventScript_TutorRedShard_21
+	call VerdanturfTown_House_EventScript_TutorEnd
 VerdanturfTown_House_EventScript_TutorRedShard_4:
 	call MoveTutor_EventScript_OpenPartyMenu
 	compare VAR_RESULT, 0
-	goto_if_eq VerdanturfTown_House_EventScript_TutorRedShard_22
+	goto_if_eq VerdanturfTown_House_EventScript_TutorRedShard_23
+	removeitem ITEM_RED_SHARD
 	call VerdanturfTown_House_EventScript_TutorTaugthMove
 	return
 
@@ -191,7 +194,322 @@ VerdanturfTown_House_EventScript_TutorRedShard_21:
 	setvar VAR_0x8005, MOVE_WORK_UP
 	goto VerdanturfTown_House_EventScript_TutorRedShard_4
 
-VerdanturfTown_House_EventScript_TutorRedShard_22:
+VerdanturfTown_House_EventScript_TutorRedShard_23:
+	call VerdanturfTown_House_EventScript_TutorEnd
+	return
+
+
+VerdanturfTown_House_EventScript_TutorYellowShard::
+	checkitem ITEM_YELLOW_SHARD
+	compare VAR_RESULT, FALSE
+	goto_if_eq VerdanturfTown_House_EventScript_TutorYellowShard_2
+	call VerdanturfTown_House_EventScript_PleaseSelectMove
+	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, VerdanturfTown_House_EventScript_TutorYellowShard_Text_0, VerdanturfTown_House_EventScript_TutorYellowShard_Text_1, VerdanturfTown_House_EventScript_TutorYellowShard_Text_2, VerdanturfTown_House_EventScript_TutorYellowShard_Text_3, VerdanturfTown_House_EventScript_TutorYellowShard_Text_4, VerdanturfTown_House_EventScript_TutorYellowShard_Text_5, VerdanturfTown_House_EventScript_TutorYellowShard_Text_6, VerdanturfTown_House_EventScript_TutorYellowShard_Text_7, VerdanturfTown_House_EventScript_TutorYellowShard_Text_8, VerdanturfTown_House_EventScript_TutorYellowShard_Text_9, VerdanturfTown_House_EventScript_TutorYellowShard_Text_10, VerdanturfTown_House_EventScript_TutorYellowShard_Text_11, VerdanturfTown_House_EventScript_TutorYellowShard_Text_12, VerdanturfTown_House_EventScript_TutorYellowShard_Text_13, VerdanturfTown_House_EventScript_TutorYellowShard_Text_14, VerdanturfTown_House_EventScript_TutorYellowShard_Text_15
+	switch VAR_RESULT
+	case 0, VerdanturfTown_House_EventScript_TutorYellowShard_6
+	case 1, VerdanturfTown_House_EventScript_TutorYellowShard_7
+	case 2, VerdanturfTown_House_EventScript_TutorYellowShard_8
+	case 3, VerdanturfTown_House_EventScript_TutorYellowShard_9
+	case 4, VerdanturfTown_House_EventScript_TutorYellowShard_10
+	case 5, VerdanturfTown_House_EventScript_TutorYellowShard_11
+	case 6, VerdanturfTown_House_EventScript_TutorYellowShard_12
+	case 7, VerdanturfTown_House_EventScript_TutorYellowShard_13
+	case 8, VerdanturfTown_House_EventScript_TutorYellowShard_14
+	case 9, VerdanturfTown_House_EventScript_TutorYellowShard_15
+	case 10, VerdanturfTown_House_EventScript_TutorYellowShard_16
+	case 11, VerdanturfTown_House_EventScript_TutorYellowShard_17
+	case 12, VerdanturfTown_House_EventScript_TutorYellowShard_18
+	case 13, VerdanturfTown_House_EventScript_TutorYellowShard_19
+	case 14, VerdanturfTown_House_EventScript_TutorYellowShard_20
+	case 15, VerdanturfTown_House_EventScript_TutorYellowShard_21
+	call VerdanturfTown_House_EventScript_TutorEnd
+VerdanturfTown_House_EventScript_TutorYellowShard_4:
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq VerdanturfTown_House_EventScript_TutorYellowShard_23
+	removeitem ITEM_YELLOW_SHARD
+	call VerdanturfTown_House_EventScript_TutorTaugthMove
+	return
+
+VerdanturfTown_House_EventScript_TutorYellowShard_2:
+	call VerdanturfTown_House_EventScript_TutorNoShardOfColor
+	end
+
+VerdanturfTown_House_EventScript_TutorYellowShard_6:
+	setvar VAR_0x8005, MOVE_BREAKING_SWIPE
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_7:
+	setvar VAR_0x8005, MOVE_CROSS_POISON
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_8:
+	setvar VAR_0x8005, MOVE_ELECTROWEB
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_9:
+	setvar VAR_0x8005, MOVE_FIRE_PUNCH
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_10:
+	setvar VAR_0x8005, MOVE_ICE_PUNCH
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_11:
+	setvar VAR_0x8005, MOVE_ICY_WIND
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_12:
+	setvar VAR_0x8005, MOVE_IRON_HEAD
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_13:
+	setvar VAR_0x8005, MOVE_POUNCE
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_14:
+	setvar VAR_0x8005, MOVE_POWER_GEM
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_15:
+	setvar VAR_0x8005, MOVE_PSYCHIC_FANGS
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_16:
+	setvar VAR_0x8005, MOVE_RAZOR_SHELL
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_17:
+	setvar VAR_0x8005, MOVE_SCORCHING_SANDS
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_18:
+	setvar VAR_0x8005, MOVE_SEED_BOMB
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_19:
+	setvar VAR_0x8005, MOVE_SIGNAL_BEAM
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_20:
+	setvar VAR_0x8005, MOVE_THROAT_CHOP
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_21:
+	setvar VAR_0x8005, MOVE_THUNDER_PUNCH
+	goto VerdanturfTown_House_EventScript_TutorYellowShard_4
+
+VerdanturfTown_House_EventScript_TutorYellowShard_23:
+	call VerdanturfTown_House_EventScript_TutorEnd
+	return
+
+
+VerdanturfTown_House_EventScript_TutorBlueShard::
+	checkitem ITEM_BLUE_SHARD
+	compare VAR_RESULT, FALSE
+	goto_if_eq VerdanturfTown_House_EventScript_TutorBlueShard_2
+	call VerdanturfTown_House_EventScript_PleaseSelectMove
+	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, VerdanturfTown_House_EventScript_TutorBlueShard_Text_0, VerdanturfTown_House_EventScript_TutorBlueShard_Text_1, VerdanturfTown_House_EventScript_TutorBlueShard_Text_2, VerdanturfTown_House_EventScript_TutorBlueShard_Text_3, VerdanturfTown_House_EventScript_TutorBlueShard_Text_4, VerdanturfTown_House_EventScript_TutorBlueShard_Text_5, VerdanturfTown_House_EventScript_TutorBlueShard_Text_6, VerdanturfTown_House_EventScript_TutorBlueShard_Text_7, VerdanturfTown_House_EventScript_TutorBlueShard_Text_8, VerdanturfTown_House_EventScript_TutorBlueShard_Text_9, VerdanturfTown_House_EventScript_TutorBlueShard_Text_10, VerdanturfTown_House_EventScript_TutorBlueShard_Text_11, VerdanturfTown_House_EventScript_TutorBlueShard_Text_12, VerdanturfTown_House_EventScript_TutorBlueShard_Text_13, VerdanturfTown_House_EventScript_TutorBlueShard_Text_14, VerdanturfTown_House_EventScript_TutorBlueShard_Text_15
+	switch VAR_RESULT
+	case 0, VerdanturfTown_House_EventScript_TutorBlueShard_6
+	case 1, VerdanturfTown_House_EventScript_TutorBlueShard_7
+	case 2, VerdanturfTown_House_EventScript_TutorBlueShard_8
+	case 3, VerdanturfTown_House_EventScript_TutorBlueShard_9
+	case 4, VerdanturfTown_House_EventScript_TutorBlueShard_10
+	case 5, VerdanturfTown_House_EventScript_TutorBlueShard_11
+	case 6, VerdanturfTown_House_EventScript_TutorBlueShard_12
+	case 7, VerdanturfTown_House_EventScript_TutorBlueShard_13
+	case 8, VerdanturfTown_House_EventScript_TutorBlueShard_14
+	case 9, VerdanturfTown_House_EventScript_TutorBlueShard_15
+	case 10, VerdanturfTown_House_EventScript_TutorBlueShard_16
+	case 11, VerdanturfTown_House_EventScript_TutorBlueShard_17
+	case 12, VerdanturfTown_House_EventScript_TutorBlueShard_18
+	case 13, VerdanturfTown_House_EventScript_TutorBlueShard_19
+	case 14, VerdanturfTown_House_EventScript_TutorBlueShard_20
+	case 15, VerdanturfTown_House_EventScript_TutorBlueShard_21
+	call VerdanturfTown_House_EventScript_TutorEnd
+VerdanturfTown_House_EventScript_TutorBlueShard_4:
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq VerdanturfTown_House_EventScript_TutorBlueShard_23
+	removeitem ITEM_BLUE_SHARD
+	call VerdanturfTown_House_EventScript_TutorTaugthMove
+	return
+
+VerdanturfTown_House_EventScript_TutorBlueShard_2:
+	call VerdanturfTown_House_EventScript_TutorNoShardOfColor
+	end
+
+VerdanturfTown_House_EventScript_TutorBlueShard_6:
+	setvar VAR_0x8005, MOVE_AQUA_TAIL
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_7:
+	setvar VAR_0x8005, MOVE_BLAZE_KICK
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_8:
+	setvar VAR_0x8005, MOVE_BOUNCE
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_9:
+	setvar VAR_0x8005, MOVE_CHILLING_WATER
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_10:
+	setvar VAR_0x8005, MOVE_DRILL_RUN
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_11:
+	setvar VAR_0x8005, MOVE_EARTH_POWER
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_12:
+	setvar VAR_0x8005, MOVE_HYPER_VOICE
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_13:
+	setvar VAR_0x8005, MOVE_ICE_SPINNER
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_14:
+	setvar VAR_0x8005, MOVE_ICICLE_SPEAR
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_15:
+	setvar VAR_0x8005, MOVE_IRON_TAIL
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_16:
+	setvar VAR_0x8005, MOVE_KNOCK_OFF
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_17:
+	setvar VAR_0x8005, MOVE_MYSTICAL_FIRE
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_18:
+	setvar VAR_0x8005, MOVE_REVENGE
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_19:
+	setvar VAR_0x8005, MOVE_ROCK_BLAST
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_20:
+	setvar VAR_0x8005, MOVE_SKITTER_SMACK
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_21:
+	setvar VAR_0x8005, MOVE_TRAILBLAZE
+	goto VerdanturfTown_House_EventScript_TutorBlueShard_4
+
+VerdanturfTown_House_EventScript_TutorBlueShard_23:
+	call VerdanturfTown_House_EventScript_TutorEnd
+	return
+
+
+VerdanturfTown_House_EventScript_TutorGreenShard::
+	checkitem ITEM_GREEN_SHARD
+	compare VAR_RESULT, FALSE
+	goto_if_eq VerdanturfTown_House_EventScript_TutorGreenShard_2
+	call VerdanturfTown_House_EventScript_PleaseSelectMove
+	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, VerdanturfTown_House_EventScript_TutorGreenShard_Text_0, VerdanturfTown_House_EventScript_TutorGreenShard_Text_1, VerdanturfTown_House_EventScript_TutorGreenShard_Text_2, VerdanturfTown_House_EventScript_TutorGreenShard_Text_3, VerdanturfTown_House_EventScript_TutorGreenShard_Text_4, VerdanturfTown_House_EventScript_TutorGreenShard_Text_5, VerdanturfTown_House_EventScript_TutorGreenShard_Text_6, VerdanturfTown_House_EventScript_TutorGreenShard_Text_7, VerdanturfTown_House_EventScript_TutorGreenShard_Text_8, VerdanturfTown_House_EventScript_TutorGreenShard_Text_9, VerdanturfTown_House_EventScript_TutorGreenShard_Text_10, VerdanturfTown_House_EventScript_TutorGreenShard_Text_11, VerdanturfTown_House_EventScript_TutorGreenShard_Text_12, VerdanturfTown_House_EventScript_TutorGreenShard_Text_13, VerdanturfTown_House_EventScript_TutorGreenShard_Text_14, VerdanturfTown_House_EventScript_TutorGreenShard_Text_15
+	switch VAR_RESULT
+	case 0, VerdanturfTown_House_EventScript_TutorGreenShard_6
+	case 1, VerdanturfTown_House_EventScript_TutorGreenShard_7
+	case 2, VerdanturfTown_House_EventScript_TutorGreenShard_8
+	case 3, VerdanturfTown_House_EventScript_TutorGreenShard_9
+	case 4, VerdanturfTown_House_EventScript_TutorGreenShard_10
+	case 5, VerdanturfTown_House_EventScript_TutorGreenShard_11
+	case 6, VerdanturfTown_House_EventScript_TutorGreenShard_12
+	case 7, VerdanturfTown_House_EventScript_TutorGreenShard_13
+	case 8, VerdanturfTown_House_EventScript_TutorGreenShard_14
+	case 9, VerdanturfTown_House_EventScript_TutorGreenShard_15
+	case 10, VerdanturfTown_House_EventScript_TutorGreenShard_16
+	case 11, VerdanturfTown_House_EventScript_TutorGreenShard_17
+	case 12, VerdanturfTown_House_EventScript_TutorGreenShard_18
+	case 13, VerdanturfTown_House_EventScript_TutorGreenShard_19
+	case 14, VerdanturfTown_House_EventScript_TutorGreenShard_20
+	case 15, VerdanturfTown_House_EventScript_TutorGreenShard_21
+	call VerdanturfTown_House_EventScript_TutorEnd
+VerdanturfTown_House_EventScript_TutorGreenShard_4:
+	call MoveTutor_EventScript_OpenPartyMenu
+	compare VAR_RESULT, 0
+	goto_if_eq VerdanturfTown_House_EventScript_TutorGreenShard_23
+	removeitem ITEM_GREEN_SHARD
+	call VerdanturfTown_House_EventScript_TutorTaugthMove
+	return
+
+VerdanturfTown_House_EventScript_TutorGreenShard_2:
+	call VerdanturfTown_House_EventScript_TutorNoShardOfColor
+	end
+
+VerdanturfTown_House_EventScript_TutorGreenShard_6:
+	setvar VAR_0x8005, MOVE_BODY_PRESS
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_7:
+	setvar VAR_0x8005, MOVE_DRAIN_PUNCH
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_8:
+	setvar VAR_0x8005, MOVE_DUAL_WINGBEAT
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_9:
+	setvar VAR_0x8005, MOVE_EXPANDING_FORCE
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_10:
+	setvar VAR_0x8005, MOVE_FLIP_TURN
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_11:
+	setvar VAR_0x8005, MOVE_FOUL_PLAY
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_12:
+	setvar VAR_0x8005, MOVE_GUNK_SHOT
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_13:
+	setvar VAR_0x8005, MOVE_HEAT_WAVE
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_14:
+	setvar VAR_0x8005, MOVE_LIQUIDATION
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_15:
+	setvar VAR_0x8005, MOVE_OUTRAGE
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_16:
+	setvar VAR_0x8005, MOVE_PHANTOM_FORCE
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_17:
+	setvar VAR_0x8005, MOVE_POLLEN_PUFF
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_18:
+	setvar VAR_0x8005, MOVE_RISING_VOLTAGE
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_19:
+	setvar VAR_0x8005, MOVE_STOMPING_TANTRUM
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_20:
+	setvar VAR_0x8005, MOVE_SUPERPOWER
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_21:
+	setvar VAR_0x8005, MOVE_TRIPLE_AXEL
+	goto VerdanturfTown_House_EventScript_TutorGreenShard_4
+
+VerdanturfTown_House_EventScript_TutorGreenShard_23:
 	call VerdanturfTown_House_EventScript_TutorEnd
 	return
 
@@ -201,33 +519,15 @@ VerdanturfTown_House_EventScript_TutorEnd::
 	end
 
 
+VerdanturfTown_House_EventScript_PleaseSelectMove::
+	msgbox VerdanturfTown_House_EventScript_PleaseSelectMove_Text_0
+	return
+
+
 VerdanturfTown_House_EventScript_TutorTaugthMove::
 	msgbox VerdanturfTown_House_EventScript_TutorTaugthMove_Text_0
 	call VerdanturfTown_House_EventScript_TutorEnd
 	return
-
-
-EventScript_MultichoiceTests::
-	lock
-	faceplayer
-	msgbox LittlerootTown_Text_CanUsePCToStoreItems, MSGBOX_DEFAULT
-	random ITEMS_COUNT
-	bufferitemname STR_VAR_1, VAR_RESULT
-	dynmultipush EventScript_MultichoiceTests_Text_0, VAR_RESULT
-	random ITEMS_COUNT
-	bufferitemname STR_VAR_2, VAR_RESULT
-	dynmultipush EventScript_MultichoiceTests_Text_1, VAR_RESULT
-	random ITEMS_COUNT
-	bufferitemname STR_VAR_3, VAR_RESULT
-	dynmultipush EventScript_MultichoiceTests_Text_2, VAR_RESULT
-	dynmultistack 0, 0, TRUE, 6, FALSE, VAR_0x800A, DYN_MULTICHOICE_CB_SHOW_ITEM
-	dynmultichoice 0, 0, TRUE, 6, 0, DYN_MULTICHOICE_CB_NONE, EventScript_MultichoiceTests_Text_3, EventScript_MultichoiceTests_Text_4, EventScript_MultichoiceTests_Text_5
-	dynmultichoice 0, 0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, EventScript_MultichoiceTests_Text_3, EventScript_MultichoiceTests_Text_4, EventScript_MultichoiceTests_Text_5, EventScript_MultichoiceTests_Text_6
-	buffernumberstring STR_VAR_1, VAR_RESULT
-	msgbox EventScript_MultichoiceTests_Text_0, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
 
 
 VerdanturfTown_House_EventScript_TutorPresentation_Text_0:
@@ -242,7 +542,7 @@ VerdanturfTown_House_EventScript_TutorNoShard_Text_0:
 
 VerdanturfTown_House_EventScript_TutorNoShardOfColor_Text_0:
 	.string "You don't seem to have any shard of\n"
-	.string "that color. Come back when yo'll finde\l"
+	.string "that color. Come back when you'll find\l"
 	.string "some.$"
 
 VerdanturfTown_House_EventScript_TutorChooseShard_Text_0:
@@ -291,41 +591,170 @@ VerdanturfTown_House_EventScript_TutorRedShard_Text_9:
 	.string "Poison Fang$"
 
 VerdanturfTown_House_EventScript_TutorRedShard_Text_10:
-	.string "Silver Wind"
-	.string "Super Fang$"
+	.string "Silver Wind$"
 
 VerdanturfTown_House_EventScript_TutorRedShard_Text_11:
-	.string "Swift$"
+	.string "Super Fang$"
 
 VerdanturfTown_House_EventScript_TutorRedShard_Text_12:
-	.string "Taunt$"
+	.string "Swift$"
 
 VerdanturfTown_House_EventScript_TutorRedShard_Text_13:
-	.string "Thunder Fang$"
+	.string "Taunt$"
 
 VerdanturfTown_House_EventScript_TutorRedShard_Text_14:
+	.string "Thunder Fang$"
+
+VerdanturfTown_House_EventScript_TutorRedShard_Text_15:
 	.string "Work Up$"
 
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_0:
+	.string "Breaking Swipe$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_1:
+	.string "Cross Poison$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_2:
+	.string "Electroweb$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_3:
+	.string "Fire Punch$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_4:
+	.string "Ice Punch$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_5:
+	.string "Icy Wind$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_6:
+	.string "Iron Head$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_7:
+	.string "Pounce$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_8:
+	.string "Power Gem$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_9:
+	.string "Psychic Fangs$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_10:
+	.string "Razor Shell$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_11:
+	.string "Scorching Sands$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_12:
+	.string "Seed Bomb$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_13:
+	.string "Signal Beam$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_14:
+	.string "Throat Chop$"
+
+VerdanturfTown_House_EventScript_TutorYellowShard_Text_15:
+	.string "Thunder Punch$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_0:
+	.string "Aqua Tail$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_1:
+	.string "Blaze Kick$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_2:
+	.string "Bounce$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_3:
+	.string "Chilling Water$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_4:
+	.string "Drill Run$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_5:
+	.string "Earth Power$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_6:
+	.string "Hyper Voice$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_7:
+	.string "Ice Spinner$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_8:
+	.string "Icicle Spear$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_9:
+	.string "Iron Tail$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_10:
+	.string "Knock Off$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_11:
+	.string "Mystical Fire$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_12:
+	.string "Revenge$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_13:
+	.string "Rock Blast$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_14:
+	.string "Skitter Smack$"
+
+VerdanturfTown_House_EventScript_TutorBlueShard_Text_15:
+	.string "Trailblaze$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_0:
+	.string "Body Press$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_1:
+	.string "Drain Punch$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_2:
+	.string "Dual Wingbeat$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_3:
+	.string "Expanding Force$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_4:
+	.string "Flip Turn$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_5:
+	.string "Foul Play$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_6:
+	.string "Gunk Shot$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_7:
+	.string "Heat Wave$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_8:
+	.string "Liquidation$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_9:
+	.string "Outrage$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_10:
+	.string "Phantom Force$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_11:
+	.string "Pollen Puff$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_12:
+	.string "Rising Voltage$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_13:
+	.string "Stomping Tantrum$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_14:
+	.string "Superpower$"
+
+VerdanturfTown_House_EventScript_TutorGreenShard_Text_15:
+	.string "Triple Axel$"
+
+VerdanturfTown_House_EventScript_PleaseSelectMove_Text_0:
+	.string "Please select a move from the list.$"
+
 VerdanturfTown_House_EventScript_TutorTaugthMove_Text_0:
-	.string "All done! Your Pokèmon learned a new move.\nCome back soon.$"
-
-EventScript_MultichoiceTests_Text_0:
-	.string "{STR_VAR_1}$"
-
-EventScript_MultichoiceTests_Text_1:
-	.string "{STR_VAR_2}$"
-
-EventScript_MultichoiceTests_Text_2:
-	.string "{STR_VAR_3}$"
-
-EventScript_MultichoiceTests_Text_3:
-	.string "Option 1$"
-
-EventScript_MultichoiceTests_Text_4:
-	.string "Option 2$"
-
-EventScript_MultichoiceTests_Text_5:
-	.string "Option 3$"
-
-EventScript_MultichoiceTests_Text_6:
-	.string "Option 4$"
+	.string "All done! Your Pokèmon learned a new\n"
+	.string "move. Come back soon.$"

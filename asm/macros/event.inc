@@ -1736,7 +1736,7 @@
 	.endm
 
 	.macro _dynmultichoice left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req argv:vararg
-	.byte 0xe3
+	.byte 0xe5
 	.byte \left
 	.byte \top
 	.byte \ignoreBPress
@@ -1758,7 +1758,7 @@
 	.endm
 
 	.macro dynmultipush name:req, id:req
-	.byte 0xe4
+	.byte 0xe6
 	.4byte \name
 	.2byte \id
 	.endm
