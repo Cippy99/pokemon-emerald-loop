@@ -1111,7 +1111,7 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
     if(FlagGet(FLAG_CLEANSE_TAG)){
         if(CheckBagHasItem(ITEM_CLEANSE_TAG, 1)){
-            *encRate * 0;
+            *encRate = *encRate * 0;
             return;
         }
         FlagClear(FLAG_CLEANSE_TAG);

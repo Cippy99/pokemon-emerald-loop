@@ -1352,19 +1352,21 @@ void ItemUseOutOfBattle_CleanseTag(u8 taskId)
     {
         FlagSet(FLAG_CLEANSE_TAG);
         PlaySE(SE_EXP_MAX);
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, gText_CleanseTagTurnOn, CloseItemMessage);
+
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_CleanseTagTurnOn, Task_CloseCantUseKeyItemMessage);
         else
-            DisplayItemMessageInBattlePyramid(taskId, gText_CleanseTagTurnOn, Task_CloseBattlePyramidBagMessage);
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_CleanseTagTurnOn, CloseItemMessage);
     }
     else
     {
         FlagClear(FLAG_CLEANSE_TAG);
         PlaySE(SE_PC_OFF);
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, gText_CleanseTagTurnOff, CloseItemMessage);
+
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_CleanseTagTurnOff, Task_CloseCantUseKeyItemMessage);
         else
-            DisplayItemMessageInBattlePyramid(taskId, gText_CleanseTagTurnOff, Task_CloseBattlePyramidBagMessage);
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_CleanseTagTurnOff, CloseItemMessage);
     }
 }
 
