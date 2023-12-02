@@ -15,7 +15,7 @@ struct RematchTrainer
 
 struct LevelCap
 {
-    bool8 flag;
+    u16 flag;
     u8 level;
 };
 
