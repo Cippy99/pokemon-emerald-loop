@@ -20,7 +20,7 @@ FortreeCity_Gym_EventScript_Winona::
 	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
-	goto_if_unset FLAG_RECEIVED_TM_AERIAL_ACE, FortreeCity_Gym_EventScript_GiveAerialAce2
+	goto_if_unset FLAG_RECEIVED_TM_HURRICANE, FortreeCity_Gym_EventScript_GiveHurricane2
 	msgbox FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -34,7 +34,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setflag FLAG_BADGE06_GET
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
-	call FortreeCity_Gym_EventScript_GiveAerialAce
+	call FortreeCity_Gym_EventScript_GiveHurricane
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -48,19 +48,19 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	release
 	end
 
-FortreeCity_Gym_EventScript_GiveAerialAce2::
-	giveitem ITEM_TM_AERIAL_ACE
+FortreeCity_Gym_EventScript_GiveHurricane2::
+	giveitem ITEM_TM_HURRICANE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox FortreeCity_Gym_Text_ExplainAerialAce, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM_AERIAL_ACE
+	msgbox FortreeCity_Gym_Text_ExplainHurricane, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_HURRICANE
 	release
 	end
 
-FortreeCity_Gym_EventScript_GiveAerialAce::
-	giveitem ITEM_TM_AERIAL_ACE
+FortreeCity_Gym_EventScript_GiveHurricane::
+	giveitem ITEM_TM_HURRICANE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox FortreeCity_Gym_Text_ExplainAerialAce, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM_AERIAL_ACE
+	msgbox FortreeCity_Gym_Text_ExplainHurricane, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_HURRICANE
 	return
 
 FortreeCity_Gym_EventScript_WinonaRematch::
@@ -261,8 +261,8 @@ FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "And this…\n"
 	.string "This is a gift from me.$"
 
-FortreeCity_Gym_Text_ExplainAerialAce:
-	.string "TM40 contains AERIAL ACE.\p"
+FortreeCity_Gym_Text_ExplainHurricane:
+	.string "TM40 contains HURRICANE.\p"
 	.string "Its speed…\n"
 	.string "No POKéMON should be able to avoid it.\p"
 	.string "… … … … … …$"

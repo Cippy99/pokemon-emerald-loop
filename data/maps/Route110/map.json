@@ -273,12 +273,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_ItemDireHit",
-      "flag": "FLAG_ITEM_ROUTE_110_DIRE_HIT"
+      "trainer_sight_or_berry_tree_id": "ITEM_IRON_PLATE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_110_IRON_PLATE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
       "x": 26,
       "y": 47,
       "elevation": 3,
@@ -286,9 +286,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_ItemRareCandy",
-      "flag": "FLAG_ITEM_ROUTE_110_RARE_CANDY"
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_X_SCISSOR",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_110_X_SCISSOR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",

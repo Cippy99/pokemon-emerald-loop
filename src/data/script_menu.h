@@ -238,10 +238,10 @@ static const struct MenuAction MultichoiceList_Satisfaction[] =
     {gText_Dissatisfied},
 };
 
-static const struct MenuAction MultichoiceList_SternDeepSea[] =
+static const struct MenuAction MultichoiceList_SternAbility[] =
 {
-    {gText_DeepSeaTooth},
-    {gText_DeepSeaScale},
+    {gText_AbilityCapsule},
+    {gText_AbilityPatch},
     {gText_Exit},
 };
 
@@ -830,7 +830,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_MACH_BIKE_INFO]             = MULTICHOICE(MultichoiceList_MachBikeInfo),
     [MULTI_ACRO_BIKE_INFO]             = MULTICHOICE(MultichoiceList_AcroBikeInfo),
     [MULTI_SATISFACTION]               = MULTICHOICE(MultichoiceList_Satisfaction),
-    [MULTI_STERN_DEEPSEA]              = MULTICHOICE(MultichoiceList_SternDeepSea),
+    [MULTI_STERN_ABILITY]              = MULTICHOICE(MultichoiceList_SternAbility),
     [MULTI_UNUSED_ASH_VENDOR]          = MULTICHOICE(MultichoiceList_UnusedAshVendor),
     [MULTI_GAME_CORNER_DOLLS]          = MULTICHOICE(MultichoiceList_GameCornerDolls),
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),

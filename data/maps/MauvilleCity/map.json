@@ -148,9 +148,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_EventScript_ItemXSpeed",
-      "flag": "FLAG_ITEM_MAUVILLE_CITY_X_SPEED"
+      "trainer_sight_or_berry_tree_id": "ITEM_MAGNET",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MAUVILLE_CITY_MAGNET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
@@ -230,7 +230,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

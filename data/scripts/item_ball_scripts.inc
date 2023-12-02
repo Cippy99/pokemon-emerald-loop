@@ -424,7 +424,7 @@ NewMauville_Inside_EventScript_ItemParalyzeHeal::
 	end
 
 AbandonedShip_Rooms_1F_EventScript_ItemHarborMail::
-	finditem ITEM_HARBOR_MAIL
+	finditem ITEM_WAVE_MAIL
 	end
 
 AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::
@@ -576,7 +576,7 @@ Route110_TrickHousePuzzle1_EventScript_ItemOrangeMail::
 	end
 
 Route110_TrickHousePuzzle2_EventScript_ItemHarborMail::
-	finditem ITEM_HARBOR_MAIL
+	finditem ITEM_WAVE_MAIL
 	end
 
 Route110_TrickHousePuzzle2_EventScript_ItemWaveMail::

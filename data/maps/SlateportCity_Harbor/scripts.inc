@@ -339,18 +339,18 @@ SlateportCity_Harbor_EventScript_AskToTradeScanner::
 	end
 
 SlateportCity_Harbor_EventScript_ChooseScannerTrade::
-	multichoice 0, 0, MULTI_STERN_DEEPSEA, FALSE
+	multichoice 0, 0, MULTI_STERN_ABILITY, FALSE
 	switch VAR_RESULT
-	case 0, SlateportCity_Harbor_EventScript_DeepSeaTooth
-	case 1, SlateportCity_Harbor_EventScript_DeepSeaScale
+	case 0, SlateportCity_Harbor_EventScript_AbilityCapsule
+	case 1, SlateportCity_Harbor_EventScript_AbilityPatch
 	case 2, SlateportCity_Harbor_EventScript_DeclineTrade
 	case MULTI_B_PRESSED, SlateportCity_Harbor_EventScript_DeclineTrade
 	end
 
-SlateportCity_Harbor_EventScript_DeepSeaTooth::
-	msgbox SlateportCity_Harbor_Text_TradeForDeepSeaTooth, MSGBOX_YESNO
+SlateportCity_Harbor_EventScript_AbilityCapsule::
+	msgbox SlateportCity_Harbor_Text_TradeForAbilityCapsule, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SlateportCity_Harbor_EventScript_ChooseDifferentTrade
-	giveitem ITEM_DEEP_SEA_TOOTH
+	giveitem ITEM_ABILITY_PATCH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	removeitem ITEM_SCANNER
 	msgbox SlateportCity_Harbor_Text_HandedScannerToStern, MSGBOX_DEFAULT
@@ -358,10 +358,10 @@ SlateportCity_Harbor_EventScript_DeepSeaTooth::
 	goto SlateportCity_Harbor_EventScript_TradedScanner
 	end
 
-SlateportCity_Harbor_EventScript_DeepSeaScale::
-	msgbox SlateportCity_Harbor_Text_TradeForDeepSeaScale, MSGBOX_YESNO
+SlateportCity_Harbor_EventScript_AbilityPatch::
+	msgbox SlateportCity_Harbor_Text_TradeForAbilityPatch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SlateportCity_Harbor_EventScript_ChooseDifferentTrade
-	giveitem ITEM_DEEP_SEA_SCALE
+	giveitem ITEM_ABILITY_PATCH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	removeitem ITEM_SCANNER
 	msgbox SlateportCity_Harbor_Text_HandedScannerToStern, MSGBOX_DEFAULT
@@ -517,8 +517,8 @@ SlateportCity_Harbor_Text_WouldYouTradeScanner:
 	.string "help us on our explorations.\p"
 	.string "{PLAYER}{KUN}, would you trade your\n"
 	.string "SCANNER for something?\p"
-	.string "Like, say, a DEEPSEATOOTH or\n"
-	.string "a DEEPSEASCALE that I have?$"
+	.string "Like, say, a Ability Capsule or\n"
+	.string "an Ability Patch that I have?$"
 
 SlateportCity_Harbor_Text_IfYouWantToTradeLetMeKnow:
 	.string "CAPT. STERN: Are you certain?\n"
@@ -526,13 +526,13 @@ SlateportCity_Harbor_Text_IfYouWantToTradeLetMeKnow:
 	.string "Well, okay, then. If you want to trade\n"
 	.string "your SCANNER, let me know.$"
 
-SlateportCity_Harbor_Text_TradeForDeepSeaTooth:
+SlateportCity_Harbor_Text_TradeForAbilityCapsule:
 	.string "CAPT. STERN: So you'll trade it for\n"
-	.string "my DEEPSEATOOTH?$"
+	.string "my Ability Capsule?$"
 
-SlateportCity_Harbor_Text_TradeForDeepSeaScale:
+SlateportCity_Harbor_Text_TradeForAbilityPatch:
 	.string "CAPT. STERN: So you'll trade it for\n"
-	.string "my DEEPSEASCALE?$"
+	.string "my Ability Patch?$"
 
 SlateportCity_Harbor_Text_WhichOneDoYouWant:
 	.string "CAPT. STERN: Which one do you want?$"
