@@ -43,11 +43,11 @@ Route114_EventScript_ReceivedBerry::
 Route114_EventScript_RoarGentleman::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_ROAR, Route114_EventScript_ReceivedRoar
+	goto_if_set FLAG_RECEIVED_TM_THIEF, Route114_EventScript_ReceivedRoar
 	msgbox Route114_Text_AllMyMonDoesIsRoarTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_TM_VENOSHOCK
+	giveitem ITEM_TM_THIEF
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_ROAR
+	setflag FLAG_RECEIVED_TM_THIEF
 	msgbox Route114_Text_ExplainRoar, MSGBOX_DEFAULT
 	release
 	end
@@ -177,14 +177,14 @@ Route114_EventScript_Kai::
 	end
 
 Route114_Text_AllMyMonDoesIsRoarTakeThis:
-	.string "All my POKéMON does is ROAR…\n"
+	.string "All my POKéMON does is STEAL…\n"
 	.string "No one dares to come near me…\p"
 	.string "Sigh… If you would, please take\n"
 	.string "this TM away…$"
 
 Route114_Text_ExplainRoar:
-	.string "TM05 contains ROAR.\n"
-	.string "A ROAR sends POKéMON scurrying.$"
+	.string "TM46 contains THIEF.\n"
+	.string "You can use it to steal items.$"
 
 Route114_Text_Poochyena:
 	.string "Bow! Bowwow!$"

@@ -288,7 +288,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_TM_X_SCISSOR",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_110_X_SCISSOR"
+      "flag": "FLAG_ITEM_ROUTE_110_TM_X_SCISSOR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
@@ -481,9 +481,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_ItemElixir",
-      "flag": "FLAG_ITEM_ROUTE_110_ELIXIR"
+      "trainer_sight_or_berry_tree_id": "ITEM_YELLOW_SHARD",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_110_YELLOW_SHARD"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",

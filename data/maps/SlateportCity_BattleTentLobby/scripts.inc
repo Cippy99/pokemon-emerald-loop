@@ -199,11 +199,11 @@ SlateportCity_BattleTentLobby_Movement_UnusedEnterDoor::
 SlateportCity_BattleTentLobby_EventScript_TormentGiver::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_TORMENT, SlateportCity_BattleTentLobby_EventScript_ReceivedTorment
+	goto_if_set FLAG_RECEIVED_TM_ECHOED_VOICE, SlateportCity_BattleTentLobby_EventScript_ReceivedTorment
 	msgbox SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe, MSGBOX_DEFAULT
 	giveitem ITEM_TM_ECHOED_VOICE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_TORMENT
+	setflag FLAG_RECEIVED_TM_ECHOED_VOICE
 	msgbox SlateportCity_BattleTentLobby_Text_ExplainTorment, MSGBOX_DEFAULT
 	release
 	end
@@ -286,11 +286,10 @@ SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
 
 SlateportCity_BattleTentLobby_Text_ExplainTorment:
 	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
-	.string "Like, it won't let the other guy\n"
-	.string "use the same move twice in a row, see?\p"
-	.string "Hey, now, you listen here, like,\n"
-	.string "I'm not laying a torment on you!$"
+	.string "Hey, it's ECHOED VOICE, you hearing me?\p"
+	.string "Like, it will get stronger if\n"
+	.string "your Pokèmon use it multiple\n"
+	.string "times in a row.$\n"
 
 SlateportCity_BattleTentLobby_Text_IllTryUsingBugMons:
 	.string "I don't really like BUG POKéMON,\n"

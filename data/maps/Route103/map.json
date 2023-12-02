@@ -247,19 +247,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 36,
-      "y": 6,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route103_EventScript_Isabelle",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
       "x": 36,
       "y": 13,
@@ -273,7 +260,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
       "x": 64,
       "y": 7,
       "elevation": 0,
@@ -281,9 +268,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_ROCK_POLISH",
       "script": "Route103_EventScript_ItemPPUp",
-      "flag": "FLAG_ITEM_ROUTE_103_PP_UP"
+      "flag": "FLAG_ITEM_ROUTE_103_TM_ROCK_POLISH"
     }
   ],
   "warp_events": [
@@ -292,6 +279,13 @@
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ALTERING_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 32,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_GLACIAL_HOLLOW_ENTRANCE",
       "dest_warp_id": "0"
     }
   ],
