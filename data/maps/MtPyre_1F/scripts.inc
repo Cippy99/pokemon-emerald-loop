@@ -1,19 +1,19 @@
 MtPyre_1F_MapScripts::
 	.byte 0
 
-MtPyre_1F_EventScript_CleanseTagWoman::
+MtPyre_1F_EventScript_SpellTagWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_CLEANSE_TAG, MtPyre_1F_EventScript_ReceivedCleanseTag
+	goto_if_set FLAG_RECEIVED_SPELL_TAG, MtPyre_1F_EventScript_ReceivedSpellTag
 	msgbox MtPyre_1F_Text_TakeThisForYourOwnGood, MSGBOX_DEFAULT
-	giveitem ITEM_CLEANSE_TAG
+	giveitem ITEM_SPELL_TAG
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_CLEANSE_TAG
+	setflag FLAG_RECEIVED_SPELL_TAG
 	release
 	end
 
-MtPyre_1F_EventScript_ReceivedCleanseTag::
-	msgbox MtPyre_1F_Text_ExplainCleanseTag, MSGBOX_DEFAULT
+MtPyre_1F_EventScript_ReceivedSpellTag::
+	msgbox MtPyre_1F_Text_ExplainSpellTag, MSGBOX_DEFAULT
 	release
 	end
 
@@ -31,10 +31,10 @@ MtPyre_1F_Text_TakeThisForYourOwnGood:
 	.string "There is no telling what may happen.\n"
 	.string "Take this. It's for your own good.$"
 
-MtPyre_1F_Text_ExplainCleanseTag:
+MtPyre_1F_Text_ExplainSpellTag:
 	.string "Have a POKéMON hold that\n"
-	.string "CLEANSE TAG.\p"
-	.string "It will help ward off wild POKéMON.$"
+	.string "SPELL TAG.\p"
+	.string "It will boost its ghost moves.$"
 
 MtPyre_1F_Text_ComeToPayRespects:
 	.string "Did you come to pay your respect\n"

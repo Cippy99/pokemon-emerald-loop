@@ -20,7 +20,7 @@ FortreeCity_Gym_EventScript_Winona::
 	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
-	goto_if_unset FLAG_RECEIVED_TM_HURRICANE, FortreeCity_Gym_EventScript_GiveHurricane2
+	goto_if_unset FLAG_RECEIVED_TM_ROOST, FortreeCity_Gym_EventScript_GiveRoost2
 	msgbox FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -34,7 +34,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	setflag FLAG_BADGE06_GET
 	setvar VAR_0x8008, 6
 	call Common_EventScript_SetGymTrainers
-	call FortreeCity_Gym_EventScript_GiveHurricane
+	call FortreeCity_Gym_EventScript_GiveRoost
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -48,19 +48,19 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	release
 	end
 
-FortreeCity_Gym_EventScript_GiveHurricane2::
-	giveitem ITEM_TM_HURRICANE
+FortreeCity_Gym_EventScript_GiveRoost2::
+	giveitem ITEM_TM_ROOST
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox FortreeCity_Gym_Text_ExplainHurricane, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM_HURRICANE
+	msgbox FortreeCity_Gym_Text_ExplainRoost, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_ROOST
 	release
 	end
 
-FortreeCity_Gym_EventScript_GiveHurricane::
-	giveitem ITEM_TM_HURRICANE
+FortreeCity_Gym_EventScript_GiveRoost::
+	giveitem ITEM_TM_ROOST
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox FortreeCity_Gym_Text_ExplainHurricane, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM_HURRICANE
+	msgbox FortreeCity_Gym_Text_ExplainRoost, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_ROOST
 	return
 
 FortreeCity_Gym_EventScript_WinonaRematch::
@@ -261,10 +261,10 @@ FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "And this…\n"
 	.string "This is a gift from me.$"
 
-FortreeCity_Gym_Text_ExplainHurricane:
-	.string "TM40 contains HURRICANE.\p"
-	.string "Its speed…\n"
-	.string "No POKéMON should be able to avoid it.\p"
+FortreeCity_Gym_Text_ExplainRoost:
+	.string "TM40 contains Roost.\p"
+	.string "It can heal your POKéMON but\n"
+	.string "it will land on the ground\p"
 	.string "… … … … … …$"
 
 FortreeCity_Gym_Text_RegisteredWinona:

@@ -15,6 +15,10 @@ FortreeCity_EventScript_Man::
 	msgbox FortreeCity_Text_SawGiganticPokemonInSky, MSGBOX_NPC
 	end
 
+FortreeCity_EventScript_Man_FrontGym::
+	msgbox FortreeCity_Text_LeaderNotHere, MSGBOX_NPC
+	end
+
 FortreeCity_EventScript_Woman::
 	lock
 	faceplayer
@@ -153,4 +157,11 @@ FortreeCity_Text_GymSign:
 	.string "LEADER: WINONA\p"
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
+
+FortreeCity_Text_LeaderNotHere:
+	.string "The gym is closed at the moment.\p"
+	.string "May I suggest you to visit Lilycove\n"
+	.string "City in the meantime.\p"
+	.string "You can buy interesting items\n"
+	.string "at the Department Store.$"
 

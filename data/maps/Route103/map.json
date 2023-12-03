@@ -271,6 +271,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM_ROCK_POLISH",
       "script": "Route103_EventScript_ItemPPUp",
       "flag": "FLAG_ITEM_ROUTE_103_TM_ROCK_POLISH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
+      "x": 31,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_AVALANCHE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_103_TM_AVALANCHE"
     }
   ],
   "warp_events": [
