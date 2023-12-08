@@ -566,7 +566,6 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
 	.2byte ITEM_TM_HONE_CLAWS
 	.2byte ITEM_TM_THUNDER_WAVE
 	.2byte ITEM_TM_STRUGGLE_BUG

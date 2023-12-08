@@ -1,20 +1,20 @@
 SootopolisCity_House1_MapScripts::
 	.byte 0
 
-SootopolisCity_House1_EventScript_BrickBreakBlackBelt::
+SootopolisCity_House1_EventScript_SwordsDanceBlackBelt::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_BRICK_BREAK, SootopolisCity_House1_EventScript_ReceivedBrickBreak
+	goto_if_set FLAG_RECEIVED_TM_SWORDS_DANCE, SootopolisCity_House1_EventScript_ReceivedSwordsDance
 	msgbox SootopolisCity_House1_Text_DevelopedThisTM, MSGBOX_DEFAULT
-	giveitem ITEM_TM_BRICK_BREAK
+	giveitem ITEM_TM_SWORDS_DANCE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_BRICK_BREAK
-	msgbox SootopolisCity_House1_Text_ExplainBrickBreak, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_TM_SWORDS_DANCE
+	msgbox SootopolisCity_House1_Text_ExplainSwordsDance, MSGBOX_DEFAULT
 	release
 	end
 
-SootopolisCity_House1_EventScript_ReceivedBrickBreak::
-	msgbox SootopolisCity_House1_Text_ExplainBrickBreak, MSGBOX_DEFAULT
+SootopolisCity_House1_EventScript_ReceivedSwordsDance::
+	msgbox SootopolisCity_House1_Text_ExplainSwordsDance, MSGBOX_DEFAULT
 	release
 	end
 
@@ -34,9 +34,9 @@ SootopolisCity_House1_Text_DevelopedThisTM:
 	.string "I developed a shattering TM.\n"
 	.string "I bequeath it to you!$"
 
-SootopolisCity_House1_Text_ExplainBrickBreak:
-	.string "TM31 contains BRICK BREAK! It's a move\n"
-	.string "so horrible that I can't describe it.$"
+SootopolisCity_House1_Text_ExplainSwordsDance:
+	.string "TM31 contains SWORDS DANCE! It's a\n"
+	.string "very strong move!$"
 
 SootopolisCity_House1_Text_Kecleon:
 	.string "KECLEON: Puu puhyaah.$"

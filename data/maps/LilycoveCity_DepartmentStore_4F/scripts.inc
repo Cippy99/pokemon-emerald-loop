@@ -53,6 +53,10 @@ LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
 	.2byte ITEM_TM_PROTECT
 	.2byte ITEM_TM_REFLECT
 	.2byte ITEM_TM_LIGHT_SCREEN
+	.2byte ITEM_TM_HEX
+	.2byte ITEM_TM_DRAGON_TAIL
+	.2byte ITEM_TM_LOW_SWEEP
+	.2byte ITEM_TM_DRAINING_KISS
 	.2byte ITEM_NONE
 	release
 	end
