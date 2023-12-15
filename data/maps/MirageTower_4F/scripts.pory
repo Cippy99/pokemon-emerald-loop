@@ -1,0 +1,117 @@
+raw `
+.set LOCALID_FOSSILIZED_BIRD, 1
+.set LOCALID_FOSSILIZED_FISH, 2
+.set LOCALID_FOSSILIZED_DRAKE, 4
+.set LOCALID_FOSSILIZED_DINO, 5
+
+MirageTower_4F_MapScripts::
+	.byte 0
+
+MirageTower_4F_EventScript_CollapseMirageTower::
+	setvar VAR_0x8004, 1   @ vertical pan
+	setvar VAR_0x8005, 1   @ horizontal pan
+	setvar VAR_0x8006, 32  @ num shakes
+	setvar VAR_0x8007, 2   @ shake delay
+	special ShakeCamera
+	waitstate
+	special DoMirageTowerCeilingCrumble
+	waitstate
+	setvar VAR_MIRAGE_TOWER_STATE, 1
+	clearflag FLAG_LANDMARK_MIRAGE_TOWER
+	warp MAP_ROUTE111, 19, 59
+	waitstate
+	release
+	end
+
+`
+
+
+script MirageTower_4F_EventScript_FossilizedBird{
+	lock
+	faceplayer
+	msgbox("Take the Fossilized Bird?", MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil)
+	giveitem(ITEM_FOSSILIZED_BIRD)
+	closemessage
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_BIRD)
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_FISH)
+	removeobject(LOCALID_FOSSILIZED_BIRD)
+	delay(30)
+	setvar(VAR_0x800A, LOCALID_FOSSILIZED_FISH)
+	goto(MirageTower_4F_EventScript_ShakeOrCollapse)
+}
+
+script MirageTower_4F_EventScript_FossilizedFish{
+	lock
+	faceplayer
+	msgbox("Take the Fossilized Fish?", MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil)
+	giveitem(ITEM_FOSSILIZED_FISH)
+	closemessage
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_FISH)
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_BIRD)
+	removeobject(LOCALID_FOSSILIZED_FISH)
+	delay(30)
+	setvar(VAR_0x800A, LOCALID_FOSSILIZED_BIRD)
+	goto(MirageTower_4F_EventScript_ShakeOrCollapse)
+}
+
+script MirageTower_4F_EventScript_FossilizedDrake{
+	lock
+	faceplayer
+	msgbox("Take the Fossilized Drake?", MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil)
+	giveitem(ITEM_FOSSILIZED_DRAKE)
+	closemessage
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DRAKE)
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DINO)
+	removeobject(LOCALID_FOSSILIZED_DRAKE)
+	delay(30)
+	setvar(VAR_0x800A, LOCALID_FOSSILIZED_DINO)
+	goto(MirageTower_4F_EventScript_ShakeOrCollapse)
+}
+
+script MirageTower_4F_EventScript_FossilizedDino{
+	lock
+	faceplayer
+	msgbox("Take the Fossilized Dino?", MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil)
+	giveitem(ITEM_FOSSILIZED_DINO)
+	closemessage
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DINO)
+	setflag(FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DRAKE)
+	removeobject(LOCALID_FOSSILIZED_DINO)
+	delay(30)
+	setvar(VAR_0x800A, LOCALID_FOSSILIZED_DRAKE)
+	goto(MirageTower_4F_EventScript_ShakeOrCollapse)
+}
+
+script MirageTower_4F_EventScript_ShakeOrCollapse {
+	if(flag(FLAG_CHOOSE_FIRST_FOSSIL)){
+		goto(MirageTower_4F_EventScript_CollapseMirageTower)
+	}
+	else{
+		setflag(FLAG_CHOOSE_FIRST_FOSSIL)
+		goto(MirageTower_4F_EventScript_ShakeMirageTower)
+	}
+}
+
+script MirageTower_4F_EventScript_LeaveFossil{
+	msgbox("{PLAYER} left the fossil alone.")
+	release
+}
+
+script MirageTower_4F_EventScript_ShakeMirageTower{
+	setvar(VAR_0x8004, 1)   //vertical pan
+	setvar(VAR_0x8005, 1)   //horizontal pan
+	setvar(VAR_0x8006, 16)  //num shakes
+	setvar(VAR_0x8007, 2)   //shake delay
+	special(ShakeCamera)
+	waitstate
+	removeobject(VAR_0x800A)
+	msgbox(format("The floor seems instable. If you take another fossil the tower may collapse."))
+	closemessage
+	release
+}
+
+	

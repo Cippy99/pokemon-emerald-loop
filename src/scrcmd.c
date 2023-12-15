@@ -2437,3 +2437,15 @@ bool8 ScrCmd_getImportantFightSet(struct ScriptContext *ctx){
     return TRUE;
 
 }
+
+bool8 ScrCmd_checkGalarFossils(void){
+    if((CheckBagHasItem(ITEM_FOSSILIZED_BIRD, 1) || CheckBagHasItem(ITEM_FOSSILIZED_FISH, 1)) &&
+        (CheckBagHasItem(ITEM_FOSSILIZED_DRAKE, 1) || CheckBagHasItem(ITEM_FOSSILIZED_DINO, 1))){
+        gSpecialVar_Result = TRUE;    
+    }
+    else{
+        gSpecialVar_Result = FALSE;
+    }
+
+    return TRUE;
+}

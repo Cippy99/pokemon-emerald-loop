@@ -2057,3 +2057,8 @@
 	callnative CreateTrainerPartyForPlayer
 	trainerbattle_no_intro \trainer2, NULL
 	.endm
+
+	@ Check if player can revive galar fossils
+	.macro checkgalarfossils
+	.byte 0xe7
+	.endm

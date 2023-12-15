@@ -132,8 +132,7 @@ Route111_EventScript_MirageTowerDisappear::
 	waitstate
 	setvar VAR_MIRAGE_TOWER_STATE, 2
 	clearflag FLAG_HIDE_DESERT_UNDERPASS_FOSSIL
-	goto_if_set FLAG_CHOSE_CLAW_FOSSIL, Route111_EventScript_RootFossilDisappeared
-	msgbox Route111_Text_ClawFossilDisappeared, MSGBOX_DEFAULT
+	msgbox Route111_Text_OtherFossilsDisappeared, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -706,8 +705,8 @@ Route111_Text_MirageTowerHasntBeenSeenSince:
 	.string "Perhaps it really was\n"
 	.string "the MIRAGE TOWER…$"
 
-Route111_Text_ClawFossilDisappeared:
-	.string "The CLAW FOSSIL disappeared into\n"
+Route111_Text_OtherFossilsDisappeared:
+	.string "The other fossil disappeared into\n"
 	.string "the sand…$"
 
 Route111_Text_RootFossilDisappeared:
