@@ -9372,6 +9372,15 @@ static bool32 CanEvolve(u32 species)
     return FALSE;
 }
 
+static bool32 HasRegionalFormThatCanEvolve(u32 species){
+    if(species == SPECIES_FARFETCHD || species == SPECIES_MR_MIME || 
+    species == SPECIES_QWILFISH || species == SPECIES_CORSOLA ||
+    species == SPECIES_LINOONE){
+        return TRUE;
+    }
+    return FALSE;
+}
+
 static inline u32 CalcDefenseStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 moveType, bool32 isCrit, bool32 updateFlags, u32 atkAbility, u32 defAbility, u32 holdEffectDef, u32 weather)
 {
     bool32 usesDefStat;
@@ -9486,7 +9495,7 @@ static inline u32 CalcDefenseStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_EVIOLITE:
-        if (CanEvolve(gBattleMons[battlerDef].species))
+        if (CanEvolve(gBattleMons[battlerDef].species) || HasRegionalFormThatCanEvolve(gBattleMons[battlerDef].species))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case HOLD_EFFECT_ASSAULT_VEST:
