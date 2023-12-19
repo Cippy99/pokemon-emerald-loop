@@ -33,15 +33,15 @@ ShoalCave_LowTideLowerRoom_EventScript_ReceivedShoalSalt::
 ShoalCave_LowTideLowerRoom_EventScript_BlackBelt::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_FOCUS_BAND, ShoalCave_LowTideLowerRoom_EventScript_ReceivedFocusBand
+	goto_if_set FLAG_RECEIVED_EXPERT_BELT, ShoalCave_LowTideLowerRoom_EventScript_ReceivedExpertBelt
 	msgbox ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus, MSGBOX_DEFAULT
-	giveitem ITEM_FOCUS_BAND
+	giveitem ITEM_EXPERT_BELT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_FOCUS_BAND
+	setflag FLAG_RECEIVED_EXPERT_BELT
 	release
 	end
 
-ShoalCave_LowTideLowerRoom_EventScript_ReceivedFocusBand::
+ShoalCave_LowTideLowerRoom_EventScript_ReceivedExpertBelt::
 	msgbox ShoalCave_LowTideLowerRoom_Text_EverythingStartsWithFocus, MSGBOX_DEFAULT
 	release
 	end
@@ -49,10 +49,10 @@ ShoalCave_LowTideLowerRoom_EventScript_ReceivedFocusBand::
 ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus:
 	.string "The penetrating cold around these\n"
 	.string "parts is an impediment to training.\p"
-	.string "But with focus, one can overcome!\p"
-	.string "With this FOCUS BAND, buckle down and\n"
-	.string "withstand the cold!$"
+	.string "But with experience, one can overcome!\p"
+	.string "With this EXPERT BELT, buckle down\n"
+	.string "and withstand the cold!$"
 
 ShoalCave_LowTideLowerRoom_Text_EverythingStartsWithFocus:
-	.string "Everything starts with focus!$"
+	.string "Everything comes with experience!$"
 

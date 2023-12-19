@@ -24,7 +24,18 @@ FallarborTown_PokemonCenter_1F_EventScript_Girl::
 	end
 
 FallarborTown_PokemonCenter_1F_EventScript_ExpertM::
-	msgbox FallarborTown_PokemonCenter_1F_Text_PlantHardyTrees, MSGBOX_NPC
+	goto_if_set FLAG_RECEIVED_EVIOLITE FallarborTown_PokemonCenter_1F_EventScript_ExplainEviolite
+	lock
+	msgbox FallarborTown_PokemonCenter_1F_Text_TrainingRequiresTime, MSGBOX_NPC
+	giveitem ITEM_EVIOLITE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_EVIOLITE
+	releaseall
+	end
+
+FallarborTown_PokemonCenter_1F_EventScript_ExplainEviolite::
+	msgbox FallarborTown_PokemonCenter_1F_Text_ExplainEviolite
+	releaseall
 	end
 
 FallarborTown_PokemonCenter_1F_EventScript_Lanette::
@@ -107,8 +118,13 @@ FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown:
 	.string "Maybe the FOSSIL MANIAC at the edge\n"
 	.string "of town will know.$"
 
-FallarborTown_PokemonCenter_1F_Text_PlantHardyTrees:
-	.string "In the fields of FALLARBOR, we plant\n"
-	.string "seedlings of hardy trees that thrive\l"
-	.string "even in volcanic ash.$"
+FallarborTown_PokemonCenter_1F_Text_TrainingRequiresTime:
+	.string "Training a POKéMON requires time and\n"
+	.string "patience. If your POKéMON hasn't\l"
+	.string "evolved yet, you can give it this to\l"
+	.string "make him stronger in the meantime.$"
 
+FallarborTown_PokemonCenter_1F_Text_ExplainEviolite:
+	.string "Eviolite makes your POKéMON's defenses\n"
+	.string "stronger, but only if it hasn't\l"
+	.string "evolved yet.$"

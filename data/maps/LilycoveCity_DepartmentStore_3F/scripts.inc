@@ -28,20 +28,21 @@ LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters
+	pokemart LilycoveCity_DepartmentStore_3F_Pokemart_EvoItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters:
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_X_ACCURACY
+LilycoveCity_DepartmentStore_3F_Pokemart_EvoItems:
+	.2byte ITEM_WHIPPED_DREAM
+	.2byte ITEM_SACHET
+	.2byte ITEM_CRACKED_POT
+	.2byte ITEM_CHIPPED_POT
+	.2byte ITEM_BLACK_AUGURITE
+	.2byte ITEM_PEAT_BLOCK
+	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_WREATH
 	.2byte ITEM_NONE
 	release
 	end

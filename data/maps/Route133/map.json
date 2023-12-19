@@ -73,9 +73,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route133_EventScript_ItemBigPearl",
-      "flag": "FLAG_ITEM_ROUTE_133_BIG_PEARL"
+      "trainer_sight_or_berry_tree_id": "ITEM_LEEK",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_133_LEEK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -86,9 +86,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route133_EventScript_ItemStarPiece",
-      "flag": "FLAG_ITEM_ROUTE_133_STAR_PIECE"
+      "trainer_sight_or_berry_tree_id": "ITEM_DRAGON_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_133_DRAGON_SCALE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
