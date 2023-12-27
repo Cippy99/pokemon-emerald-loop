@@ -299,7 +299,7 @@
 #define FLAG_RECEIVED_RUNNING_SHOES          0x112
 #define FLAG_RECEIVED_QUICK_CLAW             0x113
 #define FLAG_RECEIVED_KINGS_ROCK             0x114
-#define FLAG_RECEIVED_MACHO_BRACE            0x115
+#define FLAG_RECEIVED_BINDING_BAND           0x115
 #define FLAG_RECEIVED_SOOTHE_BELL            0x116
 #define FLAG_RECEIVED_WHITE_HERB             0x117
 #define FLAG_RECEIVED_SOFT_SAND              0x118
@@ -1088,12 +1088,12 @@
 #define FLAG_ITEM_PETALBURG_CITY_TM_POISON_JAB                      0x40F
 #define FLAG_ITEM_PETALBURG_CITY_DUBIOUS_DISC                       0x410
 #define FLAG_ITEM_RUSTBORO_CITY_BIG_ROOT                            0x411
-#define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
+#define FLAG_ITEM_LILYCOVE_CITY_METRONOME                           0x412
 #define FLAG_ITEM_MOSSDEEP_CITY_TM_ZEN_HEADBUTT                     0x413
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_FOCUS_SASH                     0x414
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_WATER_PULSE                 0x415
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417
+#define FLAG_ITEM_METEOR_FALLS_1F_1R_TERRAIN_EXTENDER               0x417
 #define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
 #define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
 #define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A

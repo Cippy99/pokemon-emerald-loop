@@ -108,14 +108,6 @@ LavaridgeTown_PokemonCenter_1F_EventScript_Scientist_5:
 	goto LavaridgeTown_PokemonCenter_1F_EventScript_Scientist_4
 
 
-blackBeltFaceRight:
-	face_right
-	step_end
-
-scientistFaceLeft:
-	face_left
-	step_end
-
 LavaridgeTown_PokemonCenter_1F_EventScript_BlackBelt_Text_0:
 	.string "Muscles rules!$"
 

@@ -18,15 +18,15 @@ Route111_WinstrateFamilysHouse_EventScript_Victoria::
 	lock
 	faceplayer
 	setvar VAR_0x8008, LOCALID_VICTORIA
-	goto_if_set FLAG_RECEIVED_MACHO_BRACE, Route111_WinstrateFamilysHouse_EventScript_ReceivedMachoBrace
-	msgbox Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace, MSGBOX_DEFAULT
-	giveitem ITEM_MACHO_BRACE
+	goto_if_set FLAG_RECEIVED_BINDING_BAND, Route111_WinstrateFamilysHouse_EventScript_ReceivedBindingBand
+	msgbox Route111_WinstrateFamilysHouse_Text_LikeYouToHaveBindingBand, MSGBOX_DEFAULT
+	giveitem ITEM_BINDING_BAND
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_MACHO_BRACE
+	setflag FLAG_RECEIVED_BINDING_BAND
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
 
-Route111_WinstrateFamilysHouse_EventScript_ReceivedMachoBrace::
+Route111_WinstrateFamilysHouse_EventScript_ReceivedBindingBand::
 	msgbox Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles, MSGBOX_DEFAULT
 	goto Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection
 	end
@@ -69,13 +69,13 @@ Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou:
 	.string "He even took the POKéMON LEAGUE\n"
 	.string "challenge, I'll have you know.$"
 
-Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace:
-	.string "We use this MACHO BRACE to more\n"
+Route111_WinstrateFamilysHouse_Text_LikeYouToHaveBindingBand:
+	.string "We use this BINDING BAND to more\n"
 	.string "effectively strengthen our POKéMON\l"
-	.string "in training.\p"
+	.string "damage over time.\p"
 	.string "Since you've beaten all of us here,\n"
-	.string "I don't know if you need it, but we\l"
-	.string "would like you to have our MACHO BRACE.$"
+	.string "I don't know if you need it, but we'd\l"
+	.string "like you to have our BINDING BAND.$"
 
 Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles:
 	.string "When it comes to POKéMON battles,\n"
