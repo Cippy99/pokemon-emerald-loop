@@ -1,0 +1,102 @@
+raw `
+.set LOCALID_NURSE, 1
+.set LOCALID_BLACK_BELT, 5
+.set LOCALID_SCIENTIST, 6
+
+LavaridgeTown_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+LavaridgeTown_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
+	call Common_EventScript_UpdateBrineyLocation
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Youngster::
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate, MSGBOX_NPC
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Woman::
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether, MSGBOX_NPC
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Gentleman::
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo, MSGBOX_NPC
+	end
+
+LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether:
+	.string "I think POKéMON get closer to their\n"
+	.string "TRAINERS if they spend time together.\p"
+	.string "The longer the better.\n"
+	.string "That's what I think.$"
+
+LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate:
+	.string "It's sort of magical how just sitting\n"
+	.string "in a hot-spring pool can invigorate.\p"
+	.string "I wish I could let my POKéMON\n"
+	.string "soak, too.$"
+
+LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo:
+	.string "Hohoho! Hey, kid, you can reach\n"
+	.string "the hot springs from here.\p"
+	.string "If POKéMON are getting rest, so too\n"
+	.string "should their TRAINERS.$"
+
+`
+script LavaridgeTown_PokemonCenter_1F_EventScript_BlackBelt{
+	lock
+	faceplayer
+	if(flag(FLAG_RECEIVED_MUSCLE_BAND)){
+		msgbox("Muscles rules!")
+		goto(BlackBeltReturnNormalPos)
+	}
+	msgbox(format("Muscles are better than mind, don't you think?"), MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+		msgbox(format("You're right. And with this your muscles will be even stronger!"))
+		giveitem(ITEM_MUSCLE_BAND)
+		goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+		setflag(FLAG_RECEIVED_MUSCLE_BAND)
+	}	
+	else{
+		msgbox(format("WHAT?\n IMPOSSIBLE!"))
+	}
+
+BlackBeltReturnNormalPos:
+	applymovement(LOCALID_BLACK_BELT, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+}
+
+script LavaridgeTown_PokemonCenter_1F_EventScript_Scientist{
+	lock
+	faceplayer
+	if(flag(FLAG_RECEIVED_WISE_GLASSES)){
+		msgbox("Mind is superior to raw strength!")
+		goto(ScientistReturnNormalPos)
+	}
+	msgbox(format("Mind is better than muscles, do you agree?"), MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES){
+		msgbox(format("Well Said! And with this your mind will be even more powerful!"))
+		giveitem(ITEM_WISE_GLASSES)
+		goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+		setflag(FLAG_RECEIVED_WISE_GLASSES)
+	}	
+	else{
+		msgbox(format("You cannot even imagine what our mind is capable of!"))
+	}
+
+	
+ScientistReturnNormalPos:
+	applymovement(LOCALID_SCIENTIST, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+}

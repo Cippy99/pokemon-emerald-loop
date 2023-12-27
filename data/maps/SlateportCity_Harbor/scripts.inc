@@ -350,7 +350,7 @@ SlateportCity_Harbor_EventScript_ChooseScannerTrade::
 SlateportCity_Harbor_EventScript_AbilityCapsule::
 	msgbox SlateportCity_Harbor_Text_TradeForAbilityCapsule, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SlateportCity_Harbor_EventScript_ChooseDifferentTrade
-	giveitem ITEM_ABILITY_PATCH
+	giveitem ITEM_ABILITY_CAPSULE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	removeitem ITEM_SCANNER
 	msgbox SlateportCity_Harbor_Text_HandedScannerToStern, MSGBOX_DEFAULT
