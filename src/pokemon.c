@@ -3606,13 +3606,44 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     #endif
     }
 
-    // Modify here to allow hidden ability
+    u8 secondAbilChance;
+    u8 hiddenAbilChance;
 
-    if (gSpeciesInfo[species].abilities[1])
-    {
-        value = personality & 1;    
-        SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
+    // Calculate Probabilities
+
+    if(gSpeciesInfo[species].abilities[1] && gSpeciesInfo[species].abilities[2]){
+        hiddenAbilChance = HIDDEN_ABILITY_CHANCE;
+        secondAbilChance = (100 - hiddenAbilChance) / 2 + hiddenAbilChance;
     }
+    else if (gSpeciesInfo[species].abilities[1])
+    {
+        hiddenAbilChance = 0;
+        secondAbilChance = 50;
+    }
+    else if (gSpeciesInfo[species].abilities[2])
+    {
+        hiddenAbilChance = HIDDEN_ABILITY_CHANCE * 1.5;
+        secondAbilChance = 0;
+    }
+    else{
+        hiddenAbilChance = 0;
+        secondAbilChance = 0;
+    }
+
+    // Get Ability index
+    u16 rnd = Random() % 100;
+    if(rnd < hiddenAbilChance){
+        value = 2;
+    }
+    else if(rnd < secondAbilChance){
+        value = 1;
+    }
+    else{
+        value = 0;
+    }
+    
+    SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
+
 
     GiveBoxMonInitialMoveset(boxMon);
 }
