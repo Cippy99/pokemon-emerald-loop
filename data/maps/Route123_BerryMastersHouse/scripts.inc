@@ -128,3 +128,20 @@ Route123_BerryMastersHouse_EventScript_GaveBerry::
 	release
 	end
 
+Route123_BerryMastersHouse_EventScript_WailmerPailGirl::
+	lock
+	faceplayer
+	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route123_BerryMastersHouse_EventScript_GiveWailmerPail
+	msgbox Route123_BerryMastersHouse_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveWailmerPail::
+	msgbox Route123_BerryMastersHouse_Text_YouCanHaveThis, MSGBOX_DEFAULT
+	giveitem ITEM_WAILMER_PAIL
+	msgbox Route123_BerryMastersHouse_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_WAILMER_PAIL
+	release
+	end
+
+

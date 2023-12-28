@@ -63,19 +63,19 @@ Route104_PrettyPetalFlowerShop_Pokemart_Plants:
 	release
 	end
 
-Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
+Route104_PrettyPetalFlowerShop_EventScript_AbsorbBulbGirl::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
-	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+	goto_if_unset FLAG_RECEIVED_ABSORB_BULB, Route104_PrettyPetalFlowerShop_EventScript_GiveAbsorbBulb
+	msgbox Route104_PrettyPetalFlowerShop_Text_AbsorbBulbExplanation, MSGBOX_DEFAULT
 	release
 	end
 
-Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
+Route104_PrettyPetalFlowerShop_EventScript_GiveAbsorbBulb::
 	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
-	giveitem ITEM_WAILMER_PAIL
-	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_WAILMER_PAIL
+	giveitem ITEM_ABSORB_BULB
+	msgbox Route104_PrettyPetalFlowerShop_Text_AbsorbBulbExplanation, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_ABSORB_BULB
 	release
 	end
 
@@ -98,3 +98,12 @@ Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	release
 	end
+
+Route104_PrettyPetalFlowerShop_Text_AbsorbBulbExplanation:
+	.string "This bulb raises your POKèMON Sp. Atk\n"
+	.string "when it's hit with a water type move.$"
+
+
+Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
+	.string "If you water a bulb regularly it can!\n"
+	.string "grow into a beautiful flower!$"

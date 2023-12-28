@@ -168,14 +168,14 @@ Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness:
 	.string "Flowers bring so much happiness to\n"
 	.string "people, don't they?$"
 
-Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
+Route123_BerryMastersHouse_Text_YouCanHaveThis:
 	.string "Hello!\p"
 	.string "The more attention you give to flowers,\n"
 	.string "the more beautifully they bloom.\p"
 	.string "You'll like tending flowers. I'm sure\n"
 	.string "of it. You can have this.$"
 
-Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
+Route123_BerryMastersHouse_Text_WailmerPailExplanation:
 	.string "While BERRY plants are growing,\n"
 	.string "water them with the WAILMER PAIL.\p"
 	.string "Oh, another thing.\p"
