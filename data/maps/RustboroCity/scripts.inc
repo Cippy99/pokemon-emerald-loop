@@ -600,8 +600,10 @@ RustboroCity_EventScript_ReturnGoods::
 	call_if_eq VAR_TEMP_1, 3, RustboroCity_EventScript_EmployeeApproachPlayerDown2
 	call_if_eq VAR_TEMP_1, 4, RustboroCity_EventScript_EmployeeFacePlayerRight
 	msgbox RustboroCity_Text_YouGotItThankYou, MSGBOX_DEFAULT
-	giveitem ITEM_GREAT_BALL
-	call_if_eq VAR_RESULT, FALSE, RustboroCity_EventScript_BagFull
+	playfanfare MUS_OBTAIN_ITEM
+	message RustboroCity_Text_ReceivedPortablePc
+	waitfanfare
+	setflag FLAG_SYS_PC_GET
 	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_RETURNED_DEVON_GOODS
@@ -1124,11 +1126,15 @@ RustboroCity_Text_YouGotItThankYou:
 	.string "You got them back!\p"
 	.string "You really are a great TRAINER!\p"
 	.string "I know! As my thanks, I'll give you\n"
-	.string "another GREAT BALL!$"
+	.string "a new portable PC, so that you can\p"
+	.string "access it wherever you are!$"
 
 RustboroCity_Text_YoureLoadedWithItems:
 	.string "You're loaded with items.\n"
 	.string "I can't give you this GREAT BALL.$"
+
+RustboroCity_Text_ReceivedPortablePc:
+	.string "{PLAYER} received a PORTABLE PC.$"
 
 RustboroCity_Text_PleaseComeWithMe:
 	.string "Excuse me, please!\n"
