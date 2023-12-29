@@ -1228,7 +1228,7 @@
 #define FLAG_RECEIVED_MUSCLE_BAND                                   0x49A
 #define FLAG_RECEIVED_WISE_GLASSES                                  0x49B
 #define FLAG_RECEIVED_ABSORB_BULB                                   0x49C
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+#define FLAG_HIDE_AQUA_GRUNT_ROUTE_122                              0x49D
 #define FLAG_CHOOSE_FIRST_FOSSIL                                    0x49E
 #define FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_BIRD                      0x49F
 #define FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_FISH                      0x4A0

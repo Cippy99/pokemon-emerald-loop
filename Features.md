@@ -12,13 +12,13 @@ Here's a list of all the changes made from base Emerald.
 
 - Added a move tutor in Verdanturf Town that teaches powerful moves for shards. Shards can be founs trough Hoenn, and can be bought at the Pokèmon League's Pokèmon Center.
 
-- The Treasure Hunter on route 124 has now open a shop that sells evolutionary stones instead of trading them for shards. TODO
+- The Treasure Hunter on route 124 has now open a shop that sells evolutionary stones instead of trading them for shards.
 
 - Implemented a portable PC that can be used from everywhere (Except at the Pokèmon League). It will be given to you from a Devon Corp guy. It can also be used to quickly heal your party.
 
 - The player must visit Lilycove City and beat the rival to unlock the entrance for the 6th Gym.
 
-- Mt. Pyre can't be entered until you have obtained the 6th Gym Badge. TODO
+- Mt. Pyre can't be entered until you have obtained the 6th Gym Badge.
 
 ## Map
 
@@ -64,6 +64,8 @@ Here's a list of all the changes made from base Emerald.
 - Berry trees have been changed and now they also yield more berries then usual.
 
 - Wild Pokèmon will have no held items until you've become champion. This is done to prevent getting multiple copy of strong items.
+
+- Hearth Scales can be bought at Sootopolis City Mart
 
 ## Other
 

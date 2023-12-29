@@ -1,0 +1,9 @@
+raw `Route122_MapScripts::
+	.byte 0
+`
+script Route122_EventScript_AquaGrunt{
+	lock
+	faceplayer
+	msgbox(format("I'm guarding the entrance to Mt. Pyre.\nNo one can enter it!"), MSGBOX_NPC)
+	release
+}
