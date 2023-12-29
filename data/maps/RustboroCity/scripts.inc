@@ -203,6 +203,7 @@ RustboroCity_EventScript_DevonCorpSign::
 	end
 
 RustboroCity_EventScript_GymSign::
+	bufferleadername STR_VAR_1, VAR_GYM_1_LEADER
 	msgbox RustboroCity_Text_GymSign, MSGBOX_SIGN
 	end
 
@@ -1247,8 +1248,7 @@ RustboroCity_Text_DevonCorpSign:
 
 RustboroCity_Text_GymSign:
 	.string "RUSTBORO CITY POKéMON GYM\n"
-	.string "LEADER: ROXANNE\p"
-	.string "“The ROCK-loving honors student!”$"
+	.string "LEADER: {STR_VAR_1}$"
 
 RustboroCity_Text_DevonCorpBranchOfficeSign:
 	.string "DEVON CORP. BRANCH OFFICE\p"

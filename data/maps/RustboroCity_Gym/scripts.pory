@@ -1,4 +1,4 @@
-RustboroCity_Gym_MapScripts::
+raw `RustboroCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, RustboroCity_Gym_OnWarp
 	.byte 0
@@ -256,61 +256,64 @@ RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
 	.string "Please return with at least one more\n"
 	.string "POKéMON.$"
 
-RustboroCity_Gym_EventScript_GymGuideGreeting::
+`
+
+script RustboroCity_Gym_EventScript_GymGuideGreeting{
 	lock
-	playse SE_PIN
-	applymovement LOCALID_GYM_GUIDE, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_GYM_GUIDE, GymGuideWalkToPlayer
-	waitmovement 0
-	msgbox RustboroCity_Gym_Text_GymGuideGreetAndExplain, MSGBOX_DEFAULT
-	applymovement LOCALID_GYM_GUIDE, GymGuideGoBack
-	waitmovement 0
-	setvar VAR_RUSTBORO_GYM_STATE, 1
+	playse(SE_PIN)
+	applymovement(LOCALID_GYM_GUIDE, Common_Movement_ExclamationMark)
+	waitmovement(0)
+	applymovement(LOCALID_GYM_GUIDE, GymGuideWalkToPlayer)
+	waitmovement(0)
+	msgbox(RustboroCity_Gym_Text_GymGuideGreetAndExplain, MSGBOX_DEFAULT)
+	applymovement(LOCALID_GYM_GUIDE, GymGuideGoBack)
+	waitmovement(0)
+	setvar(VAR_RUSTBORO_GYM_STATE, 1)
 	release
-	return
+	
+}
 
+text RustboroCity_Gym_Text_GymGuideGreetAndExplain {
+	"Yo, how's it going?\p"
+	"Listen, my friend!\n"
+	"Would you like to become the CHAMPION?\p"
+	"I'm no TRAINER, not me, but I can\n"
+	"sure give you winning advice.\p"
+	"That's settled, then! We'll aim for the\n"
+	"POKéMON CHAMPIONSHIP together!\p"
+	"It's your job as a TRAINER to collect\n"
+	"GYM BADGES, am I right?\p"
+	"But GYM LEADERS aren't pushovers!\p"
+	"And that's where I come in!\n"
+	"I'm here to provide expert advice!\p"
+	"Some time ago the Hoenn POKéMON League\n"
+	"decided that collecting all the BADGES\l"
+	"was too easy.\p"
+	"So, to spice up the competition they\n"
+	"invited GYM LEADERS from all over\l"
+	"the world to fight against\l"
+	"challengers like you.\p"
+	"Inside every gym there is always a\n"
+	"different leader. Even I can't keep\l"
+	"up with all this randomness...\p"
+	"Fortunately, every time a new leader\n"
+	"arrives they replace the sign outside\l"
+	"of the GYM, so challengers can\l"
+	"prepare for the battle.\p"
+	"Well, enough talking, now it's time\n"
+	"to fight!\p"
+	"Come see me afterwards, if you beat\n"
+	"the GYM LEADER."
+}
 
-GymGuideWalkToPlayer:
+movement GymGuideWalkToPlayer {
 	walk_right
 	walk_right
 	face_player
-	step_end
+}
 
-GymGuideGoBack:
+movement GymGuideGoBack {
 	walk_left
 	walk_left
 	face_original_direction
-	step_end
-
-RustboroCity_Gym_Text_GymGuideGreetAndExplain::
-	.string "Yo, how's it going?\p"
-	.string "Listen, my friend!\n"
-	.string "Would you like to become the CHAMPION?\p"
-	.string "I'm no TRAINER, not me, but I can\n"
-	.string "sure give you winning advice.\p"
-	.string "That's settled, then! We'll aim for the\n"
-	.string "POKéMON CHAMPIONSHIP together!\p"
-	.string "It's your job as a TRAINER to collect\n"
-	.string "GYM BADGES, am I right?\p"
-	.string "But GYM LEADERS aren't pushovers!\p"
-	.string "And that's where I come in!\n"
-	.string "I'm here to provide expert advice!\p"
-	.string "Some time ago the Hoenn POKéMON League\n"
-	.string "decided that collecting all the BADGES\l"
-	.string "was too easy.\p"
-	.string "So, to spice up the competition they\n"
-	.string "invited gym leaders from all over the\l"
-	.string "world to fight against challengers\l"
-	.string "like you.\p"
-	.string "Inside every gym there is always a\n"
-	.string "different leader. Even I can't keep\l"
-	.string "up with all this randomness...\p"
-	.string "Fortunately, every time a new leader\n"
-	.string "comes, they replace the sign outside\l"
-	.string "of the gym, so challengers can\l"
-	.string "prepare for the battle.\p"
-	.string "Well, enough talking, now it's time\n"
-	.string "to fight!\p"
-	.string "Come see me afterwards, if you beat\n"
-	.string "the GYM LEADER.$"
+}
