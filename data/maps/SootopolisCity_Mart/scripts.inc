@@ -22,6 +22,7 @@ SootopolisCity_Mart_Pokemart:
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_HARBOR_MAIL
+	.2byte ITEM_HEART_SCALE
 	.2byte ITEM_NONE
 	release
 	end

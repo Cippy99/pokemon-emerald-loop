@@ -1777,7 +1777,7 @@ const struct Item gItems[] =
     [ITEM_RED_SHARD] =
     {
         .name = _("Red Shard"),
-        .price = 1000,
+        .price = 5000,
         .description = sRedShardDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1788,7 +1788,7 @@ const struct Item gItems[] =
     [ITEM_BLUE_SHARD] =
     {
         .name = _("Blue Shard"),
-        .price = 1000,
+        .price = 5000,
         .description = sBlueShardDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1799,7 +1799,7 @@ const struct Item gItems[] =
     [ITEM_YELLOW_SHARD] =
     {
         .name = _("Yellow Shard"),
-        .price = 1000,
+        .price = 5000,
         .description = sYellowShardDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1810,7 +1810,7 @@ const struct Item gItems[] =
     [ITEM_GREEN_SHARD] =
     {
         .name = _("Green Shard"),
-        .price = 1000,
+        .price = 5000,
         .description = sGreenShardDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1821,7 +1821,7 @@ const struct Item gItems[] =
     [ITEM_HEART_SCALE] =
     {
         .name = _("Heart Scale"),
-        .price = 100,
+        .price = 1000,
         .description = sHeartScaleDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -2503,7 +2503,7 @@ const struct Item gItems[] =
     [ITEM_FIRE_STONE] =
     {
         .name = _("Fire Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sFireStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2514,7 +2514,7 @@ const struct Item gItems[] =
     [ITEM_WATER_STONE] =
     {
         .name = _("Water Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sWaterStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2525,7 +2525,7 @@ const struct Item gItems[] =
     [ITEM_THUNDER_STONE] =
     {
         .name = _("Thunder Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sThunderStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2536,7 +2536,7 @@ const struct Item gItems[] =
     [ITEM_LEAF_STONE] =
     {
         .name = _("Leaf Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sLeafStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2547,7 +2547,7 @@ const struct Item gItems[] =
     [ITEM_ICE_STONE] =
     {
         .name = _("Ice Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sIceStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2558,7 +2558,7 @@ const struct Item gItems[] =
     [ITEM_SUN_STONE] =
     {
         .name = _("Sun Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sSunStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2569,7 +2569,7 @@ const struct Item gItems[] =
     [ITEM_MOON_STONE] =
     {
         .name = _("Moon Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sMoonStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2580,7 +2580,7 @@ const struct Item gItems[] =
     [ITEM_SHINY_STONE] =
     {
         .name = _("Shiny Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sShinyStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2591,7 +2591,7 @@ const struct Item gItems[] =
     [ITEM_DUSK_STONE] =
     {
         .name = _("Dusk Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sDuskStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -2602,7 +2602,7 @@ const struct Item gItems[] =
     [ITEM_DAWN_STONE] =
     {
         .name = _("Dawn Stone"),
-        .price = 3000,
+        .price = 10000,
         .description = sDawnStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
