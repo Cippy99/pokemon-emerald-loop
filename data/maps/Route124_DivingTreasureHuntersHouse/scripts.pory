@@ -1,0 +1,61 @@
+raw `Route124_DivingTreasureHuntersHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route124_DivingTreasureHuntersHouse_OnTransition
+	.byte 0
+
+Route124_DivingTreasureHuntersHouse_OnTransition:
+	setflag FLAG_LANDMARK_HUNTERS_HOUSE
+	end
+`
+
+script Route124_DivingTreasureHuntersHouse_EventScript_TreasureHunter{
+	lock
+	faceplayer
+	goto_if_set(FLAG_MET_DIVING_TREASURE_HUNTER, Route124_DivingTreasureHuntersHouse_Shop)
+	msgbox (Route124_DivingTreasureHuntersHouse_Text_Greeting, MSGBOX_DEFAULT)
+	setflag(FLAG_MET_DIVING_TREASURE_HUNTER)
+	goto(Route124_DivingTreasureHuntersHouse_Shop)
+	end
+}
+
+script Route124_DivingTreasureHuntersHouse_Shop{
+	message(format("Are you interested in any of my stones?"))
+	waitmessage
+	pokemart(Route124_DivingTreasureHuntersHouse_StoneMart)
+	msgbox(format("I hope to see you again soon."))
+	release
+}
+
+script Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard{
+	msgbox(Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard, MSGBOX_SIGN)
+}
+
+text Route124_DivingTreasureHuntersHouse_Text_Greeting{
+	"I'm the DIVING TREASURE HUNTER!\p"
+	"I'm the awesome dude who makes\n"
+	"deep-sea dives to gather treasures\l"
+	"resting at the bottom.\p"
+	"I once traded shards for stones, but\n"
+	"since that guy in Verdantuf came\l"
+	"everyoune is giving shards to him.\p"
+	"So now I'm just selling my items\n"
+	"normally..."
+}
+
+text Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard{
+	"EVOLUTIONARY STONES SHOP"
+}
+	
+
+mart Route124_DivingTreasureHuntersHouse_StoneMart{
+	ITEM_FIRE_STONE
+	ITEM_WATER_STONE
+	ITEM_THUNDER_STONE
+	ITEM_LEAF_STONE
+	ITEM_MOON_STONE
+	ITEM_SUN_STONE
+	ITEM_SHINY_STONE
+	ITEM_DUSK_STONE
+	ITEM_DAWN_STONE
+	ITEM_ICE_STONE
+}
+	
