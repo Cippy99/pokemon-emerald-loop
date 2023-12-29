@@ -232,6 +232,7 @@ gScriptCmdTable::
 	.4byte ScrCmd_dynmultichoice            @ 0xe5
 	.4byte ScrCmd_dynmultipush              @ 0xe6
 	.4byte ScrCmd_checkGalarFossils			@ 0xe7
+	.4byte ScrCmd_bufferLeaderName			@ 0xe8
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

@@ -74,6 +74,7 @@ DewfordTown_EventScript_TownSign::
 	end
 
 DewfordTown_EventScript_GymSign::
+	bufferleadername STR_VAR_1, VAR_GYM_2_LEADER
 	msgbox DewfordTown_Text_GymSign, MSGBOX_SIGN
 	end
 
@@ -649,8 +650,7 @@ DewfordTown_Text_TownSign:
 
 DewfordTown_Text_GymSign:
 	.string "DEWFORD TOWN POKéMON GYM\n"
-	.string "LEADER: BRAWLY\l"
-	.string "“A big wave in fighting!”$"
+	.string "LEADER: {STR_VAR_1}$"
 
 DewfordTown_Text_HallSign:
 	.string "DEWFORD HALL\n"

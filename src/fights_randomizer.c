@@ -43,6 +43,8 @@ void RandomizeImportantFights(void)
     //Assign a type to each fight
     for (i = 0; i < NELEMS(importantFIghts); i++){
         VarSet(importantFIghts[i], types[i] << 2);
+
+        // Set is always 0 for now. A random number between 0 and 3 should be added to each var in order to randomize it.
     }
 }
 

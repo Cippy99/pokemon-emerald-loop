@@ -2449,3 +2449,17 @@ bool8 ScrCmd_checkGalarFossils(void){
 
     return TRUE;
 }
+
+bool8 ScrCmd_bufferLeaderName(struct ScriptContext *ctx){
+    u8 stringVarIndex = ScriptReadByte(ctx);
+    u16 id = VarGet(ScriptReadHalfword(ctx));
+
+    DebugPrintf("VAR = %d", id);
+
+    u16 type = id >> 2;
+    u16 set = id & 0b11;
+
+    StringCopy(sScriptStringVars[stringVarIndex], GetLeaderNameFromTypeAndSet(type, set));
+
+    return FALSE;
+}

@@ -124,7 +124,7 @@ text GlaciaIntroGym{
 	"weak TRAINERS and their POKéMON.\p"
 	"What about you?\p"
 	"It would please me to no end if I could\n"
-	"go all out against you!$"
+	"go all out against you!"
 }
 
 text PhoebeIntroGym{
@@ -136,7 +136,7 @@ text PhoebeIntroGym{
 	"Yes, the bond I developed with POKéMON\n"
 	"is extremely tight.\p"
 	"So, come on, just try and see if you can\n"
-	"even inflict damage on my POKéMON!$"
+	"even inflict damage on my POKéMON!"
 }
 
 text DrakeIntroGym{
@@ -149,7 +149,7 @@ text DrakeIntroGym{
 	"partners, do you know what it takes?\p"
 	"Do you know what is needed?\p"
 	"If you don't, then you will never\n"
-	"prevail over me!$"
+	"prevail over me!"
 }
 
 text ErikaIntroGym{
@@ -166,7 +166,7 @@ text ErikaIntroGym{
     "GRASS type.\p"
     "…Oh, I'm sorry, I had no idea that\n"
     "you wished to challenge me.\p"
-    "Very well, but I shall not lose.$"
+    "Very well, but I shall not lose."
 }
 
 text GiovanniIntroGym{
@@ -178,7 +178,7 @@ text GiovanniIntroGym{
     "So be it.\l"
     "This time, I'm not holding back!\p"
     "You shall face GIOVANNI\n"
-    "the greatest TRAINER!$"
+    "the greatest TRAINER!"
 }
 
 text KogaIntroGym{
@@ -192,7 +192,7 @@ text KogaIntroGym{
     "Poison brings steady doom.\n"
     "Sleep renders foes helpless.\p"
     "Despair to the creeping horror of\n"
-    "POISON-type POKéMON!$"
+    "POISON-type POKéMON!"
 }
 
 text StevenIntroGym{
@@ -240,7 +240,7 @@ text RoxanneGymDefeat{
 	"that TRAINERS are to be given this\l"
 	"if they defeat a GYM LEADER.\p"
 	"Please accept this official POKéMON\n"
-	"LEAGUE GYM BADGE.$"
+	"LEAGUE GYM BADGE."
 }
 
 text BrawlyGymDefeat{
@@ -248,14 +248,14 @@ text BrawlyGymDefeat{
 	"splash than I expected!\p"
 	"You swamped me!\p"
 	"Okay, you've got me.\n"
-	"Take this GYM BADGE!$"
+	"Take this GYM BADGE!"
 }
 
 text WattsonGymDefeat{
 	"Wahahahah!\n"
 	"Fine, I lost!\p"
 	"You ended up giving me a thrill!\n"
-	"Take this BADGE!$"
+	"Take this BADGE!"
 }
 
 text FlanneryGymDefeat{
@@ -268,7 +268,7 @@ text FlanneryGymDefeat{
 	"I have to do things my natural way. If\n"
 	"I don't, my POKéMON will be confused.\p"
 	"Thanks for teaching me that.\n"
-	"For that, you deserve this.$"
+	"For that, you deserve this."
 }
 
 text NormanGymDefeat{
@@ -277,7 +277,7 @@ text NormanGymDefeat{
 	"I can't believe it. {PLAYER}…\p"
 	"I lost to {PLAYER}?\p"
 	"But, rules are rules!\n"
-	"Here, take this.$"
+	"Here, take this."
 }
 
 text WinonaGymDefeat{
@@ -285,14 +285,14 @@ text WinonaGymDefeat{
 	"command POKéMON with more grace\l"
 	"than I…\p"
 	"In recognition of your prowess,\n"
-	"I present to you this GYM BADGE.$"
+	"I present to you this GYM BADGE."
 }
 
 text TateGymDefeat{
 	"The... The combination of me and my\n"
 	"POKèMON!\p"
 	"It can't be helped. You've won…\n"
-	"So, in recognition, take this.$"
+	"So, in recognition, take this."
 }
 
 text JuanGymDefeat{
@@ -308,7 +308,7 @@ text JuanGymDefeat{
 	"… … … … … …\p"
 	"Hahaha, I merely jest!\p"
 	"Rather than my clothes, I shall reward\n"
-	"you with this BADGE!$"
+	"you with this BADGE!"
 }
 
 text SidneyGymDefeat{
@@ -322,7 +322,7 @@ text GlaciaGymDefeat{
 	"How hot your spirits burn!\p"
 	"The all-consuming heat overwhelms.\p"
 	"It's no surprise that my icy skills\n"
-	"failed to harm you.$"
+	"failed to harm you."
 }
 
 text PhoebeGymDefeat{
@@ -342,7 +342,7 @@ text DrakeGymDefeat{
 	"They touch the good hearts of\n"
 	"TRAINERS and grow strong.\p"
 	"Go! Go onwards!\n"
-	"And take this BADGE!$"
+	"And take this BADGE!"
 }
 
 text ErikaGymDefeat{
@@ -363,7 +363,7 @@ text KogaGymDefeat{
 	"Humph!\n"
     "You have proven your worth!\p"
     "Here!\n"
-    "Take this BADGE!$"
+    "Take this BADGE!"
 }
 
 text StevenGymDefeat{

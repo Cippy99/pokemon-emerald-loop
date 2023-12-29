@@ -4,7 +4,7 @@ DewfordTown_Gym_MapScripts::
 
 DewfordTown_Gym_OnTransition:
 	call DewfordTown_Gym_EventScript_SetFlashLevel
-	copyvar VAR_0x8003 VAR_GYM_1_LEADER
+	copyvar VAR_0x8003 VAR_GYM_2_LEADER
 	call Common_EventScript_SetupImportantFightGfxId
 	end
 
@@ -135,7 +135,7 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Leader::
-	copyvar VAR_0x8003 VAR_GYM_1_LEADER
+	copyvar VAR_0x8003 VAR_GYM_2_LEADER
 	call Common_EventScript_StartGym2Fight
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch

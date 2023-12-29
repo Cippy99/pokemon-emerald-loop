@@ -8728,3 +8728,9 @@ void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality)
     boxMon->checksum = CalculateBoxMonChecksum(boxMon);
     EncryptBoxMon(boxMon);
 }
+
+const u8 *GetLeaderNameFromTypeAndSet(u16 type, u16 set)
+{
+    DebugPrintf("Type: %d, Set: %d", type, set);
+    return gLeaders[type][set];
+}

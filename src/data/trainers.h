@@ -10698,3 +10698,60 @@ const struct Trainer gTrainers[] = {
     },
 
 };
+
+const u8 gLeaders[][4][TRAINER_NAME_LENGTH + 1] ={
+    [TYPE_NORMAL] =
+    {_("NORMAN"), _(""), _(""), _("")},
+
+    [TYPE_FIGHTING] =
+    {_("BRAWLY"), _(""), _(""), _("")},
+
+    [TYPE_ELECTRIC] =
+    {_("WATTSON"), _(""), _(""), _("")},
+    
+    [TYPE_FIRE] =
+    {_("FLANNERY"), _(""), _(""), _("")},
+
+    [TYPE_ROCK] =
+    {_("ROXANNE"), _(""), _(""), _("")},
+
+    [TYPE_GRASS] =
+    {_("ERIKA"), _(""), _(""), _("")},
+
+    [TYPE_DRAGON] =
+    {_("DRAKE"), _(""), _(""), _("")},
+
+    [TYPE_DARK] =
+    {_("SIDNEY"), _(""), _(""), _("")},
+
+    [TYPE_FLYING] =
+    {_("WINONA"), _(""), _(""), _("")},
+
+    [TYPE_PSYCHIC] =
+    {_("TATE"), _(""), _(""), _("")},
+
+    [TYPE_WATER] =
+    {_("JUAN"), _(""), _(""), _("")},
+
+    [TYPE_ICE] =
+    {_("GLACIA"), _(""), _(""), _("")},
+
+    [TYPE_FAIRY] =
+    {_("VALERIE"), _(""), _(""), _("")},
+
+    [TYPE_GROUND] =
+    {_("GIOVANNI"), _(""), _(""), _("")},
+
+    [TYPE_STEEL] =
+    {_("STEVEN"), _(""), _(""), _("")},
+
+    [TYPE_GHOST] =
+    {_("PHOEBE"), _(""), _(""), _("")},
+
+    [TYPE_BUG] =
+    {_("BUGSY"), _(""), _(""), _("")},
+
+    [TYPE_POISON] =
+    {_("KOGA"), _(""), _(""), _("")},
+    
+};
