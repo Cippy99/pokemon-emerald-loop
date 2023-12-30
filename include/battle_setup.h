@@ -78,5 +78,6 @@ u16 CountBattledRematchTeams(u16 trainerId);
 void DoStandardWildBattle_Debug(void);
 void BattleSetup_StartTrainerBattle_Debug(void);
 bool8 isUnderLevelCap(u8);
+u8 getLevelcap(void);
 
 #endif // GUARD_BATTLE_SETUP_H

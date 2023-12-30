@@ -1960,7 +1960,7 @@ u16 CountBattledRematchTeams(u16 trainerId)
     return i;
 }
 
-static u8 getLevelcap(void){
+u8 getLevelcap(void){
     u8 i;
     for (i = 0; i < NUM_LEVEL_CAPS; i++){
         if(!FlagGet(sLevelCaps[i].flag)){

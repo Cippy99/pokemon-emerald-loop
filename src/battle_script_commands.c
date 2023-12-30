@@ -4043,6 +4043,22 @@ static u32 GetMonHoldEffect(struct Pokemon *mon)
     return holdEffect;
 }
 
+//Returns a level multiplier based on distance from level cap. Max multiplier is 3
+double GetPokemonExpMultiplier(u8 level){
+    if(!isUnderLevelCap(level)){
+        return 1.0;
+    }
+
+    u8 levelCap = getLevelcap();
+    double multiplier = 1.25; //y = 0.25x + 1.25 -> 1.5x 1 level below and 3.0x at 7 or more level below
+    multiplier += 0.25*(levelCap - level);
+    if(multiplier > 3){
+        multiplier = 3;
+    }
+    
+    return multiplier;
+}
+
 static void Cmd_getexp(void)
 {
     CMD_ARGS(u8 battler);
@@ -4142,7 +4158,7 @@ static void Cmd_getexp(void)
                 }
             #else
                 *exp = calculatedExp;
-                gBattleStruct->expShareExpValue = calculatedExp / 2;
+                gBattleStruct->expShareExpValue = calculatedExp; //Full Exp also for exp. Share
                 if (gBattleStruct->expShareExpValue == 0)
                     gBattleStruct->expShareExpValue = 1;
             #endif
@@ -15992,13 +16008,17 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
     if (CheckBagHasItem(ITEM_EXP_CHARM, 1)) //is also for other exp boosting Powers if/when implemented
         *expAmount = (*expAmount * 150) / 100;
 
+    u8 expGetterLevel = GetMonData(&gPlayerParty[expGetterMonId], MON_DATA_LEVEL);
+    //Level Cap Exp Multiplier
+    *expAmount = *expAmount * GetPokemonExpMultiplier(expGetterLevel);
+
     if (B_SCALED_EXP >= GEN_5 && B_SCALED_EXP != GEN_6)
     {
         // Note: There is an edge case where if a pokemon receives a large amount of exp, it wouldn't be properly calculated
         //       because of multiplying by scaling factor(the value would simply be larger than an u32 can hold). Hence u64 is needed.
         u64 value = *expAmount;
         u8 faintedLevel = gBattleMons[faintedBattler].level;
-        u8 expGetterLevel = GetMonData(&gPlayerParty[expGetterMonId], MON_DATA_LEVEL);
+        
 
         value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
         value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
