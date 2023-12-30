@@ -43,7 +43,7 @@ MauvilleCity_EventScript_CitySign::
 	end
 
 MauvilleCity_EventScript_GymSign::
-	buffeleadername STR_VAR_1, VAR_GYM_3_LEADER
+	bufferleadername STR_VAR_1, VAR_GYM_3_LEADER
 	msgbox MauvilleCity_Text_GymSign, MSGBOX_SIGN
 	end
 
@@ -640,7 +640,7 @@ MauvilleCity_Text_CitySign:
 
 MauvilleCity_Text_GymSign:
 	.string "MAUVILLE CITY POKéMON GYM\n"
-	.string "LEADER: {STR_VAR_1}\$"
+	.string "LEADER: {STR_VAR_1}$"
 
 MauvilleCity_Text_BikeShopSign:
 	.string "“Ride in gravel and shake up your\n"
