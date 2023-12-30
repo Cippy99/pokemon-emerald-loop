@@ -147,14 +147,14 @@ RustboroCity_Gym_Text_JoshPostBattle:
 
 RustboroCity_Gym_Text_TommyIntro:
 	.string "If you can't beat me, you won't stand\n"
-	.string "a chance against the leader!$"
+	.string "a chance against the GYM LEADER!$"
 
 RustboroCity_Gym_Text_TommyDefeat:
 	.string "Wow! You've got some potential!$"
 
 RustboroCity_Gym_Text_TommyPostBattle:
-	.string "The leader is stronger than me by\n"
-	.string "several times.\p"
+	.string "The GYM LEADER is stronger than me\n"
+	.string "by several times.\p"
 	.string "You'd better be on your guard!$"
 
 RustboroCity_Gym_Text_MarcIntro:
@@ -300,7 +300,7 @@ RustboroCity_Gym_Text_GymGuideGreetAndExplain::
 	.string "decided that collecting all the BADGES\l"
 	.string "was too easy.\p"
 	.string "So, to spice up the competition they\n"
-	.string "invited gym leaders from all over the\l"
+	.string "invited GYM LEADERS from all over the\l"
 	.string "world to fight against challengers\l"
 	.string "like you.\p"
 	.string "Inside every gym there is always a\n"
