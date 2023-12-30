@@ -59,7 +59,7 @@ LavaridgeTown_Gym_1F_EventScript_Leader::
 	release
 	end
 
-LavaridgeTown_Gym_1F_EventScript_LeaderDefeated::
+LavaridgeTown_Gym_EventScript_LeaderDefeated::
 	bufferleadername STR_VAR_1, VAR_GYM_4_LEADER
 	message LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge
 	waitmessage
