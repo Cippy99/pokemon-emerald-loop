@@ -693,6 +693,7 @@ EventScript_BackupMrBrineyLocation::
 	.include "data/scripts/set_gym_trainers.inc"
 	.include "data/scripts/important_fights/gym1.inc"
 	.include "data/scripts/important_fights/gym2.inc"
+	.include "data/scripts/important_fights/gym3.inc"
 	.include "data/scripts/important_fights/texts.inc"
 
 Common_EventScript_ShowBagIsFull::

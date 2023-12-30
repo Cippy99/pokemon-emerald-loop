@@ -1,4 +1,5 @@
 MauvilleCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_Gym_OnLoad
 	.byte 0
 
@@ -10,6 +11,11 @@ MauvilleCity_Gym_OnLoad:
 	case 2, MauvilleCity_Gym_EventScript_Switch2Pressed
 	case 3, MauvilleCity_Gym_EventScript_Switch3Pressed
 	case 4, MauvilleCity_Gym_EventScript_Switch4Pressed
+	end
+
+MauvilleCity_Gym_OnTransition:
+	copyvar VAR_0x8003 VAR_GYM_3_LEADER
+	call Common_EventScript_SetupImportantFightGfxId
 	end
 
 MauvilleCity_Gym_EventScript_UpdateBarriers::
@@ -73,8 +79,9 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	special MauvilleGymDeactivatePuzzle
 	end
 
-MauvilleCity_Gym_EventScript_Wattson::
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+MauvilleCity_Gym_EventScript_Leader::
+	copyvar VAR_0x8003 VAR_GYM_3_LEADER
+	call Common_EventScript_StartGym3Fight
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
@@ -83,7 +90,8 @@ MauvilleCity_Gym_EventScript_Wattson::
 	release
 	end
 
-MauvilleCity_Gym_EventScript_WattsonDefeated::
+MauvilleCity_Gym_EventScript_LeaderDefeated::
+	bufferleadername STR_VAR_1, VAR_GYM_3_LEADER
 	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -259,8 +267,8 @@ MauvilleCity_Gym_EventScript_GymStatue::
 MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "WATTSON, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type POKéMON.\p"
+	.string "WATTSON was the LEADER of MAUVILLE\n"
+	.string "GYM. He uses ELECTRIC-type POKéMON.\p"
 	.string "If you challenge him with WATER-type\n"
 	.string "POKéMON, he'll zap them! Bzzt!\p"
 	.string "And, he's put in switch-controlled\n"
@@ -291,7 +299,7 @@ MauvilleCity_Gym_Text_ShawnDefeat:
 	.string "Unplugged and turned off…$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
-	.string "WATTSON, our GYM LEADER, has been\n"
+	.string "Our GYM LEADER, has been\n"
 	.string "around for a long, long time.\p"
 	.string "He was battling even before your\n"
 	.string "daddy was born, that tough coot.$"
@@ -353,7 +361,7 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received the DYNAMO BADGE\n"
-	.string "from WATTSON.$"
+	.string "from {STR_VAR_1}.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "With the DYNAMO BADGE, POKéMON can\n"
