@@ -1,0 +1,205 @@
+script(global) Common_EventScript_StartGym3Fight{
+    // VAR_0x8003 contains Gym Leader Variable
+    getImportantFightType(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case TYPE_NORMAL: call(normalFightGym3) 
+        case TYPE_ROCK: call(rockFightGym3) 
+        case TYPE_ELECTRIC: call(electricFightGym3) 
+        case TYPE_FIGHTING: call(fightingFightGym3) 
+        case TYPE_PSYCHIC: call(psychicFightGym3) 
+        case TYPE_FIRE: call(fireFightGym3) 
+        case TYPE_FLYING: call(flyingFightGym3) 
+        case TYPE_WATER: call(waterFightGym3) 
+        case TYPE_DARK: call(darkFightGym3) 
+        case TYPE_GHOST: call(ghostFightGym3) 
+        case TYPE_ICE: call(iceFightGym3) 
+        case TYPE_DRAGON: call(dragonFightGym3) 
+        case TYPE_POISON: call(poisonFightGym3) 
+        case TYPE_GROUND: call(groundFightGym3) 
+        case TYPE_GRASS: call(grassFightGym3) 
+        case TYPE_FAIRY: call(fairyFightGym3) 
+        case TYPE_STEEL: call(steelFightGym3) 
+        case TYPE_BUG: call(bugFightGym3) 
+        default: call(normalFightGym3)
+    }
+}
+
+script(local) normalFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_3, NormanIntroGym, NormanGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_3, NormanIntroGym, NormanGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) rockFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_3, RoxanneIntroGym, RoxanneGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_3, RoxanneIntroGym, RoxanneGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) electricFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_WATTSON_GYM_3, WattsonIntroGym, WattsonGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WATTSON_GYM_3, WattsonIntroGym, WattsonGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fightingFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_3, BrawlyIntroGym, BrawlyGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_3, BrawlyIntroGym, BrawlyGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) psychicFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_TATE_GYM_3, TateIntroGym, TateGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_TATE_GYM_3, TateIntroGym, TateGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fireFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_3, FlanneryIntroGym, FlanneryGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_3, FlanneryIntroGym, FlanneryGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) flyingFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_WINONA_GYM_3, WinonaIntroGym, WinonaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WINONA_GYM_3, WinonaIntroGym, WinonaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) waterFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_JUAN_GYM_3, JuanIntroGym, JuanGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_JUAN_GYM_3, JuanIntroGym, JuanGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) darkFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_3, SidneyIntroGym, SidneyGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_3, SidneyIntroGym, SidneyGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) ghostFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_3, PhoebeIntroGym, PhoebeGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_3, PhoebeIntroGym, PhoebeGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) iceFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_GLACIA_GYM_3, GlaciaIntroGym, GlaciaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GLACIA_GYM_3, GlaciaIntroGym, GlaciaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) dragonFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_DRAKE_GYM_3, DrakeIntroGym, DrakeGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_DRAKE_GYM_3, DrakeIntroGym, DrakeGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) poisonFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_KOGA_GYM_3, KogaIntroGym, KogaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_KOGA_GYM_3, KogaIntroGym, KogaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) groundFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_3, GiovanniIntroGym, GiovanniGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_3, GiovanniIntroGym, GiovanniGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) grassFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_ERIKA_GYM_3, ErikaIntroGym, ErikaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ERIKA_GYM_3, ErikaIntroGym, ErikaGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fairyFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_VALERIE_GYM_3, ValerieIntroGym, ValerieGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_VALERIE_GYM_3, ValerieIntroGym, ValerieGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) steelFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_STEVEN_GYM_3, StevenIntroGym, StevenGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_STEVEN_GYM_3, StevenIntroGym, StevenGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) bugFightGym3{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_BUGSY_GYM_3, BugsyIntroGym, BugsyGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BUGSY_GYM_3, BugsyIntroGym, BugsyGymDefeat, MauvilleCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}

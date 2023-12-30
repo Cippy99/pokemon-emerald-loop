@@ -1,33 +1,32 @@
 script(global) Common_EventScript_StartGym2Fight{
     // VAR_0x8003 contains Gym Leader Variable
     getImportantFightType(VAR_0x8003)
-    switch(var(VAR_RESULT)){
-        case TYPE_NORMAL: call(normalFightGym2)
-        case TYPE_FIRE: call(fireFightGym2)
-        case TYPE_WATER: call(waterFightGym2)
-        case TYPE_GHOST: call(ghostFightGym2)    
-        case TYPE_DARK: call(darkFightGym2)
-        case TYPE_ICE: call(iceFightGym2)
-        case TYPE_DRAGON: call(dragonFightGym2)
+    switch(var(VAR_RESULT)){ 
+        case TYPE_NORMAL: call(normalFightGym2) 
+        case TYPE_ROCK: call(rockFightGym2) 
         case TYPE_ELECTRIC: call(electricFightGym2) 
-        case TYPE_ROCK: call(rockFightGym2)
-        case TYPE_FLYING: call(flyingFightGym2)
-        case TYPE_PSYCHIC: call(psychicFightGym2)
-        case TYPE_FIGHTING: call(fightingFightGym2)
-        case TYPE_GROUND: call(groundFightGym2)
-        case TYPE_GRASS: call(grassFightGym2)
-        case TYPE_STEEL: call(steelFightGym2)
-        case TYPE_BUG: call(bugFightGym2)
-        case TYPE_POISON: call(poisonFightGym2)
-        case TYPE_FAIRY: call(fairyFightGym2)
+        case TYPE_FIGHTING: call(fightingFightGym2) 
+        case TYPE_PSYCHIC: call(psychicFightGym2) 
+        case TYPE_FIRE: call(fireFightGym2) 
+        case TYPE_FLYING: call(flyingFightGym2) 
+        case TYPE_WATER: call(waterFightGym2) 
+        case TYPE_DARK: call(darkFightGym2) 
+        case TYPE_GHOST: call(ghostFightGym2) 
+        case TYPE_ICE: call(iceFightGym2) 
+        case TYPE_DRAGON: call(dragonFightGym2) 
+        case TYPE_POISON: call(poisonFightGym2) 
+        case TYPE_GROUND: call(groundFightGym2) 
+        case TYPE_GRASS: call(grassFightGym2) 
+        case TYPE_FAIRY: call(fairyFightGym2) 
+        case TYPE_STEEL: call(steelFightGym2) 
+        case TYPE_BUG: call(bugFightGym2) 
         default: call(normalFightGym2)
-
     }
 }
 
 script(local) normalFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_NORMAN_GYM_2, NormanIntroGym, NormanGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -37,7 +36,7 @@ script(local) normalFightGym2{
 
 script(local) rockFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_ROXANNE_GYM_2, RoxanneIntroGym, RoxanneGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -47,7 +46,7 @@ script(local) rockFightGym2{
 
 script(local) electricFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_WATTSON_GYM_2, WattsonIntroGym, WattsonGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -57,7 +56,7 @@ script(local) electricFightGym2{
 
 script(local) fightingFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_BRAWLY_GYM_2, BrawlyIntroGym, BrawlyGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -67,7 +66,7 @@ script(local) fightingFightGym2{
 
 script(local) psychicFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_TATE_GYM_2, TateIntroGym, TateGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -77,7 +76,7 @@ script(local) psychicFightGym2{
 
 script(local) fireFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_FLANNERY_GYM_2, FlanneryIntroGym, FlanneryGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -87,7 +86,7 @@ script(local) fireFightGym2{
 
 script(local) flyingFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_WINONA_GYM_2, WinonaIntroGym, WinonaGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -97,7 +96,7 @@ script(local) flyingFightGym2{
 
 script(local) waterFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_JUAN_GYM_2, JuanIntroGym, JuanGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -107,7 +106,7 @@ script(local) waterFightGym2{
 
 script(local) darkFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_SIDNEY_GYM_2, SidneyIntroGym, SidneyGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -117,7 +116,7 @@ script(local) darkFightGym2{
 
 script(local) ghostFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_PHOEBE_GYM_2, PhoebeIntroGym, PhoebeGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -127,7 +126,7 @@ script(local) ghostFightGym2{
 
 script(local) iceFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_GLACIA_GYM_2, GlaciaIntroGym, GlaciaGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -137,7 +136,7 @@ script(local) iceFightGym2{
 
 script(local) dragonFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_DRAKE_GYM_2, DrakeIntroGym, DrakeGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -147,7 +146,7 @@ script(local) dragonFightGym2{
 
 script(local) poisonFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_KOGA_GYM_2, KogaIntroGym, KogaGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -157,7 +156,7 @@ script(local) poisonFightGym2{
 
 script(local) groundFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_GIOVANNI_GYM_2, GiovanniIntroGym, GiovanniGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -167,7 +166,7 @@ script(local) groundFightGym2{
 
 script(local) grassFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_ERIKA_GYM_2, ErikaIntroGym, ErikaGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -177,7 +176,7 @@ script(local) grassFightGym2{
 
 script(local) fairyFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_VALERIE_GYM_2, ValerieIntroGym, ValerieGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -187,7 +186,7 @@ script(local) fairyFightGym2{
 
 script(local) steelFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_STEVEN_GYM_2, StevenIntroGym, StevenGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:
@@ -197,7 +196,7 @@ script(local) steelFightGym2{
 
 script(local) bugFightGym2{
     getImportantFightSet(VAR_0x8003)
-    switch(var(VAR_RESULT)){
+    switch(var(VAR_RESULT)){ 
         case 0:
             trainerbattle_single(TRAINER_BUGSY_GYM_2, BugsyIntroGym, BugsyGymDefeat, DewfordTown_Gym_EventScript_LeaderDefeated, NO_MUSIC)
         default:

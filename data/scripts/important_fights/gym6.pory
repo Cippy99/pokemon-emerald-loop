@@ -1,0 +1,205 @@
+script(global) Common_EventScript_StartGym6Fight{
+    // VAR_0x8003 contains Gym Leader Variable
+    getImportantFightType(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case TYPE_NORMAL: call(normalFightGym6) 
+        case TYPE_ROCK: call(rockFightGym6) 
+        case TYPE_ELECTRIC: call(electricFightGym6) 
+        case TYPE_FIGHTING: call(fightingFightGym6) 
+        case TYPE_PSYCHIC: call(psychicFightGym6) 
+        case TYPE_FIRE: call(fireFightGym6) 
+        case TYPE_FLYING: call(flyingFightGym6) 
+        case TYPE_WATER: call(waterFightGym6) 
+        case TYPE_DARK: call(darkFightGym6) 
+        case TYPE_GHOST: call(ghostFightGym6) 
+        case TYPE_ICE: call(iceFightGym6) 
+        case TYPE_DRAGON: call(dragonFightGym6) 
+        case TYPE_POISON: call(poisonFightGym6) 
+        case TYPE_GROUND: call(groundFightGym6) 
+        case TYPE_GRASS: call(grassFightGym6) 
+        case TYPE_FAIRY: call(fairyFightGym6) 
+        case TYPE_STEEL: call(steelFightGym6) 
+        case TYPE_BUG: call(bugFightGym6) 
+        default: call(normalFightGym6)
+    }
+}
+
+script(local) normalFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_6, NormanIntroGym, NormanGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_6, NormanIntroGym, NormanGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) rockFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_6, RoxanneIntroGym, RoxanneGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_6, RoxanneIntroGym, RoxanneGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) electricFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_WATTSON_GYM_6, WattsonIntroGym, WattsonGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WATTSON_GYM_6, WattsonIntroGym, WattsonGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fightingFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_6, BrawlyIntroGym, BrawlyGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_6, BrawlyIntroGym, BrawlyGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) psychicFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_TATE_GYM_6, TateIntroGym, TateGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_TATE_GYM_6, TateIntroGym, TateGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fireFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_6, FlanneryIntroGym, FlanneryGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_6, FlanneryIntroGym, FlanneryGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) flyingFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_WINONA_GYM_6, WinonaIntroGym, WinonaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WINONA_GYM_6, WinonaIntroGym, WinonaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) waterFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_JUAN_GYM_6, JuanIntroGym, JuanGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_JUAN_GYM_6, JuanIntroGym, JuanGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) darkFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_6, SidneyIntroGym, SidneyGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_6, SidneyIntroGym, SidneyGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) ghostFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_6, PhoebeIntroGym, PhoebeGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_6, PhoebeIntroGym, PhoebeGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) iceFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_GLACIA_GYM_6, GlaciaIntroGym, GlaciaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GLACIA_GYM_6, GlaciaIntroGym, GlaciaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) dragonFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_DRAKE_GYM_6, DrakeIntroGym, DrakeGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_DRAKE_GYM_6, DrakeIntroGym, DrakeGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) poisonFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_KOGA_GYM_6, KogaIntroGym, KogaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_KOGA_GYM_6, KogaIntroGym, KogaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) groundFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_6, GiovanniIntroGym, GiovanniGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_6, GiovanniIntroGym, GiovanniGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) grassFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_ERIKA_GYM_6, ErikaIntroGym, ErikaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ERIKA_GYM_6, ErikaIntroGym, ErikaGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fairyFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_VALERIE_GYM_6, ValerieIntroGym, ValerieGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_VALERIE_GYM_6, ValerieIntroGym, ValerieGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) steelFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_STEVEN_GYM_6, StevenIntroGym, StevenGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_STEVEN_GYM_6, StevenIntroGym, StevenGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) bugFightGym6{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_BUGSY_GYM_6, BugsyIntroGym, BugsyGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BUGSY_GYM_6, BugsyIntroGym, BugsyGymDefeat, FortreeCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}

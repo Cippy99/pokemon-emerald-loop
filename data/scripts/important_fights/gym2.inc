@@ -2,23 +2,23 @@ Common_EventScript_StartGym2Fight::
 	getImportantFightType VAR_0x8003
 	switch VAR_RESULT
 	case TYPE_NORMAL, Common_EventScript_StartGym2Fight_2
-	case TYPE_FIRE, Common_EventScript_StartGym2Fight_3
-	case TYPE_WATER, Common_EventScript_StartGym2Fight_4
-	case TYPE_GHOST, Common_EventScript_StartGym2Fight_5
-	case TYPE_DARK, Common_EventScript_StartGym2Fight_6
-	case TYPE_ICE, Common_EventScript_StartGym2Fight_7
-	case TYPE_DRAGON, Common_EventScript_StartGym2Fight_8
-	case TYPE_ELECTRIC, Common_EventScript_StartGym2Fight_9
-	case TYPE_ROCK, Common_EventScript_StartGym2Fight_10
-	case TYPE_FLYING, Common_EventScript_StartGym2Fight_11
-	case TYPE_PSYCHIC, Common_EventScript_StartGym2Fight_12
-	case TYPE_FIGHTING, Common_EventScript_StartGym2Fight_13
-	case TYPE_GROUND, Common_EventScript_StartGym2Fight_14
-	case TYPE_GRASS, Common_EventScript_StartGym2Fight_15
-	case TYPE_STEEL, Common_EventScript_StartGym2Fight_16
-	case TYPE_BUG, Common_EventScript_StartGym2Fight_17
-	case TYPE_POISON, Common_EventScript_StartGym2Fight_18
-	case TYPE_FAIRY, Common_EventScript_StartGym2Fight_19
+	case TYPE_ROCK, Common_EventScript_StartGym2Fight_3
+	case TYPE_ELECTRIC, Common_EventScript_StartGym2Fight_4
+	case TYPE_FIGHTING, Common_EventScript_StartGym2Fight_5
+	case TYPE_PSYCHIC, Common_EventScript_StartGym2Fight_6
+	case TYPE_FIRE, Common_EventScript_StartGym2Fight_7
+	case TYPE_FLYING, Common_EventScript_StartGym2Fight_8
+	case TYPE_WATER, Common_EventScript_StartGym2Fight_9
+	case TYPE_DARK, Common_EventScript_StartGym2Fight_10
+	case TYPE_GHOST, Common_EventScript_StartGym2Fight_11
+	case TYPE_ICE, Common_EventScript_StartGym2Fight_12
+	case TYPE_DRAGON, Common_EventScript_StartGym2Fight_13
+	case TYPE_POISON, Common_EventScript_StartGym2Fight_14
+	case TYPE_GROUND, Common_EventScript_StartGym2Fight_15
+	case TYPE_GRASS, Common_EventScript_StartGym2Fight_16
+	case TYPE_FAIRY, Common_EventScript_StartGym2Fight_17
+	case TYPE_STEEL, Common_EventScript_StartGym2Fight_18
+	case TYPE_BUG, Common_EventScript_StartGym2Fight_19
 	call normalFightGym2
 	return
 
@@ -27,71 +27,71 @@ Common_EventScript_StartGym2Fight_2:
 	return
 
 Common_EventScript_StartGym2Fight_3:
-	call fireFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_4:
-	call waterFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_5:
-	call ghostFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_6:
-	call darkFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_7:
-	call iceFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_8:
-	call dragonFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_9:
-	call electricFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_10:
 	call rockFightGym2
 	return
 
-Common_EventScript_StartGym2Fight_11:
-	call flyingFightGym2
+Common_EventScript_StartGym2Fight_4:
+	call electricFightGym2
 	return
 
-Common_EventScript_StartGym2Fight_12:
-	call psychicFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_13:
+Common_EventScript_StartGym2Fight_5:
 	call fightingFightGym2
 	return
 
+Common_EventScript_StartGym2Fight_6:
+	call psychicFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_7:
+	call fireFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_8:
+	call flyingFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_9:
+	call waterFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_10:
+	call darkFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_11:
+	call ghostFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_12:
+	call iceFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_13:
+	call dragonFightGym2
+	return
+
 Common_EventScript_StartGym2Fight_14:
-	call groundFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_15:
-	call grassFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_16:
-	call steelFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_17:
-	call bugFightGym2
-	return
-
-Common_EventScript_StartGym2Fight_18:
 	call poisonFightGym2
 	return
 
-Common_EventScript_StartGym2Fight_19:
+Common_EventScript_StartGym2Fight_15:
+	call groundFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_16:
+	call grassFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_17:
 	call fairyFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_18:
+	call steelFightGym2
+	return
+
+Common_EventScript_StartGym2Fight_19:
+	call bugFightGym2
 	return
 
 

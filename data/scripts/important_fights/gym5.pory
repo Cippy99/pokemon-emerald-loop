@@ -1,0 +1,205 @@
+script(global) Common_EventScript_StartGym5Fight{
+    // VAR_0x8003 contains Gym Leader Variable
+    getImportantFightType(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case TYPE_NORMAL: call(normalFightGym5) 
+        case TYPE_ROCK: call(rockFightGym5) 
+        case TYPE_ELECTRIC: call(electricFightGym5) 
+        case TYPE_FIGHTING: call(fightingFightGym5) 
+        case TYPE_PSYCHIC: call(psychicFightGym5) 
+        case TYPE_FIRE: call(fireFightGym5) 
+        case TYPE_FLYING: call(flyingFightGym5) 
+        case TYPE_WATER: call(waterFightGym5) 
+        case TYPE_DARK: call(darkFightGym5) 
+        case TYPE_GHOST: call(ghostFightGym5) 
+        case TYPE_ICE: call(iceFightGym5) 
+        case TYPE_DRAGON: call(dragonFightGym5) 
+        case TYPE_POISON: call(poisonFightGym5) 
+        case TYPE_GROUND: call(groundFightGym5) 
+        case TYPE_GRASS: call(grassFightGym5) 
+        case TYPE_FAIRY: call(fairyFightGym5) 
+        case TYPE_STEEL: call(steelFightGym5) 
+        case TYPE_BUG: call(bugFightGym5) 
+        default: call(normalFightGym5)
+    }
+}
+
+script(local) normalFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_NORMAN_GYM_5, NormanIntroGym, NormanGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_NORMAN_GYM_5, NormanIntroGym, NormanGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) rockFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_5, RoxanneIntroGym, RoxanneGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ROXANNE_GYM_5, RoxanneIntroGym, RoxanneGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) electricFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_WATTSON_GYM_5, WattsonIntroGym, WattsonGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WATTSON_GYM_5, WattsonIntroGym, WattsonGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fightingFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_5, BrawlyIntroGym, BrawlyGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BRAWLY_GYM_5, BrawlyIntroGym, BrawlyGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) psychicFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_TATE_GYM_5, TateIntroGym, TateGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_TATE_GYM_5, TateIntroGym, TateGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fireFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_5, FlanneryIntroGym, FlanneryGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_FLANNERY_GYM_5, FlanneryIntroGym, FlanneryGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) flyingFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_WINONA_GYM_5, WinonaIntroGym, WinonaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_WINONA_GYM_5, WinonaIntroGym, WinonaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) waterFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_JUAN_GYM_5, JuanIntroGym, JuanGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_JUAN_GYM_5, JuanIntroGym, JuanGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) darkFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_5, SidneyIntroGym, SidneyGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_SIDNEY_GYM_5, SidneyIntroGym, SidneyGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) ghostFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_5, PhoebeIntroGym, PhoebeGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_PHOEBE_GYM_5, PhoebeIntroGym, PhoebeGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) iceFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_GLACIA_GYM_5, GlaciaIntroGym, GlaciaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GLACIA_GYM_5, GlaciaIntroGym, GlaciaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) dragonFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_DRAKE_GYM_5, DrakeIntroGym, DrakeGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_DRAKE_GYM_5, DrakeIntroGym, DrakeGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) poisonFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_KOGA_GYM_5, KogaIntroGym, KogaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_KOGA_GYM_5, KogaIntroGym, KogaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) groundFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_5, GiovanniIntroGym, GiovanniGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_GIOVANNI_GYM_5, GiovanniIntroGym, GiovanniGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) grassFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_ERIKA_GYM_5, ErikaIntroGym, ErikaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_ERIKA_GYM_5, ErikaIntroGym, ErikaGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) fairyFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_VALERIE_GYM_5, ValerieIntroGym, ValerieGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_VALERIE_GYM_5, ValerieIntroGym, ValerieGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) steelFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_STEVEN_GYM_5, StevenIntroGym, StevenGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_STEVEN_GYM_5, StevenIntroGym, StevenGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
+
+script(local) bugFightGym5{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_single(TRAINER_BUGSY_GYM_5, BugsyIntroGym, BugsyGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+        default:
+            trainerbattle_single(TRAINER_BUGSY_GYM_5, BugsyIntroGym, BugsyGymDefeat, PetalburgCity_Gym_EventScript_LeaderDefeated, NO_MUSIC)
+    }
+}
