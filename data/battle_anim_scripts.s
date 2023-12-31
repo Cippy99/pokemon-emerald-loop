@@ -23587,7 +23587,7 @@ SpiderWebThread:
 	return
 
 Move_RAZOR_WIND:
-	choosetwoturnanim RazorWindSetUp, RazorWindUnleash
+	goto RazorWindUnleash
 RazorWindEnd:
 	waitforvisualfinish
 	end
