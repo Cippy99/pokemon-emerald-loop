@@ -1766,52 +1766,52 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_DIGLETT"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_DIGLETT_ALOLAN"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_GEODUDE"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_GASTLY"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_WHISMUR"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_SHIELDON"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_WOOBAT"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_NOIBAT"
               },
               {
-                "min_level": 10,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_GEODUDE_ALOLAN"
               },
               {
-                "min_level": 10,
+                "min_level": 9,
                 "max_level": 12,
                 "species": "SPECIES_BERGMITE"
               }
