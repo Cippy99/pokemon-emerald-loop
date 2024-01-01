@@ -8638,7 +8638,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         break;
     case EFFECT_SMACK_DOWN:
         if(!IsBattlerGrounded(battlerDef)){
-            basePower *= 1.5;
+            basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
         }
         break;
     case EFFECT_ACROBATICS:
@@ -8705,7 +8705,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
     case EFFECT_BOLT_BEAK:
         if (GetBattlerTurnOrderNum(battlerAtk) < GetBattlerTurnOrderNum(battlerDef)
             || gDisableStructs[battlerDef].isFirstTurn == 2)
-            basePower *= 2;
+            basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
         break;
     case EFFECT_ROUND:
         for (i = 0; i < gBattlersCount; i++)
@@ -8766,7 +8766,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         break;
     case EFFECT_RISING_VOLTAGE:
         if (IsBattlerTerrainAffected(battlerDef, STATUS_FIELD_ELECTRIC_TERRAIN))
-            basePower *= 2;
+            basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
         break;
     case EFFECT_BEAT_UP:
         #if B_BEAT_UP >= GEN_5

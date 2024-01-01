@@ -6908,7 +6908,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_DRAGON_PULSE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 85,
+            .power = 90,
         #else
             .power = 90,
         #endif
@@ -9452,7 +9452,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .effect = EFFECT_BELCH,
         .power = 120,
         .type = TYPE_POISON,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -10236,7 +10236,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_INFESTATION] =
     {
         .effect = EFFECT_TRAP,
-        .power = 20,
+        .power = 45,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,
@@ -10458,7 +10458,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_SPIRIT_SHACKLE] =
     {
         .effect = EFFECT_HIT_PREVENT_ESCAPE,
-        .power = 80,
+        .power = 85,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 10,
@@ -10539,7 +10539,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .effect = EFFECT_HIT,
         .power = 95,
         .type = TYPE_GROUND,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -11659,7 +11659,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_DRAGON_DARTS] =
     {
         .effect = EFFECT_MULTI_HIT, //TODO
-        .power = 50,
+        .power = 45,
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 10,
@@ -11703,7 +11703,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_BOLT_BEAK] =
     {
         .effect = EFFECT_BOLT_BEAK,
-        .power = 85,
+        .power = 75,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 10,
@@ -11718,7 +11718,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_FISHIOUS_REND] =
     {
         .effect = EFFECT_BOLT_BEAK,
-        .power = 85,
+        .power = 75,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 10,
@@ -11728,7 +11728,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
-        .bitingMove = TRUE,
     },
 
     [MOVE_COURT_CHANGE] =
@@ -11797,7 +11796,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_DRUM_BEATING] =
     {
         .effect = EFFECT_SPEED_DOWN_HIT,
-        .power = 80,
+        .power = 70,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 10,
@@ -11813,7 +11812,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_SNAP_TRAP] =
     {
         .effect = EFFECT_TRAP,
-        .power = 35,
+        .power = 45,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
@@ -11829,7 +11828,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_PYRO_BALL] =
     {
         .effect = EFFECT_BURN_HIT,
-        .power = 120,
+        .power = 110,
         .type = TYPE_FIRE,
         .accuracy = 90,
         .pp = 5,
@@ -11946,7 +11945,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_APPLE_ACID] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
-        .power = 80,
+        .power = 75,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 10,
@@ -11962,7 +11961,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_GRAV_APPLE] =
     {
         .effect = EFFECT_GRAV_APPLE,
-        .power = 80,
+        .power = 75,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 10,
@@ -11997,7 +11996,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .effect = EFFECT_CONFUSE_HIT,
         .power = 90,
         .type = TYPE_FAIRY,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -12197,7 +12196,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_GRASSY_GLIDE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_9
-            .power = 60,
+            .power = 55,
         #else
             .power = 70,
         #endif
@@ -12814,7 +12813,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_ESPER_WING] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_9
-            .power = 80,
+            .power = 75,
             .accuracy = 100,
         #else
             .power = 75,
@@ -12869,7 +12868,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_TRIPLE_ARROWS] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_9
-            .power = 90,
+            .power = 80,
             .pp = 10,
         #else
             .power = 50,
