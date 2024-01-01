@@ -8636,6 +8636,11 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
                 basePower = sTrumpCardPowerTable[gBattleMons[battlerAtk].pp[i]];
         }
         break;
+    case EFFECT_SMACK_DOWN:
+        if(!IsBattlerGrounded(battlerDef)){
+            basePower *= 1.5;
+        }
+        break;
     case EFFECT_ACROBATICS:
         if (gBattleMons[battlerAtk].item == ITEM_NONE
             // Edge case, because removal of items happens after damage calculation.
