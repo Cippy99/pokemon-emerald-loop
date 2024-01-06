@@ -5502,7 +5502,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},
-        .abilities = {ABILITY_INNER_FOCUS, ABILITY_EARLY_BIRD, ABILITY_SAP_SIPPER},
+        .abilities = {ABILITY_CUD_CHEW, ABILITY_ARMOR_TAIL, ABILITY_SAP_SIPPER},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -5553,8 +5553,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_DUNSPARCE] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 70,
+        .baseHP        = 110,
+        .baseAttack    = 80,
         .baseDefense   = 70,
         .baseSpeed     = 45,
         .baseSpAttack  = 65,

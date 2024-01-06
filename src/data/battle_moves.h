@@ -13555,6 +13555,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
         .metronomeBanned = TRUE,
+        .ignoresProtect = TRUE,
     },
 
     [MOVE_TWIN_BEAM] =
