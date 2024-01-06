@@ -4324,7 +4324,8 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
             score += 3;
             break;
         case HOLD_EFFECT_UTILITY_UMBRELLA:
-            if (aiData->abilities[battlerAtk] != ABILITY_SOLAR_POWER && aiData->abilities[battlerAtk] != ABILITY_DRY_SKIN)
+            if ((aiData->abilities[battlerAtk] != ABILITY_SOLAR_POWER && aiData->abilities[battlerAtk] != ABILITY_CHLOROBOOST) 
+            && aiData->abilities[battlerAtk] != ABILITY_DRY_SKIN)
             {
                 switch (aiData->abilities[battlerDef])
                 {
@@ -4333,6 +4334,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
                         score += 3; // Slow 'em down
                     break;
                 case ABILITY_CHLOROPHYLL:
+                case ABILITY_CHLOROBOOST:
                 case ABILITY_FLOWER_GIFT:
                     if (AI_GetWeather(aiData) & B_WEATHER_SUN)
                         score += 3; // Slow 'em down
