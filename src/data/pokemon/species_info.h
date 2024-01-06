@@ -4619,11 +4619,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 70,
         .baseSpDefense = 96,
         #if P_UPDATED_STATS >= GEN_7
-            .baseSpAttack  = 86,
+            .baseSpAttack  = 96,
         #else
             .baseSpAttack  = 76,
         #endif
-        .types = { TYPE_NORMAL, TYPE_FLYING},
+        .types = { TYPE_GHOST, TYPE_FLYING},
         .catchRate = 90,
         .expYield = 158,
         .evYield_HP        = 2,
@@ -4654,7 +4654,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
-        .abilities = {ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_RATTLED},
+        .abilities = {ABILITY_SWARM, ABILITY_RATTLED, ABILITY_EARLY_BIRD},
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
@@ -4662,12 +4662,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_LEDIAN] =
     {
         .baseHP        = 55,
-        .baseAttack    = 35,
+        .baseAttack    = 70,
         .baseDefense   = 50,
         .baseSpeed     = 85,
         .baseSpAttack  = 55,
         .baseSpDefense = 110,
-        .types = { TYPE_BUG, TYPE_FLYING },
+        .types = { TYPE_BUG, TYPE_FIGHTING },
         .catchRate = 90,
         .expYield = 137,
         .evYield_SpDefense = 2,
@@ -4676,7 +4676,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
-        .abilities = {ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_IRON_FIST},
+        .abilities = {ABILITY_SWARM, ABILITY_IRON_FIST, ABILITY_EARLY_BIRD},
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
@@ -4715,7 +4715,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         #else
             .baseSpDefense = 60,
         #endif
-        .types = { TYPE_BUG, TYPE_POISON},
+        .types = { TYPE_BUG, TYPE_DARK},
         .catchRate = 90,
         .expYield = 140,
         .evYield_Attack    = 2,
@@ -4724,7 +4724,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
-        .abilities = {ABILITY_SWARM, ABILITY_INSOMNIA, ABILITY_SNIPER},
+        .abilities = {ABILITY_SWARM, ABILITY_SHARPNESS, ABILITY_SNIPER},
         .bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
@@ -5005,7 +5005,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         #else
             .baseDefense   = 75,
         #endif
-        .types = { TYPE_ELECTRIC, TYPE_ELECTRIC},
+        .types = { TYPE_ELECTRIC, TYPE_DRAGON},
         .catchRate = 45,
         .expYield = 230,
         .evYield_SpAttack  = 3,
@@ -5014,7 +5014,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_FIELD},
-        .abilities = {ABILITY_STATIC, ABILITY_NONE, ABILITY_PLUS},
+        .abilities = {ABILITY_STATIC, ABILITY_MOLD_BREAKER, ABILITY_PLUS},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -5194,10 +5194,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_JUMPLUFF] =
     {
         .baseHP        = 75,
-        .baseAttack    = 55,
+        .baseAttack    = 65,
         .baseDefense   = 70,
         .baseSpeed     = 110,
-        .baseSpAttack  = 55,
+        .baseSpAttack  = 65,
         #if P_UPDATED_STATS >= GEN_6
             .baseSpDefense = 95,
         #else
