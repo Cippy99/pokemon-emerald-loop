@@ -29,7 +29,7 @@ Pokèmon Emerald Loop has pokemon from the first 8 generations and uses gen 9 Ba
 - Introduced Fairy type and updated type effectiveness chart (Steel does not resist ghost and dark)
 - Crits do 50% more damage instead of double damage
 
-For a complete list of changes see the [features](https://github.com/Cippy99/pokemon-emerald-loop/blob/master/Features.md) page.
+For a complete list of changes see the [features](https://github.com/Cippy99/pokemon-emerald-loop/blob/master/Features.md#Battle) page.
 
 ### Balance Changes
 
