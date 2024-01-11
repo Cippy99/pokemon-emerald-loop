@@ -774,6 +774,10 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 if (moveType == TYPE_WATER)
                     RETURN_SCORE_MINUS(20);
                 break;
+            case ABILITY_BUG_EATER:
+                if (moveType == TYPE_BUG)
+                    RETURN_SCORE_MINUS(20);
+                break;
             case ABILITY_FLASH_FIRE:
                 if (moveType == TYPE_FIRE)
                     RETURN_SCORE_MINUS(20);

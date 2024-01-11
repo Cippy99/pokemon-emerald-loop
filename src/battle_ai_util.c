@@ -295,6 +295,7 @@ static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
     [ABILITY_WANDERING_SPIRIT] = 2,
     [ABILITY_GORILLA_TACTICS] = 4,
     [ABILITY_CHLOROBOOST] = 6,
+    [ABILITY_BUG_EATER] = 7,
 };
 
 static const u16 sEncouragedEncoreEffects[] =

@@ -964,6 +964,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_GOOD_AS_GOLD] = 1,
     [ABILITY_PURIFYING_SALT] = 1,
     [ABILITY_WELL_BAKED_BODY] = 1,
+    [ABILITY_BUG_EATER] = 1
 };
 
 static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
@@ -5018,6 +5019,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             {
             case ABILITY_VOLT_ABSORB:
                 if (moveType == TYPE_ELECTRIC)
+                    effect = 1;
+                break;
+            case ABILITY_BUG_EATER:
+                if (moveType == TYPE_BUG)
                     effect = 1;
                 break;
             case ABILITY_WATER_ABSORB:
@@ -9991,6 +9996,10 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     {
         if (defType == TYPE_FLYING && mod >= UQ_4_12(2.0))
             mod = UQ_4_12(1.0);
+    }
+
+    if(GetBattlerAbility(battlerAtk) == ABILITY_BUG_EATER && defType == TYPE_BUG){
+        mod = UQ_4_12(2.0);
     }
 
     *modifier = uq4_12_multiply(*modifier, mod);
