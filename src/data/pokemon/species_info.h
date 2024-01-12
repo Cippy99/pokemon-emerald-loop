@@ -12392,7 +12392,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_WATCHOG] =
     {
-        .baseHP        = 60,
+        .baseHP        = 80,
         .baseAttack    = 85,
         .baseDefense   = 69,
         .baseSpeed     = 77,
@@ -12407,7 +12407,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},
-        .abilities = {ABILITY_ILLUMINATE, ABILITY_KEEN_EYE, ABILITY_ANALYTIC},
+        .abilities = {ABILITY_ILLUMINATE, ABILITY_ANALYTIC, ABILITY_KEEN_EYE},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -12507,10 +12507,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_LIEPARD] =
     {
         .baseHP        = 64,
-        .baseAttack    = 88,
+        .baseAttack    = 93,
         .baseDefense   = 50,
         .baseSpeed     = 106,
-        .baseSpAttack  = 88,
+        .baseSpAttack  = 93,
         .baseSpDefense = 50,
         .types = { TYPE_DARK, TYPE_DARK},
         .catchRate = 90,
