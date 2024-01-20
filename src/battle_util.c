@@ -9738,6 +9738,13 @@ static inline uq4_12_t GetAttackerAbilitiesModifier(u32 battlerAtk, uq4_12_t typ
         if (typeEffectivenessModifier <= UQ_4_12(0.5))
             return UQ_4_12(2.0);
         break;
+    case ABILITY_MONKEY_BRAIN:
+        u32 percentBoost = 0;
+        if(GetBattlerHoldEffect(battlerAtk, TRUE) != HOLD_EFFECT_METRONOME){
+            percentBoost = min((gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
+        }
+        return uq4_12_add(sPercentToModifier[percentBoost], UQ_4_12(1.0));
+        break;
     }
     return UQ_4_12(1.0);
 }
