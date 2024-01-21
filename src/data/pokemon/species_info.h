@@ -436,7 +436,7 @@
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                              \
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS},                              \
-        .abilities = {ABILITY_PICKUP, ABILITY_FRISK, ABILITY_INSOMNIA},\
+        .abilities = {ABILITY_PICKUP, ABILITY_INSOMNIA, ABILITY_FRISK},\
         .bodyColor = BODY_COLOR_BROWN,                                 \
         .noFlip = FALSE
 
@@ -450,7 +450,7 @@
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                              \
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS},                              \
-        .abilities = {ABILITY_PICKUP, ABILITY_FRISK, ABILITY_INSOMNIA},\
+        .abilities = {ABILITY_PICKUP, ABILITY_INSOMNIA, ABILITY_FRISK},\
         .bodyColor = BODY_COLOR_BROWN,                                 \
         .noFlip = FALSE
 
@@ -16297,7 +16297,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY},
-        .abilities = {ABILITY_HEALER, ABILITY_NONE, ABILITY_AROMA_VEIL},
+        .abilities = {ABILITY_AROMA_VEIL, ABILITY_NONE, ABILITY_HEALER},
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
@@ -16309,7 +16309,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseDefense   = 72,
         .baseSpeed     = 29,
         .baseSpAttack  = 99,
-        .baseSpDefense = 89,
+        .baseSpDefense = 99,
         .types = { TYPE_FAIRY, TYPE_FAIRY},
         .catchRate = 140,
         .expYield = 162,
@@ -16319,7 +16319,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_FAIRY},
-        .abilities = {ABILITY_HEALER, ABILITY_NONE, ABILITY_AROMA_VEIL},
+        .abilities = {ABILITY_AROMA_VEIL, ABILITY_NONE, ABILITY_HEALER},
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
@@ -16732,8 +16732,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseAttack    = 58,
         .baseDefense   = 57,
         .baseSpeed     = 101,
-        .baseSpAttack  = 81,
-        .baseSpDefense = 67,
+        .baseSpAttack  = 86,
+        .baseSpDefense = 77,
         .types = { TYPE_ELECTRIC, TYPE_FAIRY},
         .catchRate = 180,
         .expYield = 151,
@@ -16743,7 +16743,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY},
-        .abilities = {ABILITY_CHEEK_POUCH, ABILITY_PICKUP, ABILITY_PLUS},
+        .abilities = {ABILITY_CHEEK_POUCH, ABILITY_PLUS, ABILITY_PICKUP},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -16878,7 +16878,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_AMORPHOUS},
-        .abilities = {ABILITY_NATURAL_CURE, ABILITY_FRISK, ABILITY_HARVEST},
+        .abilities = {ABILITY_NATURAL_CURE, ABILITY_HARVEST, ABILITY_FRISK},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
@@ -16900,7 +16900,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_AMORPHOUS},
-        .abilities = {ABILITY_NATURAL_CURE, ABILITY_FRISK, ABILITY_HARVEST},
+        .abilities = {ABILITY_NATURAL_CURE, ABILITY_HARVEST, ABILITY_FRISK},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
