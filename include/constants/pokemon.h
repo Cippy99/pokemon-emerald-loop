@@ -284,6 +284,7 @@
 #define EVO_ITEM_DAY                      40     // specified item is used on Pokémon, is day
 #define EVO_ITEM_HOLD                     41     // Pokémon levels up, holds specified item
 #define EVO_LEVEL_FOG                     42     // Pokémon reaches the specified level during fog in the overworld
+#define EVO_ITEM_HOLD_LEVEL               43     // Pokémon reaches the specified level holding the specified item
 
 #define EVOS_PER_MON 10
 
