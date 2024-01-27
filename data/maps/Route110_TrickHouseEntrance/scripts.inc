@@ -378,7 +378,7 @@ Route110_TrickHouseEntrance_EventScript_GivePuzzle5Reward::
 	end
 
 Route110_TrickHouseEntrance_EventScript_GivePuzzle6Reward::
-	giveitem ITEM_MAGNET
+	giveitem ITEM_TM_ACROBATICS
 	goto_if_eq VAR_RESULT, TRUE, Route110_TrickHouseEntrance_EventScript_GotReward
 	call_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox Route110_TrickHouseEntrance_Text_DidYouNotComeToClaimReward, MSGBOX_DEFAULT
