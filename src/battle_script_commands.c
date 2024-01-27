@@ -1072,7 +1072,7 @@ static const u16 sPickupItems[] =
     ITEM_FULL_HEAL,
     ITEM_ULTRA_BALL,
     ITEM_HYPER_POTION,
-    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY, //
     ITEM_PROTEIN,
     ITEM_REVIVE,
     ITEM_HP_UP,
@@ -1085,16 +1085,16 @@ static const u16 sPickupItems[] =
 static const u16 sRarePickupItems[] =
 {
     ITEM_HYPER_POTION,
-    ITEM_NUGGET,
-    ITEM_KINGS_ROCK,
+    ITEM_NUGGET, //10k
+    ITEM_STAR_PIECE, // 12k
     ITEM_FULL_RESTORE,
     ITEM_ETHER,
-    ITEM_WHITE_HERB,
-    ITEM_TM_REST,
+    ITEM_PEARL_STRING, // 20k
+    ITEM_COMET_SHARD, // 25k
     ITEM_ELIXIR,
-    ITEM_TM_PSYSHOCK,
+    ITEM_BIG_NUGGET, // 40k
     ITEM_LEFTOVERS,
-    ITEM_TM_EARTHQUAKE,
+    ITEM_WHITE_HERB,
 };
 
 static const u8 sPickupProbabilities[] =
