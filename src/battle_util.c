@@ -964,6 +964,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_GOOD_AS_GOLD] = 1,
     [ABILITY_PURIFYING_SALT] = 1,
     [ABILITY_WELL_BAKED_BODY] = 1,
+    [ABILITY_BUG_EATER] = 1
 };
 
 static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
@@ -4891,6 +4892,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 break;
             SOLAR_POWER_HP_DROP:
             case ABILITY_SOLAR_POWER:
+            case ABILITY_CHLOROBOOST:
                 if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
                 {
                     BattleScriptPushCursorAndCallback(BattleScript_SolarPowerActivates);
@@ -5017,6 +5019,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             {
             case ABILITY_VOLT_ABSORB:
                 if (moveType == TYPE_ELECTRIC)
+                    effect = 1;
+                break;
+            case ABILITY_BUG_EATER:
+                if (moveType == TYPE_BUG)
                     effect = 1;
                 break;
             case ABILITY_WATER_ABSORB:
@@ -5684,6 +5690,22 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 gBattlerAttacker = gBattlerTarget;
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_AngerShellActivates;
+                effect++;
+            }
+            break;
+        case ABILITY_RUN_AWAY:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(gBattlerTarget)
+             && (gBattleMons[gBattlerTarget].hp <= gBattleMons[gBattlerTarget].maxHP / 2)
+             && !(TestSheerForceFlag(gBattlerAttacker, gCurrentMove))
+             && CompareStat(battler, STAT_SPEED, MAX_STAT_STAGE, CMP_LESS_THAN))
+            {
+                gEffectBattler = battler;
+                SET_STATCHANGER(STAT_SPEED, 1, FALSE);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
                 effect++;
             }
             break;
@@ -8636,6 +8658,11 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
                 basePower = sTrumpCardPowerTable[gBattleMons[battlerAtk].pp[i]];
         }
         break;
+    case EFFECT_SMACK_DOWN:
+        if(!IsBattlerGrounded(battlerDef)){
+            basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
+        }
+        break;
     case EFFECT_ACROBATICS:
         if (gBattleMons[battlerAtk].item == ITEM_NONE
             // Edge case, because removal of items happens after damage calculation.
@@ -8700,7 +8727,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
     case EFFECT_BOLT_BEAK:
         if (GetBattlerTurnOrderNum(battlerAtk) < GetBattlerTurnOrderNum(battlerDef)
             || gDisableStructs[battlerDef].isFirstTurn == 2)
-            basePower *= 2;
+            basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
         break;
     case EFFECT_ROUND:
         for (i = 0; i < gBattlersCount; i++)
@@ -8761,7 +8788,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         break;
     case EFFECT_RISING_VOLTAGE:
         if (IsBattlerTerrainAffected(battlerDef, STATUS_FIELD_ELECTRIC_TERRAIN))
-            basePower *= 2;
+            basePower = uq4_12_multiply(basePower, UQ_4_12(1.5));
         break;
     case EFFECT_BEAT_UP:
         #if B_BEAT_UP >= GEN_5
@@ -8969,6 +8996,11 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
     case ABILITY_TRANSISTOR:
         if (moveType == TYPE_ELECTRIC)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_PLUS:
+    case ABILITY_MINUS:
+        if (moveType == TYPE_ELECTRIC)
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
     case ABILITY_DRAGONS_MAW:
         if (moveType == TYPE_DRAGON)
@@ -9235,6 +9267,7 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
         break;
     case ABILITY_SOLAR_POWER:
+    case ABILITY_CHLOROBOOST:
         if (IS_MOVE_SPECIAL(move) && IsBattlerWeatherAffected(battlerAtk, B_WEATHER_SUN))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
@@ -9309,6 +9342,14 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
             if (updateFlags)
                 RecordAbilityBattle(battlerDef, ABILITY_THICK_FAT);
+        }
+        break;
+    case ABILITY_MAGMA_ARMOR:
+        if (moveType == TYPE_WATER)
+        {
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.25));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, ABILITY_MAGMA_ARMOR);
         }
         break;
     }
@@ -9697,6 +9738,13 @@ static inline uq4_12_t GetAttackerAbilitiesModifier(u32 battlerAtk, uq4_12_t typ
         if (typeEffectivenessModifier <= UQ_4_12(0.5))
             return UQ_4_12(2.0);
         break;
+    case ABILITY_MONKEY_BRAIN:
+        u32 percentBoost = 0;
+        if(GetBattlerHoldEffect(battlerAtk, TRUE) != HOLD_EFFECT_METRONOME){
+            percentBoost = min((gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
+        }
+        return uq4_12_add(sPercentToModifier[percentBoost], UQ_4_12(1.0));
+        break;
     }
     return UQ_4_12(1.0);
 }
@@ -9955,6 +10003,10 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     {
         if (defType == TYPE_FLYING && mod >= UQ_4_12(2.0))
             mod = UQ_4_12(1.0);
+    }
+
+    if(GetBattlerAbility(battlerAtk) == ABILITY_BUG_EATER && defType == TYPE_BUG){
+        mod = UQ_4_12(2.0);
     }
 
     *modifier = uq4_12_multiply(*modifier, mod);

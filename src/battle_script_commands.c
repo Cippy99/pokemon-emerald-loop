@@ -1072,7 +1072,7 @@ static const u16 sPickupItems[] =
     ITEM_FULL_HEAL,
     ITEM_ULTRA_BALL,
     ITEM_HYPER_POTION,
-    ITEM_RARE_CANDY,
+    ITEM_RARE_CANDY, //
     ITEM_PROTEIN,
     ITEM_REVIVE,
     ITEM_HP_UP,
@@ -1085,16 +1085,16 @@ static const u16 sPickupItems[] =
 static const u16 sRarePickupItems[] =
 {
     ITEM_HYPER_POTION,
-    ITEM_NUGGET,
-    ITEM_KINGS_ROCK,
+    ITEM_NUGGET, //10k
+    ITEM_STAR_PIECE, // 12k
     ITEM_FULL_RESTORE,
     ITEM_ETHER,
-    ITEM_WHITE_HERB,
-    ITEM_TM_REST,
+    ITEM_PEARL_STRING, // 20k
+    ITEM_COMET_SHARD, // 25k
     ITEM_ELIXIR,
-    ITEM_TM_PSYSHOCK,
+    ITEM_BIG_NUGGET, // 40k
     ITEM_LEFTOVERS,
-    ITEM_TM_EARTHQUAKE,
+    ITEM_WHITE_HERB,
 };
 
 static const u8 sPickupProbabilities[] =
@@ -1695,6 +1695,10 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move, u32 atkAbility, u
     case ABILITY_TANGLED_FEET:
         if (gBattleMons[battlerDef].status2 & STATUS2_CONFUSION)
             calc = (calc * 50) / 100; // 1.5 tangled feet loss
+        break;
+    case ABILITY_ILLUMINATE:
+        if(defHoldEffect != HOLD_EFFECT_EVASION_UP)
+            calc = (calc * 90) / 100; // 1.1 illuminate loss
         break;
     }
 
@@ -3673,8 +3677,8 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 break;
             case MOVE_EFFECT_TRIPLE_ARROWS:
                 {
-                    u8 randomLowerDefenseChance = RandomPercentage(RNG_TRIPLE_ARROWS_DEFENSE_DOWN, CalcSecondaryEffectChance(gBattlerAttacker, 50));
-                    u8 randomFlinchChance = RandomPercentage(RNG_TRIPLE_ARROWS_FLINCH, CalcSecondaryEffectChance(gBattlerAttacker, 30));
+                    u8 randomLowerDefenseChance = RandomPercentage(RNG_TRIPLE_ARROWS_DEFENSE_DOWN, CalcSecondaryEffectChance(gBattlerAttacker, 30));
+                    u8 randomFlinchChance = RandomPercentage(RNG_TRIPLE_ARROWS_FLINCH, CalcSecondaryEffectChance(gBattlerAttacker, 20));
 
                     if (randomFlinchChance && battlerAbility != ABILITY_INNER_FOCUS && GetBattlerTurnOrderNum(gEffectBattler) > gCurrentTurnActionNumber)
                         gBattleMons[gEffectBattler].status2 |= sStatusFlagsForMoveEffects[MOVE_EFFECT_FLINCH];
@@ -11087,7 +11091,7 @@ static void Cmd_manipulatedamage(void)
         break;
     case DMG_RECOIL_FROM_MISS:
     #if B_RECOIL_IF_MISS_DMG >= GEN_5
-        gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 2;
+        gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 3;
     #elif B_RECOIL_IF_MISS_DMG == GEN_4
         if ((gBattleMons[gBattlerTarget].maxHP / 2) < gBattleMoveDamage)
             gBattleMoveDamage = gBattleMons[gBattlerTarget].maxHP / 2;

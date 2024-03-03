@@ -409,6 +409,12 @@ struct Evolution
     u16 targetSpecies;
 };
 
+struct EvoItemLevel
+{
+    u16 species;
+    u16 level; 
+};
+
 struct FormChange
 {
     u16 method;
@@ -624,5 +630,6 @@ u8 CalculatePartyCount(struct Pokemon *party);
 u16 SanitizeSpeciesId(u16 species);
 bool32 IsSpeciesEnabled(u16 species);
 const u8 *GetLeaderNameFromTypeAndSet(u16 type, u16 set);
+u16 getEvolutionItemLevelRequired(u16 species);
 
 #endif // GUARD_POKEMON_H

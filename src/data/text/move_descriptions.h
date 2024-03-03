@@ -61,8 +61,8 @@ static const u8 sGuillotineDescription[] = _(
     "that may cause fainting.");
 
 static const u8 sRazorWindDescription[] = _(
-    "A 2-turn move that strikes\n"
-    "the foe on the 2nd turn.");
+    "A move that strikes the foe.\n"
+    "High critical-hir ratio.");
 
 static const u8 sSwordsDanceDescription[] = _(
     "A fighting dance that\n"
@@ -277,8 +277,8 @@ static const u8 sPeckDescription[] = _(
     "jabbing beak, etc.");
 
 static const u8 sDrillPeckDescription[] = _(
-    "A corkscrewing attack with\n"
-    "the beak acting as a drill.");
+    "An attack with the beak. Has a\n"
+    "high critical-hit ratio.");
 
 static const u8 sSubmissionDescription[] = _(
     "A reckless body slam that\n"

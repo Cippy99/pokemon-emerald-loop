@@ -33,7 +33,7 @@ static const u8 sLightningRodDescription[] = _("Draws electrical moves.");
 static const u8 sSereneGraceDescription[] = _("Promotes added effects.");
 static const u8 sSwiftSwimDescription[] = _("Raises Speed in rain.");
 static const u8 sChlorophyllDescription[] = _("Raises Speed in sunshine.");
-static const u8 sIlluminateDescription[] = _("Encounter rate increases.");
+static const u8 sIlluminateDescription[] = _("Ups evasion.");
 static const u8 sTraceDescription[] = _("Copies special ability.");
 static const u8 sHugePowerDescription[] = _("Raises Attack.");
 static const u8 sPoisonPointDescription[] = _("Poisons foe on contact.");
@@ -48,7 +48,7 @@ static const u8 sPressureDescription[] = _("Raises foe's PP usage.");
 static const u8 sThickFatDescription[] = _("Heat-and-cold protection.");
 static const u8 sEarlyBirdDescription[] = _("Awakens quickly from sleep.");
 static const u8 sFlameBodyDescription[] = _("Burns the foe on contact.");
-static const u8 sRunAwayDescription[] = _("Makes escaping easier.");
+static const u8 sRunAwayDescription[] = _("Raises Speed in difficulty.");
 static const u8 sKeenEyeDescription[] = _("Prevents loss of accuracy.");
 static const u8 sHyperCutterDescription[] = _("Prevents Attack reduction.");
 static const u8 sPickupDescription[] = _("May pick up items.");
@@ -289,6 +289,9 @@ static const u8 sToxicDebrisDescription[] = _("Throws poison spikes if hit.");
 static const u8 sArmorTailDescription[] = _("Protects from priority.");
 static const u8 sEarthEaterDescription[] = _("Eats ground to heal HP.");
 static const u8 sMyceliumMightDescription[] = _("Status moves never fail.");
+static const u8 sChloroboostDescription[] = _("Chlorophyll + Solar Power.");
+static const u8 sBugEaterDescription[] = _("Strong against bugs.");
+static const u8 sMonkeyBrainDescription[] = _("Boost consecutive moves.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -592,6 +595,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARMOR_TAIL] = _("Armor Tail"),
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("Mycelium Might"),
+    [ABILITY_CHLOROBOOST] = _("Chloroboost"),
+    [ABILITY_BUG_EATER] = _("Bug Eater"),
+    [ABILITY_MONKEY_BRAIN] = _("Monkey Brain"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -895,6 +901,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ARMOR_TAIL] = _("Armor Tail"),
     [ABILITY_EARTH_EATER] = _("Earth Eater"),
     [ABILITY_MYCELIUM_MIGHT] = _("MceliumMight"),
+    [ABILITY_CHLOROBOOST] = _("Chloroboost"),
+    [ABILITY_MONKEY_BRAIN] = _("Monkey Brain");
 };
 #endif
 
@@ -1199,4 +1207,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ARMOR_TAIL] = sArmorTailDescription,
     [ABILITY_EARTH_EATER] = sEarthEaterDescription,
     [ABILITY_MYCELIUM_MIGHT] = sMyceliumMightDescription,
+    [ABILITY_CHLOROBOOST] = sChloroboostDescription,
+    [ABILITY_BUG_EATER] = sBugEaterDescription,
+    [ABILITY_MONKEY_BRAIN] = sMonkeyBrainDescription,
 };

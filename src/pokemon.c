@@ -6709,6 +6709,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 }
                 break;
+            case EVO_ITEM_HOLD_LEVEL:
+                if (heldItem == gEvolutionTable[species][i].param && getEvolutionItemLevelRequired(species) <= level)
+                {
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
+                break;
             }
         }
         break;
@@ -6828,6 +6834,17 @@ bool8 IsMonPastEvolutionLevel(struct Pokemon *mon)
     }
 
     return FALSE;
+}
+
+u16 getEvolutionItemLevelRequired(u16 species){
+    u16 currSpecies;
+    u16 currLevel;
+    u32 i = 0;
+    do{
+        currSpecies = gEvoItemLevelTable[i++].species;
+    }while(currSpecies != species && currSpecies != SPECIES_NONE);
+
+    return gEvoItemLevelTable[i - 1].level;
 }
 
 u16 HoennPokedexNumToSpecies(u16 hoennNum)
