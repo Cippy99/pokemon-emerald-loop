@@ -2,7 +2,7 @@ EverGrandeCity_DrakesRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, EverGrandeCity_DrakesRoom_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, EverGrandeCity_DrakesRoom_OnLoad
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, EverGrandeCity_SidneysRoom_OnWarp
-	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_DrakeRoom_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_DrakesRoom_OnTransition
 	.byte 0
 
 @ Unused, Drake uses Sidneys identical OnWarp for some reason
@@ -10,7 +10,7 @@ EverGrandeCity_DrakesRoom_OnWarp:
 	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_DrakesRoom_EventScript_PlayerTurnNorth
 	.2byte 0
 
-EverGrandeCity_GlaciasRoom_OnTransition:
+EverGrandeCity_DrakesRoom_OnTransition:
 	copyvar VAR_0x8003 VAR_ELITE_FOUR_4_MEMBER
 	call Common_EventScript_SetupImportantFightGfxId
 	end
@@ -43,7 +43,7 @@ EverGrandeCity_DrakesRoom_EventScript_CloseDoor::
 	call PokemonLeague_EliteFour_EventScript_CloseDoor
 	return
 
-EverGrandeCity_DrakesRoom_EventScript_Elite4::
+EverGrandeCity_DrakesRoom_EventScript_EliteFour::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech

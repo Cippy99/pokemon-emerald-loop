@@ -46,7 +46,7 @@ EverGrandeCity_GlaciasRoom_EventScript_EliteFour::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
-	playbgm MUS_ENCOUNTER_ELITE_FOUR, 
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	bufferleadername STR_VAR_1, VAR_ELITE_FOUR_3_MEMBER
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	call Common_EventScript_StartElite4Fight
