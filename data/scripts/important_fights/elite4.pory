@@ -1,0 +1,205 @@
+script(global) Common_EventScript_StartElite4Fight{
+    // VAR_0x8003 contains Gym Leader Variable
+    getImportantFightType(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case TYPE_NORMAL: call(normalFightElite4) 
+        case TYPE_ROCK: call(rockFightElite4) 
+        case TYPE_ELECTRIC: call(electricFightElite4) 
+        case TYPE_FIGHTING: call(fightingFightElite4) 
+        case TYPE_PSYCHIC: call(psychicFightElite4) 
+        case TYPE_FIRE: call(fireFightElite4) 
+        case TYPE_FLYING: call(flyingFightElite4) 
+        case TYPE_WATER: call(waterFightElite4) 
+        case TYPE_DARK: call(darkFightElite4) 
+        case TYPE_GHOST: call(ghostFightElite4) 
+        case TYPE_ICE: call(iceFightElite4) 
+        case TYPE_DRAGON: call(dragonFightElite4) 
+        case TYPE_POISON: call(poisonFightElite4) 
+        case TYPE_GROUND: call(groundFightElite4) 
+        case TYPE_GRASS: call(grassFightElite4) 
+        case TYPE_FAIRY: call(fairyFightElite4) 
+        case TYPE_STEEL: call(steelFightElite4) 
+        case TYPE_BUG: call(bugFightElite4) 
+        default: call(normalFightElite4)
+    }
+}
+
+script(local) normalFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_NORMAN_ELITE_4, NormanElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_NORMAN_ELITE_4, NormanElite4Defeat)
+    }
+}
+
+script(local) rockFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_ROXANNE_ELITE_4, RoxanneElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_ROXANNE_ELITE_4, RoxanneElite4Defeat)
+    }
+}
+
+script(local) electricFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_WATTSON_ELITE_4, WattsonElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_WATTSON_ELITE_4, WattsonElite4Defeat)
+    }
+}
+
+script(local) fightingFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_BRAWLY_ELITE_4, BrawlyElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_BRAWLY_ELITE_4, BrawlyElite4Defeat)
+    }
+}
+
+script(local) psychicFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_TATE_ELITE_4, TateElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_TATE_ELITE_4, TateElite4Defeat)
+    }
+}
+
+script(local) fireFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_FLANNERY_ELITE_4, FlanneryElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_FLANNERY_ELITE_4, FlanneryElite4Defeat)
+    }
+}
+
+script(local) flyingFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_WINONA_ELITE_4, WinonaElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_WINONA_ELITE_4, WinonaElite4Defeat)
+    }
+}
+
+script(local) waterFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_JUAN_ELITE_4, JuanElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_JUAN_ELITE_4, JuanElite4Defeat)
+    }
+}
+
+script(local) darkFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_SIDNEY_ELITE_4, SidneyElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_SIDNEY_ELITE_4, SidneyElite4Defeat)
+    }
+}
+
+script(local) ghostFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_PHOEBE_ELITE_4, PhoebeElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_PHOEBE_ELITE_4, PhoebeElite4Defeat)
+    }
+}
+
+script(local) iceFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_GLACIA_ELITE_4, GlaciaElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_GLACIA_ELITE_4, GlaciaElite4Defeat)
+    }
+}
+
+script(local) dragonFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_DRAKE_ELITE_4, DrakeElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_DRAKE_ELITE_4, DrakeElite4Defeat)
+    }
+}
+
+script(local) poisonFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_KOGA_ELITE_4, KogaElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_KOGA_ELITE_4, KogaElite4Defeat)
+    }
+}
+
+script(local) groundFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_GIOVANNI_ELITE_4, GiovanniElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_GIOVANNI_ELITE_4, GiovanniElite4Defeat)
+    }
+}
+
+script(local) grassFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_ERIKA_ELITE_4, ErikaElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_ERIKA_ELITE_4, ErikaElite4Defeat)
+    }
+}
+
+script(local) fairyFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_VALERIE_ELITE_4, ValerieElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_VALERIE_ELITE_4, ValerieElite4Defeat)
+    }
+}
+
+script(local) steelFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_STEVEN_ELITE_4, StevenElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_STEVEN_ELITE_4, StevenElite4Defeat)
+    }
+}
+
+script(local) bugFightElite4{
+    getImportantFightSet(VAR_0x8003)
+    switch(var(VAR_RESULT)){ 
+        case 0:
+            trainerbattle_no_intro(TRAINER_BUGSY_ELITE_4, BugsyElite4Defeat)
+        default:
+            trainerbattle_no_intro(TRAINER_BUGSY_ELITE_4, BugsyElite4Defeat)
+    }
+}

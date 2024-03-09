@@ -391,3 +391,139 @@ text BugsyGymDefeat{
 	 "My research isn't complete yet.\p"
 	 "OK, you win. Take this BADGE."
 }
+
+//Elite 4 Defeat
+
+text RoxanneElite4Defeat{
+	"So…\n"
+	"I lost…\p"
+	"It seems that I still have much more\n"
+	"to learn…\p"
+	"I understand."
+}
+
+text BrawlyElite4Defeat{
+	"Whoah, wow! You made a much bigger\n"
+	"splash than I expected!\p"
+	"You swamped me!\p"
+	"Okay, you've got me."
+}
+
+text WattsonElite4Defeat{
+	"Wahahahah!\n"
+	"Fine, I lost!\p"
+	"You ended up giving me a thrill!"
+}
+
+text FlanneryElite4Defeat{
+	"Oh…\n"
+	"I guess I was trying too hard…\p"
+	"I… I've only recently become\n"
+	"an ELITE FOUR.\p"
+	"I tried too hard to be someone\n"
+	"I'm not.\p"
+	"I have to do things my natural way. If\n"
+	"I don't, my POKéMON will be confused.\p"
+	"Thanks for teaching me that."
+}
+
+text NormanElite4Defeat{
+	"…\p"
+	"I… I can't…\p"
+	"I can't believe it. {PLAYER}…\p"
+	"I lost to {PLAYER}?\p"
+	"But, rules are rules!"
+}
+
+text WinonaElite4Defeat{
+	"Never before have I seen a TRAINER\n"
+	"command POKéMON with more grace\l"
+	"than I…"
+}
+
+text TateElite4Defeat{
+	"The... The combination of me and my\n"
+	"POKèMON!\p"
+	"It can't be helped. You've won…"
+}
+
+text JuanElite4Defeat{
+	"Ahahaha, excellent!\n"
+	"Very well, you are the winner.\p"
+	"From you, I sense the brilliant shine\n"
+	"of skill that will overcome all.\p"
+	"However, compared with me or even\n"
+	"WALLACE, you are lacking in elegance.\p"
+	"Perhaps I should make you a loan\n"
+	"of my outfit?\p"
+	"… … … … … …\n"
+	"… … … … … …\p"
+	"Hahaha, I merely jest!"
+}
+
+text SidneyElite4Defeat{
+	"Well, how do you like that? I lost!\n"
+	"Eh, it was fun, so it doesn't matter."
+}
+
+text GlaciaElite4Defeat{
+	"You and your POKéMON…\n"
+	"How hot your spirits burn!\p"
+	"The all-consuming heat overwhelms.\p"
+	"It's no surprise that my icy skills\n"
+	"failed to harm you."
+}
+
+text PhoebeElite4Defeat{
+	"Oh, darn.\n"
+	"I've gone and lost."
+}
+
+text DrakeElite4Defeat{
+	"You deserve every credit for coming\n"
+	"this far as a TRAINER of POKéMON.\p"
+	"You do seem to know what is needed.\p"
+	"Yes, what a TRAINER needs is a\n"
+	"virtuous heart.\p"
+	"POKéMON touch the good hearts of\n"
+	"TRAINERS and learn good from wrong.\p"
+	"They touch the good hearts of\n"
+	"TRAINERS and grow strong.\p"
+	"Go! Go onwards!"
+}
+
+text ErikaElite4Defeat{
+	"Oh!\n"
+    "I concede defeat.\l"
+    "You are remarkably strong."
+}
+
+text GiovanniElite4Defeat{
+	"Ha!\n"
+    "That was a truly intense fight.\l"
+    "You have won!"
+}
+
+text KogaElite4Defeat{
+	"Humph!\n"
+    "You have proven your worth!"
+}
+
+text StevenElite4Defeat{
+	"Congratulations! The feelings you have\n"
+	"for your POKèMON…\p"
+	"And the POKèMON that responded to those\n"
+	"feelings with all their might...\p"
+	"They came together as one and created\n"
+	"an even greater power. And thus, you\l"
+	"were able to grasp victory!"
+}
+
+text ValerieElite4Defeat{
+	"Yes... That was a fine battle."
+}
+
+text BugsyElite4Defeat{
+	"Whoa, amazing! You're an expert on POKèMON!\n"
+	 "My research isn't complete yet."
+}

@@ -352,3 +352,119 @@ BugsyGymDefeat::
 	.string "Whoa, amazing! You're an expert on POKèMON!\n"
 	.string "My research isn't complete yet.\p"
 	.string "OK, you win. Take this BADGE.$"
+
+RoxanneElite4Defeat::
+	.string "So…\n"
+	.string "I lost…\p"
+	.string "It seems that I still have much more\n"
+	.string "to learn…\p"
+	.string "I understand.$"
+
+BrawlyElite4Defeat::
+	.string "Whoah, wow! You made a much bigger\n"
+	.string "splash than I expected!\p"
+	.string "You swamped me!\p"
+	.string "Okay, you've got me.$"
+
+WattsonElite4Defeat::
+	.string "Wahahahah!\n"
+	.string "Fine, I lost!\p"
+	.string "You ended up giving me a thrill!$"
+
+FlanneryElite4Defeat::
+	.string "Oh…\n"
+	.string "I guess I was trying too hard…\p"
+	.string "I… I've only recently become\n"
+	.string "an ELITE FOUR.\p"
+	.string "I tried too hard to be someone\n"
+	.string "I'm not.\p"
+	.string "I have to do things my natural way. If\n"
+	.string "I don't, my POKéMON will be confused.\p"
+	.string "Thanks for teaching me that.$"
+
+NormanElite4Defeat::
+	.string "…\p"
+	.string "I… I can't…\p"
+	.string "I can't believe it. {PLAYER}…\p"
+	.string "I lost to {PLAYER}?\p"
+	.string "But, rules are rules!$"
+
+WinonaElite4Defeat::
+	.string "Never before have I seen a TRAINER\n"
+	.string "command POKéMON with more grace\l"
+	.string "than I…$"
+
+TateElite4Defeat::
+	.string "The... The combination of me and my\n"
+	.string "POKèMON!\p"
+	.string "It can't be helped. You've won…$"
+
+JuanElite4Defeat::
+	.string "Ahahaha, excellent!\n"
+	.string "Very well, you are the winner.\p"
+	.string "From you, I sense the brilliant shine\n"
+	.string "of skill that will overcome all.\p"
+	.string "However, compared with me or even\n"
+	.string "WALLACE, you are lacking in elegance.\p"
+	.string "Perhaps I should make you a loan\n"
+	.string "of my outfit?\p"
+	.string "… … … … … …\n"
+	.string "… … … … … …\p"
+	.string "Hahaha, I merely jest!$"
+
+SidneyElite4Defeat::
+	.string "Well, how do you like that? I lost!\n"
+	.string "Eh, it was fun, so it doesn't matter.$"
+
+GlaciaElite4Defeat::
+	.string "You and your POKéMON…\n"
+	.string "How hot your spirits burn!\p"
+	.string "The all-consuming heat overwhelms.\p"
+	.string "It's no surprise that my icy skills\n"
+	.string "failed to harm you.$"
+
+PhoebeElite4Defeat::
+	.string "Oh, darn.\n"
+	.string "I've gone and lost.$"
+
+DrakeElite4Defeat::
+	.string "You deserve every credit for coming\n"
+	.string "this far as a TRAINER of POKéMON.\p"
+	.string "You do seem to know what is needed.\p"
+	.string "Yes, what a TRAINER needs is a\n"
+	.string "virtuous heart.\p"
+	.string "POKéMON touch the good hearts of\n"
+	.string "TRAINERS and learn good from wrong.\p"
+	.string "They touch the good hearts of\n"
+	.string "TRAINERS and grow strong.\p"
+	.string "Go! Go onwards!$"
+
+ErikaElite4Defeat::
+	.string "Oh!\n"
+	.string "I concede defeat.\l"
+	.string "You are remarkably strong.$"
+
+GiovanniElite4Defeat::
+	.string "Ha!\n"
+	.string "That was a truly intense fight.\l"
+	.string "You have won!$"
+
+KogaElite4Defeat::
+	.string "Humph!\n"
+	.string "You have proven your worth!$"
+
+StevenElite4Defeat::
+	.string "Congratulations! The feelings you have\n"
+	.string "for your POKèMON…\p"
+	.string "And the POKèMON that responded to those\n"
+	.string "feelings with all their might...\p"
+	.string "They came together as one and created\n"
+	.string "an even greater power. And thus, you\l"
+	.string "were able to grasp victory!$"
+
+ValerieElite4Defeat::
+	.string "Yes... That was a fine battle.$"
+
+BugsyElite4Defeat::
+	.string "Whoa, amazing! You're an expert on POKèMON!\n"
+	.string "My research isn't complete yet.$"

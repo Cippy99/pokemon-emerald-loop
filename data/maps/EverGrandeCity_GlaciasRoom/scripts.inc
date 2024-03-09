@@ -2,11 +2,17 @@ EverGrandeCity_GlaciasRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, EverGrandeCity_GlaciasRoom_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, EverGrandeCity_GlaciasRoom_OnLoad
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, EverGrandeCity_GlaciasRoom_OnWarp
+	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_GlaciasRoom_OnTransition
 	.byte 0
 
 EverGrandeCity_GlaciasRoom_OnWarp:
 	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_GlaciasRoom_EventScript_PlayerTurnNorth
 	.2byte 0
+
+EverGrandeCity_GlaciasRoom_OnTransition:
+	copyvar VAR_0x8003 VAR_ELITE_FOUR_3_MEMBER
+	call Common_EventScript_SetupImportantFightGfxId
+	end
 
 EverGrandeCity_GlaciasRoom_EventScript_PlayerTurnNorth::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -36,13 +42,14 @@ EverGrandeCity_GlaciasRoom_EventScript_CloseDoor::
 	call PokemonLeague_EliteFour_EventScript_CloseDoor
 	return
 
-EverGrandeCity_GlaciasRoom_EventScript_Glacia::
+EverGrandeCity_GlaciasRoom_EventScript_EliteFour::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
-	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, 
+	bufferleadername STR_VAR_1, VAR_ELITE_FOUR_3_MEMBER
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	call Common_EventScript_StartElite4Fight
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 
@@ -59,7 +66,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
+	.string "Welcome, my name is {STR_VAR_1}\n"
 	.string "of the ELITE FOUR.\p"
 	.string "I've traveled from afar to HOENN\n"
 	.string "so that I may hone my ice skills.\p"
@@ -73,7 +80,7 @@ EverGrandeCity_GlaciasRoom_Text_Defeat:
 	.string "You and your POKéMON…\n"
 	.string "How hot your spirits burn!\p"
 	.string "The all-consuming heat overwhelms.\p"
-	.string "It's no surprise that my icy skills\n"
+	.string "It's no surprise that my skills\n"
 	.string "failed to harm you.$"
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:

@@ -13530,7 +13530,7 @@ static const struct TrainerMon sParty_FlanneryElite4[] = {
     .lvl = 64,
     .species = SPECIES_BLAZIKEN,
     .ability = ABILITY_BLAZE,
-    .moves = {MOVE_BLAZE_KICK, B_BRICK_BREAK, MOVE_BOUNCE, MOVE_BULK_UP}
+    .moves = {MOVE_BLAZE_KICK, MOVE_BRICK_BREAK, MOVE_BOUNCE, MOVE_BULK_UP}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31 ,31 ,31 ,31 ,31),

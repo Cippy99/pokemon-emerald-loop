@@ -2,7 +2,13 @@ EverGrandeCity_PhoebesRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, EverGrandeCity_PhoebesRoom_OnLoad
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, EverGrandeCity_PhoebesRoom_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, EverGrandeCity_PhoebesRoom_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_PhoebesRoom_OnTransition
 	.byte 0
+
+EverGrandeCity_PhoebesRoom_OnTransition:
+	copyvar VAR_0x8003 VAR_ELITE_FOUR_2_MEMBER
+	call Common_EventScript_SetupImportantFightGfxId
+	end
 
 EverGrandeCity_PhoebesRoom_OnWarp:
 	map_script_2 VAR_TEMP_1, 0, EverGrandeCity_PhoebesRoom_EventScript_PlayerTurnNorth
@@ -36,13 +42,14 @@ EverGrandeCity_PhoebesRoom_EventScript_CloseDoor::
 	call PokemonLeague_EliteFour_EventScript_CloseDoor
 	return
 
-EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
+EverGrandeCity_PhoebesRoom_EventScript_EliteFour::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	bufferleadername STR_VAR_1, VAR_ELITE_FOUR_2_MEMBER
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
+	call Common_EventScript_StartElite4Fight
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
 
@@ -60,10 +67,8 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
+	.string "I'm {STR_VAR_1} of the ELITE FOUR.\n"
 	.string "I did my training on MT. PYRE.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
 	.string "Yes, the bond I developed with POKéMON\n"
 	.string "is extremely tight.\p"
 	.string "So, come on, just try and see if you can\n"

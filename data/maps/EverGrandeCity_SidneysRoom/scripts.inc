@@ -9,6 +9,8 @@ EverGrandeCity_SidneysRoom_OnTransition:
 	setflag FLAG_MET_SCOTT_IN_EVERGRANDE
 	setflag FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT
 	setflag FLAG_SYS_POKEMON_LEAGUE
+	copyvar VAR_0x8003 VAR_ELITE_FOUR_1_MEMBER
+	call Common_EventScript_SetupImportantFightGfxId
 	end
 
 EverGrandeCity_SidneysRoom_OnLoad:
@@ -43,13 +45,14 @@ EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor::
 	releaseall
 	end
 
-EverGrandeCity_SidneysRoom_EventScript_Sidney::
+EverGrandeCity_SidneysRoom_EventScript_EliteFour::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	bufferleadername STR_VAR_1, VAR_ELITE_FOUR_1_MEMBER
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
+	call Common_EventScript_StartElite4Fight
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 
@@ -66,8 +69,8 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_SidneysRoom_Text_IntroSpeech:
-	.string "Welcome, challenger!\n"
-	.string "I'm SIDNEY of the ELITE FOUR.\p"
+	.string "Welcome, challenger! I'm \n"
+	.string "{STR_VAR_1} of the ELITE FOUR.\p"
 	.string "I like that look you're giving me.\n"
 	.string "I guess you'll give me a good match.\l"
 	.string "That's good! Looking real good!\p"
