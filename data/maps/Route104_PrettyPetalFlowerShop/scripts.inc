@@ -74,6 +74,7 @@ Route104_PrettyPetalFlowerShop_EventScript_AbsorbBulbGirl::
 Route104_PrettyPetalFlowerShop_EventScript_GiveAbsorbBulb::
 	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
 	giveitem ITEM_ABSORB_BULB
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox Route104_PrettyPetalFlowerShop_Text_AbsorbBulbExplanation, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_ABSORB_BULB
 	release

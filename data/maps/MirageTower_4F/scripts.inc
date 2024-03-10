@@ -28,6 +28,7 @@ MirageTower_4F_EventScript_FossilizedBird::
 	msgbox MirageTower_4F_EventScript_FossilizedBird_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil
 	giveitem ITEM_FOSSILIZED_BIRD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_BIRD
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_FISH
@@ -44,6 +45,7 @@ MirageTower_4F_EventScript_FossilizedFish::
 	msgbox MirageTower_4F_EventScript_FossilizedFish_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil
 	giveitem ITEM_FOSSILIZED_FISH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_FISH
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_BIRD
@@ -60,6 +62,7 @@ MirageTower_4F_EventScript_FossilizedDrake::
 	msgbox MirageTower_4F_EventScript_FossilizedDrake_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil
 	giveitem ITEM_FOSSILIZED_DRAKE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DRAKE
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DINO
@@ -76,6 +79,7 @@ MirageTower_4F_EventScript_FossilizedDino::
 	msgbox MirageTower_4F_EventScript_FossilizedDino_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MirageTower_4F_EventScript_LeaveFossil
 	giveitem ITEM_FOSSILIZED_DINO
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DINO
 	setflag FLAG_HIDE_MIRAGE_TOWER_FOSSILIZED_DRAKE
