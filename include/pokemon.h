@@ -480,13 +480,6 @@ struct LevelUpMove
     u16 level;
 };
 
-struct Evolution
-{
-    u16 method;
-    u16 param;
-    u16 targetSpecies;
-};
-
 struct EvoItemLevel
 {
     u16 species;

@@ -4295,7 +4295,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         ICON(Dreepy, 0),
         .footprint = gMonFootprint_Dreepy,
         LEARNSETS(Dreepy),
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_DRAKLOAK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_DRAKLOAK}),
     },
 
     [SPECIES_DRAKLOAK] =

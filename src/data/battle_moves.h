@@ -14122,7 +14122,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .ignoresProtect = TRUE,
         .metronomeBanned = TRUE,
-        .ignoresProtect = TRUE,
     },
 
     [MOVE_TWIN_BEAM] =

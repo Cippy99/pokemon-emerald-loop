@@ -360,19 +360,6 @@ const struct LevelCap sLevelCaps[NUM_LEVEL_CAPS] =
     {FLAG_DEFEATED_ELITE_4_DRAKE, 60}
  };
 
-const struct LevelCap sLevelCaps[NUM_LEVEL_CAPS] =
- {
-    {FLAG_BADGE01_GET, 15},
-    {FLAG_BADGE02_GET, 20},
-    {FLAG_BADGE03_GET, 25},
-    {FLAG_BADGE04_GET, 30},
-    {FLAG_BADGE05_GET, 35},
-    {FLAG_BADGE06_GET, 40},
-    {FLAG_BADGE07_GET, 45},
-    {FLAG_BADGE08_GET, 50},
-    {FLAG_DEFEATED_ELITE_4_DRAKE, 60}
- };
-
 #define tState data[0]
 #define tTransition data[1]
 

@@ -4230,23 +4230,6 @@ u16 getEvolutionItemLevelRequired(u16 species){
     return gEvoItemLevelTable[i - 1].level;
 }
 
-u16 HoennPokedexNumToSpecies(u16 hoennNum)
-{
-    u16 species;
-
-    if (!hoennNum)
-        return 0;
-
-    species = 0;
-
-    while (species < (NUM_SPECIES - 1) && sSpeciesToHoennPokedexNum[species] != hoennNum)
-        species++;
-
-    if (species == NUM_SPECIES - 1)
-        return 0;
-
-    return species + 1;
-}
 
 u16 NationalPokedexNumToSpecies(u16 nationalNum)
 {
