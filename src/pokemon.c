@@ -4221,7 +4221,6 @@ bool8 IsMonPastEvolutionLevel(struct Pokemon *mon)
 
 u16 getEvolutionItemLevelRequired(u16 species){
     u16 currSpecies;
-    u16 currLevel;
     u32 i = 0;
     do{
         currSpecies = gEvoItemLevelTable[i++].species;
