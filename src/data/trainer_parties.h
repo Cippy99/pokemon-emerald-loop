@@ -13262,55 +13262,6 @@ static const struct TrainerMon sParty_StevenGym2[] = {
 };
 
 // Elite 4
-/*
-static const struct TrainerMon sParty_Elite4[] = {
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31 ,31 ,31 ,31 ,31),
-    .nature = TRAINER_PARTY_NATURE(NATURE_HARDY),
-    .heldItem = ITEM_NONE,
-    .lvl = 64,
-    .species = SPECIES_,
-    .ability = ABILITY_,
-    .moves = {}
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31 ,31 ,31 ,31 ,31),
-    .nature = TRAINER_PARTY_NATURE(NATURE_HARDY),
-    .heldItem = ITEM_NONE,
-    .lvl = 64,
-    .species = SPECIES_,
-    .ability = ABILITY_,
-    .moves = {}
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31 ,31 ,31 ,31 ,31),
-    .nature = TRAINER_PARTY_NATURE(NATURE_HARDY),
-    .heldItem = ITEM_NONE,
-    .lvl = 64,
-    .species = SPECIES_,
-    .ability = ABILITY_,
-    .moves = {}
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31 ,31 ,31 ,31 ,31),
-    .nature = TRAINER_PARTY_NATURE(NATURE_HARDY),
-    .heldItem = ITEM_NONE,
-    .lvl = 65,
-    .species = SPECIES_,
-    .ability = ABILITY_,
-    .moves = {}
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31 ,31 ,31 ,31 ,31),
-    .nature = TRAINER_PARTY_NATURE(NATURE_HARDY),
-    .heldItem = ITEM_SITRUS_BERRY,
-    .lvl = 67,
-    .species = SPECIES_,
-    .ability = ABILITY_,
-    .moves = {}
-    }
-};
-*/
 
 static const struct TrainerMon sParty_RoxanneElite4[] = {
     {
