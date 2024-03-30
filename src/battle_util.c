@@ -9794,6 +9794,7 @@ static inline uq4_12_t GetCollisionCourseElectroDriftModifier(u32 move, uq4_12_t
 
 static inline uq4_12_t GetAttackerAbilitiesModifier(u32 battlerAtk, uq4_12_t typeEffectivenessModifier, bool32 isCrit, u32 abilityAtk)
 {
+    u32 percentBoost = 0;
     switch (abilityAtk)
     {
     case ABILITY_NEUROFORCE:
@@ -9809,7 +9810,6 @@ static inline uq4_12_t GetAttackerAbilitiesModifier(u32 battlerAtk, uq4_12_t typ
             return UQ_4_12(2.0);
         break;
     case ABILITY_MONKEY_BRAIN:
-        u32 percentBoost = 0;
         if(GetBattlerHoldEffect(battlerAtk, TRUE) != HOLD_EFFECT_METRONOME){
             percentBoost = min((gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
         }
