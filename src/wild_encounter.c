@@ -116,7 +116,7 @@ static u16 GetFeebasFishingSpotId(s16 targetX, s16 targetY, u8 section)
     return spotId + 1;
 }
 
-static bool8 CheckFeebas(void)
+static bool8 UNUSED CheckFeebas(void)
 {
     u8 i;
     u16 feebasSpots[NUM_FEEBAS_SPOTS];
