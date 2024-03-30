@@ -1045,19 +1045,15 @@ static void Debug_ShowMenu(void (*HandleInput)(u8), struct ListMenuTemplate LMte
 {
     // To remove, here just for debug purposes
     DebugPrintImportantFightsVarsValue();
-    struct ListMenuTemplate menuTemplate;
-    u8 windowId;
-    u8 menuTaskId;
-    u8 inputTaskId;
 
     // create window
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
-    windowId = AddWindow(&sDebugMenuWindowTemplateMain);
+    u8 windowId = AddWindow(&sDebugMenuWindowTemplateMain);
     DrawStdWindowFrame(windowId, FALSE);
 
     // create list menu
-    menuTemplate = LMtemplate;
+    struct ListMenuTemplate menuTemplate = LMtemplate;
     menuTemplate.maxShowed = DEBUG_MENU_HEIGHT_MAIN;
     menuTemplate.windowId = windowId;
     menuTemplate.header_X = 0;
@@ -1072,10 +1068,10 @@ static void Debug_ShowMenu(void (*HandleInput)(u8), struct ListMenuTemplate LMte
     menuTemplate.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
     menuTemplate.fontId = DEBUG_MENU_FONT;
     menuTemplate.cursorKind = 0;
-    menuTaskId = ListMenuInit(&menuTemplate, 0, 0);
+    u8 menuTaskId = ListMenuInit(&menuTemplate, 0, 0);
 
     // create input handler task
-    inputTaskId = CreateTask(HandleInput, 3);
+    u8 inputTaskId = CreateTask(HandleInput, 3);
     gTasks[inputTaskId].tMenuTaskId = menuTaskId;
     gTasks[inputTaskId].tWindowId = windowId;
     gTasks[inputTaskId].tSubWindowId = 0;
