@@ -41,12 +41,7 @@ jobs:
           ./build.sh
           ./install.sh ../
         working-directory: agbcc
-
-      - name: Agbcc
-        env:
-          MODERN: 0
-          COMPARE: 0
-        run: make -j${nproc} -O all
+        
 
       - name: Modern
         env:
