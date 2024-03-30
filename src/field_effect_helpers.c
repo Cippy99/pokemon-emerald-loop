@@ -135,7 +135,7 @@ void LoadSpecialReflectionPalette(struct Sprite *sprite)
 
 // When walking on a bridge high above water (Route 120), the reflection is a solid dark blue color.
 // This is so the sprite blends in with the dark water metatile underneath the bridge.
-static void LoadObjectHighBridgeReflectionPalette(struct ObjectEvent *objectEvent, u8 paletteNum)
+static void UNUSED LoadObjectHighBridgeReflectionPalette(struct ObjectEvent *objectEvent, u8 paletteNum)
 {
     const struct ObjectEventGraphicsInfo *graphicsInfo;
 

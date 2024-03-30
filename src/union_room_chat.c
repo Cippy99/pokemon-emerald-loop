@@ -913,7 +913,6 @@ void EnterUnionRoomChat(void)
 
 static void InitUnionRoomChat(struct UnionRoomChat *chat)
 {
-    int i;
 
     chat->funcId = CHAT_FUNC_JOIN;
     chat->funcState = 0;
@@ -930,6 +929,7 @@ static void InitUnionRoomChat(struct UnionRoomChat *chat)
     chat->changedRegisteredTexts = FALSE;
     PrepareSendBuffer_Null(chat->sendMessageBuffer);
     #ifndef FREE_UNION_ROOM_CHAT
+    int i;
     for (i = 0; i < UNION_ROOM_KB_ROW_COUNT; i++)
         StringCopy(chat->registeredTexts[i], gSaveBlock1Ptr->registeredTexts[i]);
     #endif
