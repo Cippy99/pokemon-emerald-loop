@@ -2425,7 +2425,6 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
 bool8 ScrCmd_getImportantFightType(struct ScriptContext *ctx){
     u16 id = VarGet(ScriptReadHalfword(ctx));
     gSpecialVar_Result = id >> 2;
-    //gSpecialVar_Result = 12;
     return TRUE;
 
 }

@@ -52,6 +52,7 @@ EverGrandeCity_SidneysRoom_EventScript_EliteFour::
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	bufferleadername STR_VAR_1, VAR_ELITE_FOUR_1_MEMBER
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	copyvar VAR_0x8003 VAR_ELITE_FOUR_1_MEMBER
 	call Common_EventScript_StartElite4Fight
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
