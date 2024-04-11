@@ -391,6 +391,25 @@ static const union AnimCmd *const sAnims_LeaderBugsy[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_ChampionBlue[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_ChampionLance[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_ChampionCynthia[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_ChampionAlder[] ={
+    sAnim_GeneralFrame0,
+};
+static const union AnimCmd *const sAnims_ChampionIris[] ={
+    sAnim_GeneralFrame0,
+};
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -493,4 +512,9 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_LEADER_ERIKA] = sAnims_LeaderErika,
     [TRAINER_PIC_LEADER_KOGA] = sAnims_LeaderKoga,
     [TRAINER_PIC_LEADER_VALERIE] = sAnims_LeaderValerie,
+    [TRAINER_PIC_CHAMPION_BLUE] = sAnims_ChampionBlue,
+    [TRAINER_PIC_CHAMPION_LANCE] = sAnims_ChampionLance,
+    [TRAINER_PIC_CHAMPION_CYNTHIA] = sAnims_ChampionCynthia,
+    [TRAINER_PIC_CHAMPION_ALDER] = sAnims_ChampionAlder,
+    [TRAINER_PIC_CHAMPION_IRIS] = sAnims_ChampionIris,
 };

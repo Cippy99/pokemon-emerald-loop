@@ -100,6 +100,11 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_LEADER_GIOVANNI] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LEADER_KOGA] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LEADER_BUGSY] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CHAMPION_BLUE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CHAMPION_LANCE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CHAMPION_CYNTHIA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CHAMPION_ALDER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CHAMPION_IRIS] = {.size = 8, .y_offset = 1},
 
 };
 
@@ -207,6 +212,11 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(LEADER_ERIKA, gTrainerFrontPic_LeaderErika, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(LEADER_KOGA, gTrainerFrontPic_LeaderKoga, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(LEADER_BUGSY, gTrainerFrontPic_LeaderBugsy, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(CHAMPION_BLUE, gTrainerFrontPic_ChampionBlue, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(CHAMPION_LANCE, gTrainerFrontPic_ChampionLance, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(CHAMPION_CYNTHIA, gTrainerFrontPic_ChampionCynthia, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(CHAMPION_ALDER, gTrainerFrontPic_ChampionAlder, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(CHAMPION_IRIS, gTrainerFrontPic_ChampionIris, TRAINER_PIC_SIZE),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -313,4 +323,9 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(LEADER_ERIKA, gTrainerPalette_LeaderErika),
     TRAINER_PAL(LEADER_KOGA, gTrainerPalette_LeaderKoga),
     TRAINER_PAL(LEADER_BUGSY, gTrainerPalette_LeaderBugsy),
+    TRAINER_PAL(CHAMPION_BLUE, gTrainerPalette_ChampionBlue),
+    TRAINER_PAL(CHAMPION_LANCE, gTrainerPalette_ChampionLance),
+    TRAINER_PAL(CHAMPION_CYNTHIA, gTrainerPalette_ChampionCynthia),
+    TRAINER_PAL(CHAMPION_ALDER, gTrainerPalette_ChampionAlder),
+    TRAINER_PAL(CHAMPION_IRIS, gTrainerPalette_ChampionIris),
 };

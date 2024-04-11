@@ -117,6 +117,11 @@
 #define TRAINER_PIC_LEADER_KOGA           95
 #define TRAINER_PIC_LEADER_ERIKA          96
 #define TRAINER_PIC_LEADER_BUGSY          97
+#define TRAINER_PIC_CHAMPION_BLUE         98
+#define TRAINER_PIC_CHAMPION_LANCE        99
+#define TRAINER_PIC_CHAMPION_CYNTHIA     100
+#define TRAINER_PIC_CHAMPION_ALDER       101
+#define TRAINER_PIC_CHAMPION_IRIS        102
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)

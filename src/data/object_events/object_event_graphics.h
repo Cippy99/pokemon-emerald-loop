@@ -394,3 +394,18 @@ const u16 gObjectEventPal_Koga[] = INCBIN_U16("graphics/object_events/palettes/g
 
 const u32 gObjectEventPic_Bugsy[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/bugsy.4bpp");
 const u16 gObjectEventPal_Bugsy[] = INCBIN_U16("graphics/object_events/palettes/gym_leaders/bugsy.gbapal");
+
+const u32 gObjectEventPic_Blue[] = INCBIN_U32("graphics/object_events/pics/people/champions/blue.4bpp");
+const u16 gObjectEventPal_Blue[] = INCBIN_U16("graphics/object_events/palettes/champions/blue.gbapal");
+
+const u32 gObjectEventPic_Lance[] = INCBIN_U32("graphics/object_events/pics/people/champions/lance.4bpp");
+const u16 gObjectEventPal_Lance[] = INCBIN_U16("graphics/object_events/palettes/champions/lance.gbapal");
+
+const u32 gObjectEventPic_Cynthia[] = INCBIN_U32("graphics/object_events/pics/people/champions/cynthia.4bpp");
+const u16 gObjectEventPal_Cynthia[] = INCBIN_U16("graphics/object_events/palettes/champions/cynthia.gbapal");
+
+const u32 gObjectEventPic_Alder[] = INCBIN_U32("graphics/object_events/pics/people/champions/alder.4bpp");
+const u16 gObjectEventPal_Alder[] = INCBIN_U16("graphics/object_events/palettes/champions/alder.gbapal");
+
+const u32 gObjectEventPic_Iris[] = INCBIN_U32("graphics/object_events/pics/people/champions/iris.4bpp");
+const u16 gObjectEventPal_Iris[] = INCBIN_U16("graphics/object_events/palettes/champions/iris.gbapal");
