@@ -1,8 +1,10 @@
 #include "global.h"
 #include "constants/songs.h"
+#include "battle_setup.h"
 #include "bg.h"
 #include "decoration.h"
 #include "event_scripts.h"
+#include "event_data.h"
 #include "event_object_movement.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
@@ -34,6 +36,7 @@
 enum {
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
+    MENU_LEVEL_CAP,
     MENU_DECORATION,
     MENU_TURNOFF
 };
@@ -112,6 +115,7 @@ static void Mailbox_MailOptionsProcessInput(u8);
 
 static void PlayerPC_ItemStorage(u8);
 static void PlayerPC_Mailbox(u8);
+static void PlayerPC_LevelCap(u8);
 static void PlayerPC_Decoration(u8);
 static void PlayerPC_TurnOff(u8);
 
@@ -193,6 +197,7 @@ static const struct MenuAction sPlayerPCMenuActions[] =
 {
     [MENU_ITEMSTORAGE] = { gText_ItemStorage, {PlayerPC_ItemStorage} },
     [MENU_MAILBOX]     = { gText_Mailbox,     {PlayerPC_Mailbox} },
+    [MENU_LEVEL_CAP]   = { gText_LevelCap,    {PlayerPC_LevelCap}},
     [MENU_DECORATION]  = { gText_Decoration,  {PlayerPC_Decoration} },
     [MENU_TURNOFF]     = { gText_TurnOff,     {PlayerPC_TurnOff} }
 };
@@ -210,6 +215,7 @@ static const u8 sPlayerPC_OptionOrder[] =
 {
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
+    MENU_LEVEL_CAP,
     MENU_TURNOFF
 };
 #define NUM_PLAYER_PC_OPTIONS ARRAY_COUNT(sPlayerPC_OptionOrder)
@@ -243,7 +249,7 @@ static const struct WindowTemplate sWindowTemplates_MainMenus[] =
         .tilemapLeft = 1,
         .tilemapTop = 1,
         .width = 9,
-        .height = 6,
+        .height = 8,
         .paletteNum = 15,
         .baseBlock = 1
     },
@@ -452,6 +458,12 @@ static void PlayerPC_ItemStorage(u8 taskId)
 {
     InitItemStorageMenu(taskId, MENU_WITHDRAW);
     gTasks[taskId].func = ItemStorageMenuProcessInput;
+}
+
+static void PlayerPC_LevelCap(u8 taskId)
+{
+    ConvertIntToDecimalStringN(gStringVar1,  getLevelcap(), STR_CONV_MODE_LEFT_ALIGN, 2);
+    DisplayItemMessageOnField(taskId, gText_ShowLevelCap, ReshowPlayerPC);
 }
 
 static void PlayerPC_Mailbox(u8 taskId)
