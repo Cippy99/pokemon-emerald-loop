@@ -1219,7 +1219,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 #define FLAG_ITEM_GLACIAL_HOLLOW_ICY_ROCK                           0x493
-#define FLAG_ITEM_GLACIAL_HOLLOW_TM_HAIL                            0x494
+#define FLAG_ITEM_GLACIAL_HOLLOW_TM_SNOWSCAPE                       0x494
 #define FLAG_ITEM_GLACIAL_HOLLOW_NEVER_MELT_ICE                     0x495
 #define FLAG_ITEM_UNDERWATER_TM_ENERGY_BALL                         0x496
 #define FLAG_ITEM_UNDERWATER_TM_DARK_PULSE                          0x497
