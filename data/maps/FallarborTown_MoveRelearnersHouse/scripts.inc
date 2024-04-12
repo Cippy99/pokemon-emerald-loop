@@ -7,10 +7,16 @@ FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner::
 	lockall
 	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
 	waitmovement 0
-	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_CheckGymBadges
 	msgbox FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_1
-	goto FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	goto FallarborTown_MoveRelearnersHouse_EventScript_CheckGymBadges
+	end
+
+FallarborTown_MoveRelearnersHouse_EventScript_CheckGymBadges::
+	goto_if_set FLAG_BADGE05_GET, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ComeBackAfterBadges, MSGBOX_DEFAULT
+	releaseall
 	end
 
 FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove::
@@ -96,4 +102,9 @@ FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
 	.string "Hunh? There isn't a single move that\n"
 	.string "I can teach an EGG.$"
+
+FallarborTown_MoveRelearnersHouse_Text_ComeBackAfterBadges:
+	.string "If your POKéMON need to learn a move,\n"
+	.string "come back when you'll have\l"
+	.string "collected at least 5 BADGES.$"
 
