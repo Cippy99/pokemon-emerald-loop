@@ -4136,7 +4136,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Slugma, 0),
         .footprint = gMonFootprint_Slugma,
         LEARNSETS(Slugma),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_MAGCARGO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_MAGCARGO}),
     },
 
     [SPECIES_MAGCARGO] =
