@@ -3896,7 +3896,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(YamaskGalarian, 2),
         LEARNSETS(YamaskGalarian),
         .isGalarianForm = TRUE,
-        .evolutions = EVOLUTION({EVO_SCRIPT_TRIGGER_DMG, 49, SPECIES_RUNERIGUS}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_RUNERIGUS}),
     },
 
     [SPECIES_RUNERIGUS] =
