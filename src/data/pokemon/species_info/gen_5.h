@@ -7102,7 +7102,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Golett, 0),
         .footprint = gMonFootprint_Golett,
         LEARNSETS(Golett),
-        .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_GOLURK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 43, SPECIES_GOLURK}),
     },
 
     [SPECIES_GOLURK] =
