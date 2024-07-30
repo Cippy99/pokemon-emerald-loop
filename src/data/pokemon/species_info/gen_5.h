@@ -4980,7 +4980,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Vanillite, 0),
         .footprint = gMonFootprint_Vanillite,
         LEARNSETS(Vanillite),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_VANILLISH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_VANILLISH}),
     },
 
     [SPECIES_VANILLISH] =
@@ -5029,7 +5029,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Vanillish, 2),
         .footprint = gMonFootprint_Vanillish,
         LEARNSETS(Vanillish),
-        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_VANILLUXE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 47, SPECIES_VANILLUXE}),
     },
 
     [SPECIES_VANILLUXE] =
