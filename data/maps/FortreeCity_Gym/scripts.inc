@@ -4,6 +4,9 @@ FortreeCity_Gym_MapScripts::
 	.byte 0
 
 FortreeCity_Gym_OnTransition:
+	copyvar VAR_0x8003 VAR_GYM_6_LEADER
+	call Common_EventScript_SetupImportantFightGfxId
+	bufferleadername STR_VAR_1, VAR_GYM_6_LEADER
 	special RotatingGate_InitPuzzle
 	end
 
@@ -16,8 +19,9 @@ FortreeCity_Gym_EventScript_InitRotatingGates::
 	special RotatingGate_InitPuzzleAndGraphics
 	end
 
-FortreeCity_Gym_EventScript_Winona::
-	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+FortreeCity_Gym_EventScript_Leader::
+	copyvar VAR_0x8003 VAR_GYM_6_LEADER
+	call Common_EventScript_StartGym6Fight
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROOST, FortreeCity_Gym_EventScript_GiveRoost2
@@ -25,7 +29,8 @@ FortreeCity_Gym_EventScript_Winona::
 	release
 	end
 
-FortreeCity_Gym_EventScript_WinonaDefeated::
+FortreeCity_Gym_EventScript_LeaderDefeated::
+	bufferleadername STR_VAR_1, VAR_GYM_6_LEADER
 	message FortreeCity_Gym_Text_ReceivedFeatherBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -251,7 +256,7 @@ FortreeCity_Gym_Text_WinonaDefeat:
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
 	.string "{PLAYER} received the FEATHER BADGE\n"
-	.string "from WINONA.$"
+	.string "from {STR_VAR_1}.$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "With the FEATHER BADGE, all POKéMON up\n"
@@ -269,7 +274,7 @@ FortreeCity_Gym_Text_ExplainRoost:
 	.string "… … … … … …$"
 
 FortreeCity_Gym_Text_RegisteredWinona:
-	.string "Registered GYM LEADER WINONA\n"
+	.string "Registered GYM LEADER {STR_VAR_1}\n"
 	.string "in the POKéNAV.$"
 
 FortreeCity_Gym_Text_WinonaPostBattle:
@@ -281,7 +286,7 @@ FortreeCity_Gym_Text_GymStatue:
 
 FortreeCity_Gym_Text_GymStatueCertified:
 	.string "FORTREE CITY POKéMON GYM\p"
-	.string "WINONA'S CERTIFIED TRAINERS:\n"
+	.string "{STR_VAR_1}'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 FortreeCity_Gym_Text_WinonaPreRematch:

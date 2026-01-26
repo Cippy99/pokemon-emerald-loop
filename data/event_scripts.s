@@ -697,6 +697,7 @@ EventScript_BackupMrBrineyLocation::
 	.include "data/scripts/important_fights/gym3.inc"
 	.include "data/scripts/important_fights/gym4.inc"
 	.include "data/scripts/important_fights/gym5.inc"
+	.include "data/scripts/important_fights/gym6.inc"
 	.include "data/scripts/important_fights/elite4.inc"
 	.include "data/scripts/important_fights/texts.inc"
 
