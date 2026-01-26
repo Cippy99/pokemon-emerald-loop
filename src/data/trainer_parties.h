@@ -15355,7 +15355,7 @@ static const struct TrainerMon sParty_PhoebeGym5[] = {
     .nature = TRAINER_PARTY_NATURE(NATURE_HARDY),
     .heldItem = ITEM_NONE,
     .lvl = 33,
-    .species = SPECIES_PHANTUMP,
+    .species = SPECIES_TREVENANT,
     .ability = ABILITY_HARVEST,
     .moves = {MOVE_HEX, MOVE_WILL_O_WISP, MOVE_HORN_LEECH, MOVE_LEECH_SEED}
     },
