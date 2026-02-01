@@ -8662,7 +8662,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Chansey, 0),
         .footprint = gMonFootprint_Chansey,
         LEARNSETS(Chansey),
-        .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_BLISSEY}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_BLISSEY}),
     },
 
 #if P_GEN_2_CROSS_EVOS
