@@ -5049,7 +5049,7 @@ static const struct TrainerMon sParty_Colin[] = {
 static const struct TrainerMon sParty_Robert1[] = {
     {
     .lvl = 29,
-    .species = SPECIES_SWABLU,
+    .species = SPECIES_RANDOM,
     }
 };
 

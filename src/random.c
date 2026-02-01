@@ -49,6 +49,16 @@ u16 RandomCustom(void)
     return gRngCustomValue >> 16;
 }
 
+u32 generateRandomNumberForTrainerBattle(u32 *state, u16 trainerNum){
+    u32 x = *state;
+    x ^= (trainerNum << 16) | trainerNum;
+
+    x ^= x << 13;
+	x ^= x >> 17;
+	x ^= x << 5;
+    return *state = x;
+}
+
 /*
 Inputs:
   list: array of u16 values
