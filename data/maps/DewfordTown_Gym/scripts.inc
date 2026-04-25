@@ -6,6 +6,7 @@ DewfordTown_Gym_OnTransition:
 	call DewfordTown_Gym_EventScript_SetFlashLevel
 	copyvar VAR_0x8003 VAR_GYM_2_LEADER
 	call Common_EventScript_SetupImportantFightGfxId
+	bufferleadername STR_VAR_1, VAR_GYM_2_LEADER
 	end
 
 DewfordTown_Gym_EventScript_SetFlashLevel::
@@ -403,7 +404,7 @@ DewfordTown_Gym_Text_ExplainBulkUp:
 	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER BRAWLY\n"
+	.string "Registered GYM LEADER {STR_VAR_1}\n"
 	.string "in the POKéNAV.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
@@ -416,7 +417,7 @@ DewfordTown_Gym_Text_GymStatue:
 
 DewfordTown_Gym_Text_GymStatueCertified:
 	.string "DEWFORD TOWN POKéMON GYM\p"
-	.string "CERTIFIED TRAINERS:\n"
+	.string "{STR_VAR_1}'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:

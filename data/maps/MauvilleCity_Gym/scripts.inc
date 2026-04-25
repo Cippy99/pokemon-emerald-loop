@@ -16,6 +16,7 @@ MauvilleCity_Gym_OnLoad:
 MauvilleCity_Gym_OnTransition:
 	copyvar VAR_0x8003 VAR_GYM_3_LEADER
 	call Common_EventScript_SetupImportantFightGfxId
+	bufferleadername STR_VAR_1, VAR_GYM_3_LEADER
 	end
 
 MauvilleCity_Gym_EventScript_UpdateBarriers::
@@ -378,7 +379,7 @@ MauvilleCity_Gym_Text_ExplainShockWave:
 	.string "… … … … … …$"
 
 MauvilleCity_Gym_Text_RegisteredWattson:
-	.string "Registered GYM LEADER WATTSON\n"
+	.string "Registered GYM LEADER {STR_VAR_1}\n"
 	.string "in the POKéNAV.$"
 
 MauvilleCity_Gym_Text_WattsonPostBattle:
@@ -394,7 +395,7 @@ MauvilleCity_Gym_Text_GymStatue:
 
 MauvilleCity_Gym_Text_GymStatueCertified:
 	.string "MAUVILLE CITY POKéMON GYM\p"
-	.string "WATTSON'S CERTIFIED TRAINERS:\n"
+	.string "{STR_VAR_1}'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 MauvilleCity_Gym_Text_WattsonPreRematch:
