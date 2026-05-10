@@ -8,6 +8,7 @@ FortreeCity_Gym_OnTransition:
 	call Common_EventScript_SetupImportantFightGfxId
 	bufferleadername STR_VAR_1, VAR_GYM_6_LEADER
 	special RotatingGate_InitPuzzle
+	setflag FLAG_TEMP_HIDE_FOLLOWER @ Hide follower bc of rotating gates
 	end
 
 FortreeCity_Gym_OnWarp:

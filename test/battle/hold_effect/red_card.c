@@ -3,7 +3,7 @@
 
 ASSUMPTIONS
 {
-    ASSUME(gItems[ITEM_RED_CARD].holdEffect == HOLD_EFFECT_RED_CARD);
+    ASSUME(gItemsInfo[ITEM_RED_CARD].holdEffect == HOLD_EFFECT_RED_CARD);
 }
 
 SINGLE_BATTLE_TEST("Red Card switches the attacker with a random non-fainted replacement")
@@ -170,7 +170,7 @@ SINGLE_BATTLE_TEST("Red Card does not activate if stolen by a move")
     bool32 activate;
     PARAMETRIZE { item = ITEM_NONE; activate = FALSE; }
     PARAMETRIZE { item = ITEM_POTION; activate = TRUE; }
-    ASSUME(gBattleMoves[MOVE_THIEF].effect == EFFECT_THIEF);
+    ASSUME(MoveHasAdditionalEffect(MOVE_THIEF, MOVE_EFFECT_STEAL_ITEM) == TRUE);
 
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_RED_CARD); }
@@ -380,28 +380,10 @@ SINGLE_BATTLE_TEST("Red Card does not activate if attacker's Sheer Force applied
     }
 }
 
-SINGLE_BATTLE_TEST("Red Card activates before Emergency Exit")
-{
-    GIVEN {
-        PLAYER(SPECIES_GOLISOPOD) { MaxHP(100); HP(51); Item(ITEM_RED_CARD); }
-        PLAYER(SPECIES_WIMPOD);
-        OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_WYNAUT);
-    } WHEN {
-        TURN { MOVE(opponent, MOVE_TACKLE); SEND_OUT(player, 1); }
-    } SCENE {
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponent);
-        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, player);
-        MESSAGE("Golisopod held up its Red Card against Foe Wobbuffet!");
-        ABILITY_POPUP(player, ABILITY_EMERGENCY_EXIT);
-        MESSAGE("Go! Wimpod!");
-    }
-}
-
 SINGLE_BATTLE_TEST("Red Card is consumed after dragged out replacement has its Speed lowered by Sticky Web")
 {
     GIVEN {
-        ASSUME(gBattleMoves[MOVE_STICKY_WEB].effect == EFFECT_STICKY_WEB);
+        ASSUME(gMovesInfo[MOVE_STICKY_WEB].effect == EFFECT_STICKY_WEB);
         PLAYER(SPECIES_WOBBUFFET);
         PLAYER(SPECIES_WYNAUT) { Moves(MOVE_TACKLE); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_RED_CARD); }
@@ -444,6 +426,66 @@ SINGLE_BATTLE_TEST("Red Card does not cause the dragged out mon to lose hp due t
         MESSAGE("Foe Wobbuffet held up its Red Card against Wobbuffet!");
         MESSAGE("Wynaut was dragged out!");
         NOT MESSAGE("Wynaut was hurt by its Life Orb!");
+    }
+}
+
+SINGLE_BATTLE_TEST("Red Card does not activate if holder is switched in mid-turn")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET) { HP(1); Item(ITEM_EJECT_BUTTON); }
+        PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_RED_CARD); }
+        OPPONENT(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WYNAUT);
+    } WHEN {
+        TURN { MOVE(player, MOVE_ENDURE); MOVE(opponent, MOVE_TACKLE); SEND_OUT(player, 1); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_ENDURE, player);
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponent);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, player);
+        MESSAGE("Wobbuffet is switched out with the Eject Button!");
+        NONE_OF {
+            ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, player);
+            MESSAGE("Wobbuffet held up its Red Card against Foe Wobbuffet!");
+        }
+    }
+}
+
+SINGLE_BATTLE_TEST("Red Card prevents Emergency Exit activation when triggered")
+{
+    GIVEN {
+        PLAYER(SPECIES_WOBBUFFET);
+        PLAYER(SPECIES_WYNAUT);
+        OPPONENT(SPECIES_GOLISOPOD) { Item(ITEM_RED_CARD); Ability(ABILITY_EMERGENCY_EXIT); MaxHP(263); HP(262); };
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_SUPER_FANG); MOVE(opponent, MOVE_CELEBRATE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_SUPER_FANG, player);
+        HP_BAR(opponent);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent);
+        NOT ABILITY_POPUP(opponent, ABILITY_EMERGENCY_EXIT);
+    }
+}
+
+SINGLE_BATTLE_TEST("Red Card activates before Eject Pack")
+{
+    GIVEN {
+        ASSUME(MoveHasAdditionalEffectSelf(MOVE_OVERHEAT, MOVE_EFFECT_SP_ATK_MINUS_2) == TRUE);
+        PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_EJECT_PACK); }
+        PLAYER(SPECIES_WYNAUT);
+        OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_RED_CARD); }
+        OPPONENT(SPECIES_WYNAUT);
+    } WHEN {
+        TURN { MOVE(player, MOVE_OVERHEAT); MOVE(opponent, MOVE_TACKLE); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_OVERHEAT, player);
+        NONE_OF {
+            ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, player);
+            MESSAGE("Wobbuffet is switched out with the Eject Button!");
+        }
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent);
+        MESSAGE("Foe Wobbuffet held up its Red Card against Wobbuffet!");
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_TACKLE, opponent);
     }
 }
 

@@ -1,17 +1,18 @@
 MossdeepCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, MossdeepCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_Gym_OnTransition
 	.byte 0
-
-@ NOTE: Mossdeep Gym was redesigned between R/S and E. Leftover (and now functionally unused) scripts are commented below
 
 @ All the below checks are leftover from RS. FLAG_MOSSDEEP_GYM_SWITCH_X is never set
 MossdeepCity_Gym_OnLoad:
 	goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_1, MossdeepCity_Gym_EventScript_SetSwitch1Metatiles
 	goto MossdeepCity_Gym_EventScript_CheckSwitch2
 	end
-
+	
+@ NOTE: Mossdeep Gym was redesigned between R/S and E. Leftover (and now functionally unused) scripts are commented below
 MossdeepCity_Gym_OnTransition:
+	setflag FLAG_TEMP_HIDE_FOLLOWER @ Hide follower since it can collide with moving statues
 	copyvar VAR_0x8003 VAR_GYM_7_LEADER
 	call Common_EventScript_SetupImportantFightGfxId
 	bufferleadername STR_VAR_1, VAR_GYM_7_LEADER

@@ -1,6 +1,8 @@
 #ifndef GUARD_CONSTANTS_OPPONENTS_H
 #define GUARD_CONSTANTS_OPPONENTS_H
 
+#include "constants/battle_partner.h"
+
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
 #define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
@@ -1043,7 +1045,8 @@
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      1017 //Last +1
+#define TRAINERS_COUNT                      1017
 #define MAX_TRAINERS_COUNT                  1600
+#define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

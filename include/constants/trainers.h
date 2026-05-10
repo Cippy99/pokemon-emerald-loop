@@ -14,8 +14,6 @@
 #define TRAINER_SECRET_BASE                 1024
 #define TRAINER_LINK_OPPONENT               2048
 #define TRAINER_UNION_ROOM                  3072
-#define TRAINER_STEVEN_PARTNER              3075
-#define TRAINER_CUSTOM_PARTNER              3076
 
 #define TRAINER_PIC_HIKER                  0
 #define TRAINER_PIC_AQUA_GRUNT_M           1
@@ -122,6 +120,7 @@
 #define TRAINER_PIC_CHAMPION_CYNTHIA     100
 #define TRAINER_PIC_CHAMPION_ALDER       101
 #define TRAINER_PIC_CHAMPION_IRIS        102
+#define TRAINER_PIC_COUNT                103
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
@@ -385,7 +384,8 @@
 #define F_TRAINER_FEMALE (1 << 7)
 
 // Trainer party defines
-#define TRAINER_MON_MALE    1
-#define TRAINER_MON_FEMALE  2
+#define TRAINER_MON_MALE          1
+#define TRAINER_MON_FEMALE        2
+#define TRAINER_MON_RANDOM_GENDER 3
 
 #endif  // GUARD_TRAINERS_H

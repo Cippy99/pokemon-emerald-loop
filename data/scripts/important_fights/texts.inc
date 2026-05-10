@@ -1,4 +1,5 @@
 RoxanneIntroGym::
+# 2 "data/scripts/important_fights/texts.pory"
 	.string "Hello, I am ROXANNE, the leader\n"
 	.string "of this gym.\p"
 	.string "I became a GYM LEADER so that I might\n"
@@ -8,6 +9,7 @@ RoxanneIntroGym::
 	.string "battle, and with which POKéMON?$"
 
 BrawlyIntroGym::
+# 12 "data/scripts/important_fights/texts.pory"
 	.string "I'm BRAWLY!\n"
 	.string "I am a GYM LEADER!\p"
 	.string "I've been churned in the rough waves\n"
@@ -17,6 +19,7 @@ BrawlyIntroGym::
 	.string "Let me see what you're made of!$"
 
 WattsonIntroGym::
+# 22 "data/scripts/important_fights/texts.pory"
 	.string "I've given up on my plans to convert\n"
 	.string "the city, I have.\p"
 	.string "And so, I put my time into making\n"
@@ -30,6 +33,7 @@ WattsonIntroGym::
 	.string "you!$"
 
 FlanneryIntroGym::
+# 36 "data/scripts/important_fights/texts.pory"
 	.string "Welcome… No, wait.\p"
 	.string "Puny TRAINER, how good to see you've\n"
 	.string "made it here!\p"
@@ -45,6 +49,7 @@ FlanneryIntroGym::
 	.string "hot moves we have honed on this land!$"
 
 NormanIntroGym::
+# 52 "data/scripts/important_fights/texts.pory"
 	.string "DAD: Hm…\n"
 	.string "So, it seems you've made progress.\p"
 	.string "Fine, as I promised, we will have\n"
@@ -59,6 +64,7 @@ NormanIntroGym::
 	.string "best shot, too!$"
 
 WinonaIntroGym::
+# 67 "data/scripts/important_fights/texts.pory"
 	.string "I am WINONA. I am the LEADER of\n"
 	.string "this POKéMON GYM.\p"
 	.string "I have become one with BIRD POKéMON\n"
@@ -69,6 +75,7 @@ WinonaIntroGym::
 	.string "of FLYING POKéMON and I!$"
 
 TateIntroGym::
+# 78 "data/scripts/important_fights/texts.pory"
 	.string "Heh heh heh... I'm Tate. I'm the\n"
 	.string "GYM LEADER here.\p"
 	.string "Although my twin sister Liza is away\n"
@@ -78,6 +85,7 @@ TateIntroGym::
 	.string "Can you beat this combination?$"
 
 JuanIntroGym::
+# 88 "data/scripts/important_fights/texts.pory"
 	.string "Let me ask you.\n"
 	.string "Did you know?\l"
 	.string "Ah, I should not be so coy.\p"
@@ -97,6 +105,7 @@ JuanIntroGym::
 	.string "by POKéMON and myself!$"
 
 SidneyIntroGym::
+# 108 "data/scripts/important_fights/texts.pory"
 	.string "Welcome, challenger!\n"
 	.string "I'm SIDNEY\p"
 	.string "I like that look you're giving me.\n"
@@ -106,6 +115,7 @@ SidneyIntroGym::
 	.string "a battle that will be remembered!$"
 
 GlaciaIntroGym::
+# 118 "data/scripts/important_fights/texts.pory"
 	.string "Welcome, my name is GLACIA\n"
 	.string "I'm the GYM LEADER here.\p"
 	.string "I've traveled from afar to HOENN\n"
@@ -117,6 +127,7 @@ GlaciaIntroGym::
 	.string "go all out against you!$"
 
 PhoebeIntroGym::
+# 130 "data/scripts/important_fights/texts.pory"
 	.string "Ahahaha!\p"
 	.string "I'm PHOEBE the GYM LEADER.\n"
 	.string "I did my training on MT. PYRE.\p"
@@ -128,6 +139,7 @@ PhoebeIntroGym::
 	.string "even inflict damage on my POKéMON!$"
 
 DrakeIntroGym::
+# 142 "data/scripts/important_fights/texts.pory"
 	.string "I am DRAKE the DRAGON master!\n"
 	.string "In their natural state, POKéMON are\n"
 	.string "wild living things. They are free.\p"
@@ -140,6 +152,7 @@ DrakeIntroGym::
 	.string "prevail over me!$"
 
 ErikaIntroGym::
+# 155 "data/scripts/important_fights/texts.pory"
 	.string "Hello…\n"
 	.string "Lovely weather, isn't it?\l"
 	.string "It's so pleasant…\p"
@@ -156,6 +169,7 @@ ErikaIntroGym::
 	.string "Very well, but I shall not lose.$"
 
 GiovanniIntroGym::
+# 172 "data/scripts/important_fights/texts.pory"
 	.string "Fwahahaha!\n"
 	.string "Welcome to my hideout!\p"
 	.string "It shall be so until I can restore\n"
@@ -167,6 +181,7 @@ GiovanniIntroGym::
 	.string "the greatest TRAINER!$"
 
 KogaIntroGym::
+# 184 "data/scripts/important_fights/texts.pory"
 	.string "Fwahahaha!\p"
 	.string "A mere child like you dares to\n"
 	.string "challenge me?\p"
@@ -180,6 +195,7 @@ KogaIntroGym::
 	.string "POISON-type POKéMON!$"
 
 StevenIntroGym::
+# 198 "data/scripts/important_fights/texts.pory"
 	.string "Welcome, {PLAYER}. I was looking\n"
 	.string "forward to seeing you here one day.\p"
 	.string "You… What did you see on your journey\n"
@@ -190,6 +206,7 @@ StevenIntroGym::
 	.string "Now, bring it!$"
 
 BugsyIntroGym::
+# 209 "data/scripts/important_fights/texts.pory"
 	.string "I'm Bugsy! I never lose when it comes to\n"
 	.string "bug POKèMON.\p"
 	.string "My research is going to make me the\n"
@@ -198,6 +215,7 @@ BugsyIntroGym::
 	.string "from my studies.$"
 
 ValerieIntroGym::
+# 218 "data/scripts/important_fights/texts.pory"
 	.string "Oh, if it isn't a young Trainer...\n"
 	.string "So you've flown all the way through my Gym\l"
 	.string "fluttering down to me on a fortunate wind.\p"
@@ -210,6 +228,7 @@ ValerieIntroGym::
 	.string "but they are strong.$"
 
 RoxanneGymDefeat::
+# 233 "data/scripts/important_fights/texts.pory"
 	.string "So…\n"
 	.string "I lost…\p"
 	.string "It seems that I still have much more\n"
@@ -222,6 +241,7 @@ RoxanneGymDefeat::
 	.string "LEAGUE GYM BADGE.$"
 
 BrawlyGymDefeat::
+# 246 "data/scripts/important_fights/texts.pory"
 	.string "Whoah, wow! You made a much bigger\n"
 	.string "splash than I expected!\p"
 	.string "You swamped me!\p"
@@ -229,12 +249,14 @@ BrawlyGymDefeat::
 	.string "Take this GYM BADGE!$"
 
 WattsonGymDefeat::
+# 254 "data/scripts/important_fights/texts.pory"
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
 	.string "You ended up giving me a thrill!\n"
 	.string "Take this BADGE!$"
 
 FlanneryGymDefeat::
+# 261 "data/scripts/important_fights/texts.pory"
 	.string "Oh…\n"
 	.string "I guess I was trying too hard…\p"
 	.string "I… I've only recently become\n"
@@ -247,6 +269,7 @@ FlanneryGymDefeat::
 	.string "For that, you deserve this.$"
 
 NormanGymDefeat::
+# 274 "data/scripts/important_fights/texts.pory"
 	.string "…\p"
 	.string "I… I can't…\p"
 	.string "I can't believe it. {PLAYER}…\p"
@@ -255,6 +278,7 @@ NormanGymDefeat::
 	.string "Here, take this.$"
 
 WinonaGymDefeat::
+# 283 "data/scripts/important_fights/texts.pory"
 	.string "Never before have I seen a TRAINER\n"
 	.string "command POKéMON with more grace\l"
 	.string "than I…\p"
@@ -262,12 +286,14 @@ WinonaGymDefeat::
 	.string "I present to you this GYM BADGE.$"
 
 TateGymDefeat::
+# 291 "data/scripts/important_fights/texts.pory"
 	.string "The... The combination of me and my\n"
 	.string "POKèMON!\p"
 	.string "It can't be helped. You've won…\n"
 	.string "So, in recognition, take this.$"
 
 JuanGymDefeat::
+# 298 "data/scripts/important_fights/texts.pory"
 	.string "Ahahaha, excellent!\n"
 	.string "Very well, you are the winner.\p"
 	.string "From you, I sense the brilliant shine\n"
@@ -283,11 +309,13 @@ JuanGymDefeat::
 	.string "you with this BADGE!$"
 
 SidneyGymDefeat::
+# 314 "data/scripts/important_fights/texts.pory"
 	.string "Well, how do you like that? I lost!\n"
 	.string "Eh, it was fun, so it doesn't matter.\p"
 	.string "Take this GYM BADGE!$"
 
 GlaciaGymDefeat::
+# 320 "data/scripts/important_fights/texts.pory"
 	.string "You and your POKéMON…\n"
 	.string "How hot your spirits burn!\p"
 	.string "The all-consuming heat overwhelms.\p"
@@ -295,11 +323,13 @@ GlaciaGymDefeat::
 	.string "failed to harm you.$"
 
 PhoebeGymDefeat::
+# 328 "data/scripts/important_fights/texts.pory"
 	.string "Oh, darn.\n"
 	.string "I've gone and lost.\p"
 	.string "Take this GYM BADGE!$"
 
 DrakeGymDefeat::
+# 334 "data/scripts/important_fights/texts.pory"
 	.string "You deserve every credit for coming\n"
 	.string "this far as a TRAINER of POKéMON.\p"
 	.string "You do seem to know what is needed.\p"
@@ -313,24 +343,28 @@ DrakeGymDefeat::
 	.string "And take this BADGE!$"
 
 ErikaGymDefeat::
+# 348 "data/scripts/important_fights/texts.pory"
 	.string "Oh!\n"
 	.string "I concede defeat.\l"
 	.string "You are remarkably strong.\p"
 	.string "I must confer on you this BADGE$"
 
 GiovanniGymDefeat::
+# 355 "data/scripts/important_fights/texts.pory"
 	.string "Ha!\n"
 	.string "That was a truly intense fight.\l"
 	.string "You have won!\p"
 	.string "As proof, here is the GYM BADGE!\n$"
 
 KogaGymDefeat::
+# 362 "data/scripts/important_fights/texts.pory"
 	.string "Humph!\n"
 	.string "You have proven your worth!\p"
 	.string "Here!\n"
 	.string "Take this BADGE!$"
 
 StevenGymDefeat::
+# 369 "data/scripts/important_fights/texts.pory"
 	.string "Congratulations! The feelings you have\n"
 	.string "for your POKèMON…\p"
 	.string "And the POKèMON that responded to those\n"
@@ -340,6 +374,7 @@ StevenGymDefeat::
 	.string "were able to grasp victory!$"
 
 ValerieGymDefeat::
+# 379 "data/scripts/important_fights/texts.pory"
 	.string "Yes... That was a fine battle.\n"
 	.string "I shall reward you for this great victory.\p"
 	.string "This is a GYM BADGE. It is yours now.\n"
@@ -349,11 +384,13 @@ ValerieGymDefeat::
 	.string "I forgot for a moment that it is yours.$"
 
 BugsyGymDefeat::
+# 389 "data/scripts/important_fights/texts.pory"
 	.string "Whoa, amazing! You're an expert on POKèMON!\n"
 	.string "My research isn't complete yet.\p"
 	.string "OK, you win. Take this BADGE.$"
 
 RoxanneElite4Defeat::
+# 397 "data/scripts/important_fights/texts.pory"
 	.string "So…\n"
 	.string "I lost…\p"
 	.string "It seems that I still have much more\n"
@@ -361,17 +398,20 @@ RoxanneElite4Defeat::
 	.string "I understand.$"
 
 BrawlyElite4Defeat::
+# 405 "data/scripts/important_fights/texts.pory"
 	.string "Whoah, wow! You made a much bigger\n"
 	.string "splash than I expected!\p"
 	.string "You swamped me!\p"
 	.string "Okay, you've got me.$"
 
 WattsonElite4Defeat::
+# 412 "data/scripts/important_fights/texts.pory"
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
 	.string "You ended up giving me a thrill!$"
 
 FlanneryElite4Defeat::
+# 418 "data/scripts/important_fights/texts.pory"
 	.string "Oh…\n"
 	.string "I guess I was trying too hard…\p"
 	.string "I… I've only recently become\n"
@@ -383,6 +423,7 @@ FlanneryElite4Defeat::
 	.string "Thanks for teaching me that.$"
 
 NormanElite4Defeat::
+# 430 "data/scripts/important_fights/texts.pory"
 	.string "…\p"
 	.string "I… I can't…\p"
 	.string "I can't believe it. {PLAYER}…\p"
@@ -390,16 +431,19 @@ NormanElite4Defeat::
 	.string "But, rules are rules!$"
 
 WinonaElite4Defeat::
+# 438 "data/scripts/important_fights/texts.pory"
 	.string "Never before have I seen a TRAINER\n"
 	.string "command POKéMON with more grace\l"
 	.string "than I…$"
 
 TateElite4Defeat::
+# 444 "data/scripts/important_fights/texts.pory"
 	.string "The... The combination of me and my\n"
 	.string "POKèMON!\p"
 	.string "It can't be helped. You've won…$"
 
 JuanElite4Defeat::
+# 450 "data/scripts/important_fights/texts.pory"
 	.string "Ahahaha, excellent!\n"
 	.string "Very well, you are the winner.\p"
 	.string "From you, I sense the brilliant shine\n"
@@ -413,10 +457,12 @@ JuanElite4Defeat::
 	.string "Hahaha, I merely jest!$"
 
 SidneyElite4Defeat::
+# 464 "data/scripts/important_fights/texts.pory"
 	.string "Well, how do you like that? I lost!\n"
 	.string "Eh, it was fun, so it doesn't matter.$"
 
 GlaciaElite4Defeat::
+# 469 "data/scripts/important_fights/texts.pory"
 	.string "You and your POKéMON…\n"
 	.string "How hot your spirits burn!\p"
 	.string "The all-consuming heat overwhelms.\p"
@@ -424,10 +470,12 @@ GlaciaElite4Defeat::
 	.string "failed to harm you.$"
 
 PhoebeElite4Defeat::
+# 477 "data/scripts/important_fights/texts.pory"
 	.string "Oh, darn.\n"
 	.string "I've gone and lost.$"
 
 DrakeElite4Defeat::
+# 482 "data/scripts/important_fights/texts.pory"
 	.string "You deserve every credit for coming\n"
 	.string "this far as a TRAINER of POKéMON.\p"
 	.string "You do seem to know what is needed.\p"
@@ -440,20 +488,24 @@ DrakeElite4Defeat::
 	.string "Go! Go onwards!$"
 
 ErikaElite4Defeat::
+# 495 "data/scripts/important_fights/texts.pory"
 	.string "Oh!\n"
 	.string "I concede defeat.\l"
 	.string "You are remarkably strong.$"
 
 GiovanniElite4Defeat::
+# 501 "data/scripts/important_fights/texts.pory"
 	.string "Ha!\n"
 	.string "That was a truly intense fight.\l"
 	.string "You have won!$"
 
 KogaElite4Defeat::
+# 507 "data/scripts/important_fights/texts.pory"
 	.string "Humph!\n"
 	.string "You have proven your worth!$"
 
 StevenElite4Defeat::
+# 512 "data/scripts/important_fights/texts.pory"
 	.string "Congratulations! The feelings you have\n"
 	.string "for your POKèMON…\p"
 	.string "And the POKèMON that responded to those\n"
@@ -463,8 +515,10 @@ StevenElite4Defeat::
 	.string "were able to grasp victory!$"
 
 ValerieElite4Defeat::
+# 522 "data/scripts/important_fights/texts.pory"
 	.string "Yes... That was a fine battle.$"
 
 BugsyElite4Defeat::
+# 526 "data/scripts/important_fights/texts.pory"
 	.string "Whoa, amazing! You're an expert on POKèMON!\n"
 	.string "My research isn't complete yet.$"

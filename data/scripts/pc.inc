@@ -66,6 +66,14 @@ EventScript_AccessHallOfFame::
 	goto EventScript_AccessPC
 	end
 
+EventScript_AccessPokemonBoxLink::
+	playse SE_PC_LOGIN
+	msgbox gText_StorageSystemOpened, MSGBOX_DEFAULT
+	special ShowPokemonStorageSystemPC
+	waitstate
+	goto EventScript_TurnOffPC
+	end
+
 EventScript_HealPartyAtPC::
 	playfanfare MUS_HEAL
 	waitfanfare

@@ -13,10 +13,10 @@
 #include "constants/trainer_types.h"
 #include "constants/pokemon.h"
 #include "constants/berry.h"
+#include "constants/species.h"
 	.include "asm/macros.inc"
 	.include "constants/constants.inc"
 
 	.section .rodata
 
 	.include "data/maps/events.inc"
-

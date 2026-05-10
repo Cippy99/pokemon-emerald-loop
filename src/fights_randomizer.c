@@ -24,7 +24,7 @@ void RandomizeImportantFights(void)
 
     u16 types[] = {TYPE_NORMAL, TYPE_FIGHTING, TYPE_FLYING, TYPE_POISON, TYPE_GROUND, TYPE_ROCK, TYPE_BUG, TYPE_GHOST, TYPE_STEEL, 
     TYPE_FIRE, TYPE_WATER, TYPE_GRASS, TYPE_ELECTRIC, TYPE_PSYCHIC, TYPE_ICE, TYPE_DRAGON, TYPE_DARK, TYPE_FAIRY};
-    u16 n_of_types = NUMBER_OF_MON_TYPES - 1; // TYPE_MYSTERY not counted
+    u16 n_of_types = 18; // TYPE_MYSTERY not counted
 
     // Shuffle types
     ShuffleList(types, n_of_types);

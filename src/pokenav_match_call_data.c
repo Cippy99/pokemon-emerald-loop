@@ -506,7 +506,7 @@ static const struct MatchCallStructTrainer sSidneyMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REMATCH_SIDNEY,
+    .flag = FLAG_REGISTERED_SIDNEY,
     .rematchTableIdx = REMATCH_SIDNEY,
     .desc = gText_EliteFourMatchCallDesc,
     .name = NULL,
@@ -522,7 +522,7 @@ static const struct MatchCallStructTrainer sPhoebeMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REMATCH_PHOEBE,
+    .flag = FLAG_REGISTERED_PHOEBE,
     .rematchTableIdx = REMATCH_PHOEBE,
     .desc = gText_EliteFourMatchCallDesc,
     .name = NULL,
@@ -538,7 +538,7 @@ static const struct MatchCallStructTrainer sGlaciaMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REMATCH_GLACIA,
+    .flag = FLAG_REGISTERED_GLACIA,
     .rematchTableIdx = REMATCH_GLACIA,
     .desc = gText_EliteFourMatchCallDesc,
     .name = NULL,
@@ -554,7 +554,7 @@ static const struct MatchCallStructTrainer sDrakeMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REMATCH_DRAKE,
+    .flag = FLAG_REGISTERED_DRAKE,
     .rematchTableIdx = REMATCH_DRAKE,
     .desc = gText_EliteFourMatchCallDesc,
     .name = NULL,
@@ -570,7 +570,7 @@ static const struct MatchCallStructTrainer sWallaceMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REMATCH_WALLACE,
+    .flag = FLAG_REGISTERED_WALLACE,
     .rematchTableIdx = REMATCH_WALLACE,
     .desc = gText_ChampionMatchCallDesc,
     .name = NULL,
@@ -842,14 +842,22 @@ static bool32 MatchCall_IsRematchable_NPC(match_call_t matchCall)
 
 static bool32 MatchCall_IsRematchable_Trainer(match_call_t matchCall)
 {
+#if FREE_MATCH_CALL == FALSE
     if (matchCall.trainer->rematchTableIdx >= REMATCH_ELITE_FOUR_ENTRIES)
         return FALSE;
     return gSaveBlock1Ptr->trainerRematches[matchCall.trainer->rematchTableIdx] ? TRUE : FALSE;
+#else
+    return FALSE;
+#endif //FREE_MATCH_CALL
 }
 
 static bool32 MatchCall_IsRematchable_Wally(match_call_t matchCall)
 {
+#if FREE_MATCH_CALL == FALSE
     return gSaveBlock1Ptr->trainerRematches[matchCall.wally->rematchTableIdx] ? TRUE : FALSE;
+#else
+    return FALSE;
+#endif //FREE_MATCH_CALL
 }
 
 static bool32 MatchCall_IsRematchable_Rival(match_call_t matchCall)
@@ -1004,6 +1012,7 @@ static void MatchCall_BufferCallMessageText(const match_call_text_data_t *textDa
 
 static void MatchCall_BufferCallMessageTextByRematchTeam(const match_call_text_data_t *textData, u16 idx, u8 *dest)
 {
+#if FREE_MATCH_CALL == FALSE
     u32 i;
     for (i = 0; textData[i].text != NULL; i++)
     {
@@ -1037,6 +1046,7 @@ static void MatchCall_BufferCallMessageTextByRematchTeam(const match_call_text_d
 
         StringExpandPlaceholders(dest, textData[i].text);
     }
+#endif //FREE_MATCH_CALL
 }
 
 void MatchCall_GetNameAndDesc(u32 idx, const u8 **desc, const u8 **name)
@@ -1087,8 +1097,8 @@ static void MatchCall_GetNameAndDesc_Birch(match_call_t matchCall, const u8 **de
 
 static void MatchCall_GetNameAndDescByRematchIdx(u32 idx, const u8 **desc, const u8 **name)
 {
-    const struct Trainer *trainer = gTrainers + GetTrainerIdxByRematchIdx(idx);
-    *desc = gTrainerClassNames[trainer->trainerClass];
+    const struct Trainer *trainer = GetTrainerStructFromId(GetTrainerIdxByRematchIdx(idx));
+    *desc = gTrainerClasses[trainer->trainerClass].name;
     *name = trainer->trainerName;
 }
 
@@ -1136,7 +1146,7 @@ bool32 MatchCall_HasRematchId(u32 idx)
 
 void SetMatchCallRegisteredFlag(void)
 {
-    int r0 = GetRematchIdxByTrainerIdx(gSpecialVar_0x8004);
-    if (r0 >= 0)
-        FlagSet(FLAG_MATCH_CALL_REGISTERED + r0);
+    int index = GetRematchIdxByTrainerIdx(gSpecialVar_0x8004);
+    if (index >= 0)
+        FlagSet(TRAINER_REGISTERED_FLAGS_START + index);
 }

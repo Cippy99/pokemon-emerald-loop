@@ -57,7 +57,6 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hiker;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTree;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerryTreeEarlyStages;
@@ -238,6 +237,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
+// Begin pokemon event objects
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
+
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -257,7 +260,6 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lance;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cynthia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Alder;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Iris;
-
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -320,7 +322,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M] =     &gObjectEventGraphicsInfo_CyclingTriathleteM,
     [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F] =     &gObjectEventGraphicsInfo_CyclingTriathleteF,
     [OBJ_EVENT_GFX_NURSE] =                    &gObjectEventGraphicsInfo_Nurse,
-    [OBJ_EVENT_GFX_ITEM_BALL] =                &gObjectEventGraphicsInfo_ItemBall,
+    [OBJ_EVENT_GFX_ITEM_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_TM_BALL] =                  &gObjectEventGraphicsInfo_TMBall,
     [OBJ_EVENT_GFX_BERRY_TREE] =               &gObjectEventGraphicsInfo_BerryTree,
     [OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES] =  &gObjectEventGraphicsInfo_BerryTreeEarlyStages,
@@ -501,6 +503,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LINK_RS_MAY] =              &gObjectEventGraphicsInfo_RubySapphireMay,
     [OBJ_EVENT_GFX_LUGIA] =                    &gObjectEventGraphicsInfo_Lugia,
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
+    [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
+    [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
 
     // Gym Leaders Custom
     [OBJ_EVENT_GFX_VALERIE] =                  &gObjectEventGraphicsInfo_Valerie,
